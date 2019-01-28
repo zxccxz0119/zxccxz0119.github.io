@@ -1,0 +1,84 @@
+/* PLACE YOU CUSTOM STYLES IN THIS FILE */
+.icon-issuu img{
+	width: 15px;
+	height: auto;
+}
+.nk-navbar.nk-navbar-solid {
+    background-color: rgba(255, 255, 255, 0.85);
+    box-shadow: 0px 4px 2px -2px rgba(0,0,0,0.1);
+}
+
+.nk-contacts-top, .nk-contacts-top.nk-contacts-top-solid {
+    background-color: rgba(39, 170, 226, 0.86);
+}
+
+.bg-color1{
+	background-color: #e5f6ffa8;
+
+}
+.nk-sub-title{
+	color: #14b2f8;
+	line-height: 1.4;
+}
+.my-pic{
+	background-size: cover;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background-position: center;
+	margin: 0 auto;
+}
+.nk-copyright {
+    background-color: rgb(72, 181, 230);
+    padding: 1rem 0;
+}
+
+/*setting ====================================================*/
+
+/*color*/
+
+.nk-header-title,.text-blue,.nk-isotope-filter > li.active{
+	color: #27a9e1;
+}
+/*deep blue*/
+.nk-isotope-filter > li:hover{
+	color: #1997ce;
+}
+.nk-btn-color-dark-2{
+	background-color: #27a9e1;
+    border-color: #27a9e1;
+    border-style: solid;
+    margin: 0 10px;
+}
+
+
+
+.nk-side-buttons ul > li > a, .nk-side-buttons ul > li > span{
+	background-color: #27a9e1;
+}
+
+
+/*rwd=========================================================*/
+
+@media (max-width: 767px) {
+	.xs-block{
+		display: block;
+	}
+	.xs-text-left{
+		text-align: left;
+	}
+	.nk-btn-color-dark-2{
+		margin-bottom: 15px;
+	}
+	.nk-portfolio-text-box.sec-2{
+		padding-top: 0;
+	}
+}
+@media (max-width: 420px){
+	.nk-navbar.nk-navbar-top .nk-nav-logo {
+	     display: block; 
+	}
+	.nk-portfolio-text-box.bg-dark.sec-2{
+		display: none;
+	}
+}
