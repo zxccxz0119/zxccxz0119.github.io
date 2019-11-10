@@ -18,8 +18,10 @@
     <meta property="og:image" content="指定顯示圖片">
     <link rel="Shortcut Icon" type="images/x-icon" href="../images/fav.ico">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&amp;display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+TC&amp;display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Kameron&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=BioRhyme&amp;display=swap" rel="stylesheet">
+    <link href="static/slick.css" rel="stylesheet">
+    <link href="static/slick-theme.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <!--html body-->
@@ -28,12 +30,12 @@
     <div class="l-wrap" id="app">
         <div id="loading-part"></div>
         <div class="l-main">
-            <div class="index">
-                <div class="totop" id="totop" @click="scrollTo('.index')"></div>
+            <div class="index" id="index">
                 <section class="kv-area">
                     <div class="kv scoll-check" id="kv">
-                        <div class="kv-eyes"><img src="images/kv-eyes.png" alt="眼睛"></div>
-                        <div class="kv-eyes2"><img src="images/kv-eyes2.png" alt="眼睛2"></div>
+                        <div class="scrolldown" @click="scrollTo('#nav-block')"><img src="images/scoll-down.png" alt=""></div>
+                        <div class="kv-eyes"><img src="images/kv-eyes.png" alt="空山祭-眼睛"></div>
+                        <div class="kv-eyes2"><img src="images/kv-eyes2.png" alt="空山祭-眼睛2"></div>
                         <div class="kv-draw"></div>
                         <div class="txt-area">
                             <div class="kv-txt1"> <img src="images/kv-txt1.png" alt="龍崎光節-空山祭 2019.12.21-2020.2.2"></div>
@@ -61,47 +63,43 @@
                                         <ul class="clearfix">
                                             <li class="nav-item"><a alt="龍崎光節／空山祭" title="龍崎光節／空山祭"> <span>龍崎光節／空山祭</span></a>
                                                 <div class="drop-block">
-                                                    <div class="title">LONGCI LIGHT FESTIVAL ／ VOID MOUNTAIN</div>
                                                     <ul>
-                                                        <li @click="menuClick('#chapter1-1')"> <a>展覽簡介 Exhibition Introduction </a></li>
-                                                        <li @click="menuClick('#chapter1-2')"> <a>展覽概念 Exhibition Concept </a></li>
-                                                        <li @click="menuClick('#chapter1-3')"> <a>龍崎介紹 Longci Introduction</a></li>
+                                                        <li @click="menuClick('#chapter1-1')"> <a> <span class="tw">展覽簡介 </span><span class="eng">Exhibition Introduction </span></a></li>
+                                                        <li @click="menuClick('#chapter1-2')"> <a> <span class="tw">展覽概念 </span><span class="eng">Exhibition Concept </span></a></li>
+                                                        <li @click="menuClick('#chapter1-3')"> <a> <span class="tw">龍崎介紹 </span><span class="eng">Longci Introduction</span></a></li>
                                                     </ul>
                                                 </div>
                                             </li>
                                             <li class="nav-item"><a alt="空山作品" title="空山作品"><span>空山作品</span></a>
                                                 <div class="drop-block">
-                                                    <div class="title">ART WORKS</div>
                                                     <ul>
-                                                        <li @click="menuClick('#chapter2-1')"> <a>動畫：空空的山 Animation: Story About Void Mountain</a></li>
-                                                        <li @click="menuClick('#chapter2-2')"> <a>藝術地圖／集章 Art Map／Stamp Collection</a></li>
-                                                        <li @click="menuClick('#chapter2-3')"> <a>作品概述 Concept Of Art Works</a></li>
+                                                        <li @click="menuClick('#chapter2-1')"> <a> <span class="tw">動畫：空空的山 </span><span class="eng">Animation: Story About Void Mountain</span></a></li>
+                                                        <li @click="menuClick('#chapter2-2')"> <a> <span class="tw">藝術地圖／集章 </span><span class="eng">Art Map／Stamp Collection</span></a></li>
+                                                        <li @click="menuClick('#chapter2-3')"> <a> <span class="tw">作品概述 </span><span class="eng">Concept Of Art Works</span></a></li>
                                                     </ul>
                                                 </div>
                                             </li>
                                             <li class="nav-item"><a alt="空山活動" title="空山活動"><span>空山活動</span></a>
                                                 <div class="drop-block">
-                                                    <div class="title">EVENT</div>
                                                     <ul>
-                                                        <li @click="menuClick('#chapter3-1')"> <a>活動時程表 Schedule</a></li>
-                                                        <li @click="menuClick('#chapter3-2')"> <a>活動介紹 Event Introduction</a></li>
-                                                        <li @click="menuClick('#chapter3-3')"> <a>工作坊介紹 Workshop Introduction</a></li>
+                                                        <li @click="menuClick('#chapter3-1')"> <a> <span class="tw">活動時程表 </span><span class="eng">Schedule</span></a></li>
+                                                        <li @click="menuClick('#chapter3-2')"> <a> <span class="tw">活動介紹 </span><span class="eng">Event Introduction</span></a></li>
+                                                        <li @click="menuClick('#chapter3-3')"> <a> <span class="tw">工作坊介紹 </span><span class="eng">Workshop Introduction</span></a></li>
                                                     </ul>
                                                 </div>
                                             </li>
                                             <li class="nav-item"><a alt="參觀／交通" title="參觀╱交通"><span>參觀／交通</span></a>
                                                 <div class="drop-block">
-                                                    <div class="title">VISIT ／ TRAFFIC</div>
                                                     <ul>
-                                                        <li @click="menuClick('#chapter4-1')"> <a>展期 Exhibition Time</a></li>
-                                                        <li @click="menuClick('#chapter4-2')"> <a>地點 Exhibition Location </a></li>
-                                                        <li @click="menuClick('#chapter4-3')"> <a>交通資訊 Traffic Information</a></li>
+                                                        <li @click="menuClick('#chapter4-1')"> <a> <span class="tw">展期 </span><span class="eng">Exhibition Time</span></a></li>
+                                                        <li @click="menuClick('#chapter4-2')"> <a> <span class="tw">地點 </span><span class="eng">Exhibition Location </span></a></li>
+                                                        <li @click="menuClick('#chapter4-3')"> <a> <span class="tw">交通資訊 </span><span class="eng">Traffic Information</span></a></li>
                                                     </ul>
                                                 </div>
                                             </li>
                                             <li class="nav-item"><a @click="menuClick('#chapter5-1')" alt="南關線觀光" itemprop="url" title="南關線觀光"><span>南關線觀光</span></a>
                                                 <div class="drop-block">
-                                                    <div class="title">SIGHTSEEING OF NANGUAN</div>
+                                                    <div class="star"></div>
                                                 </div>
                                             </li>
                                             <li class="nav-item soical"><a class="yt" href="#"> </a><a class="fb" href="#"> </a><a class="ig" href="#"> </a></li>
@@ -111,36 +109,336 @@
                             </div>
                         </nav>
                     </div>
+                    <div class="main-video chapter">
+                        <div class="fixed-area">
+                            <div class="title"> <img src="images/f-title1.png" alt=""></div>
+                        </div>
+                        <div class="content">
+                            <div class="video-block">
+                                <div class="cover" v-if="!player1.state" @click="play('player1')"><img src="images/video1.png" alt=""></div>
+                                <div id="player1"></div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
                 <section class="chapter chapter1-1">
                     <div class="scoll-check" id="chapter1-1">
-                        <div class="fake-block">
-                            <p>龍崎光節／空山祭 </p>
-                            <p>展覽簡介</p>
+                        <div class="content">
+                            <div class="img-issue"><img src="images/fake.jpg" alt="空山祭-緣起"></div>
+                            <div class="info-issue tw-info">
+                                <h3 class="title">緣起</h3>
+                                <div class="inner">
+                                    <p>「龍崎」因其國際級的地質學環境，崎嶇不平的泥岩地貌而被命名；其中的虎形山因特殊的地景而有「龍盤虎踞」的稱號。18世紀以降就開始發展的聚落帶來了人文底蘊，都是龍崎區珍貴的資產。</p>
+                                    <p>龍崎絕美遼闊的自然景觀、惡地地形，以及人口逐漸外移的趨勢，成為了人們眼中山高人稀的象徵，是陌生、不熟悉且少於接觸的鄉野。另一方面，近年來龍崎區在政府公所、里民的努力之上，也逐漸多了許多藝文方面的建設，成立了市集、貓咪階梯、竹炭故事館等…。「同樣一塊地，從農業生產價值來看或許是「惡地」，但從其他價值來看，卻是不折不扣的美地。」</p>
+                                    <p>龍崎區的曲折故事，反映著人類社會所共同面對的課題：「價值的選擇。」也造就了「龍崎光節」的誕生。</p>
+                                    <p>「光蟲」這件作品的藝術概念，不僅在於其只有在現地製作的在地性、必然與環境融合的融洽性；在那之上，是對「地方創生」概念的一種不離地的實踐藝術。藝術團隊與龍崎區的邂逅，開啟了龍崎「空山祭」的可能性。</p>
+                                </div>
+                            </div>
+                            <div class="info-issue eng-info">
+                                <h3 class="title">Origin</h3>
+                                <div class="inner">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content gray">
+                            <div class="img-issue"><img src="images/fake.jpg" alt="空山祭-藝術團隊介紹：艸非火"></div>
+                            <div class="info-issue tw-info">
+                                <h3 class="title">藝術團隊介紹：艸非火</h3>
+                                <h4 class="subtitle">策展人｜陳雋中／藝術統籌｜辛綺／專案助理｜胡敦雅／執行助理｜陳瑋勛</h4>
+                                <div class="inner">
+                                    <div class="quote">
+                                        <p>「朝真暮偽何人辨，古往今來底事無。但愛臧生能詐聖，可知寧子解佯愚。草螢有耀終非火，荷露雖團豈是珠。不取燔柴兼照乘，可憐光彩亦何殊。」 </p>
+                                        <p class="right">―――白居易「放言五首、其一」</p>
+                                    </div>
+                                    <p>「空山祭」的發想單位，是由藝術家辛綺和策展人陳雋中及其他對藝術一頭熱的朋友們，於2016年成立的工作室。工作室正式名稱為「艸非火」。名稱的來由，乃因藝術家除自我表達的創作之外，更需去思考自己做為藝術史和整體人類社會性的定位，創作是一種橋梁，策展要連結虛實(精神性與物質)和古今。</p>
+                                    <p>詩首二句道盡藝術創作的虛實之「變」，次二句又闡明真假之「爭」；對應西洋藝術史上，由「洞穴寓言」到黑格爾的「藝術已死」精神性的永恆昇華。而「草螢有耀終非火，荷露雖團豈是珠」言下之意是螢火蟲發出光亮，但終究不是火；荷葉上的露珠渾圓，也並非珍珠(指出人會被外表所欺騙，而不能發現事物的內在)；其意衍伸到藝術上，藝術創作翻轉「真假、虛實」的能力，螢光非火但卻遠勝於火焰，能點燃人心。艸非火藝術團隊的「光蟲」，旨在創造出一片虛/實交錯的空間。結合藝術美學，和內在的精神性，使其「表裡如一」。</p>
+                                </div>
+                            </div>
+                            <div class="info-issue eng-info">
+                                <h3 class="title">Origin</h3>
+                                <div class="inner">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
                 <section class="chapter chapter1-2">
                     <div class="scoll-check" id="chapter1-2">
-                        <div class="fake-block">
-                            <p>龍崎光節／空山祭 </p>
-                            <p>展覽概念</p>
+                        <div class="content">
+                            <div class="img-issue"><img src="images/fake.jpg" alt="龍崎光節-空山祭"></div>
+                            <div class="info-issue tw-info">
+                                <h3 class="title">關於策展：龍崎光節-空山祭</h3>
+                                <div class="inner">
+                                    <p>藝術祭「龍崎光節」想做的，就是「價值的選擇：看見生命」。<br>這指的是看見生命的當下，我們已經擁有的、曾經建設的、龍崎的鄉民與政府攜手共同構築的「現在」。用一個藝術光節，一群投身藝術創作的熱血藝術家們的作品、和一個寓言故事「空空的山」，來傳達一個「看見」的訊息，不僅僅是看見龍崎，更是看見台灣。「空山祭」誕生在龍崎區這個台灣南部的小鎮，是因其精彩的故事和文化上深厚的底蘊。龍崎在垃圾掩埋場抗爭中，除了彰顯出台灣人民對自然的愛心外，同時也不斷讓更多前來的年輕老少「看見」這個地方的美：有自然生態的、有鄉土文化的，是具有普世價值的。而這整個故事，正適合由「空山祭」來做為最後一個註腳，和一個新的開端。</p>
+                                    <p>自網路發明已降，轟轟烈烈數十年的「全球化」，開始降溫；世界趨勢，是對身處鄉土的地緣性回歸。文化統一性、都市化的後繼無力，從世紀末到21世紀的交棒便顯端倪。取而代之的，是新的「地方」的誕生。新的「地方」概念，有別於過去的懷舊、鄉土、傳統，是一種地緣主義的「再發現」；地方文化的翻新、再認識，而藉由網路和各種媒體推向世界，其實也是全球化的一種「再定義」，「越本土化、就越國際化」。</p>
+                                </div>
+                            </div>
+                            <div class="info-issue eng-info">
+                                <h3 class="title">Origin</h3>
+                                <div class="inner">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content gray">
+                            <div class="img-issue"><img src="images/mountain.png" alt="空山祭的空和滿"></div>
+                            <div class="info-issue tw-info">
+                                <h3 class="title">空山祭的空和滿</h3>
+                                <div class="inner">
+                                    <p>「空山不見人，但聞人語響。返景入深林，復照青苔上。」「緣起性空：一切有為法，如夢幻泡影，如露亦如電，應作如是觀。」「老子：故有之以為利，無之以為用。」關於「空」，在文化上，我們有一百萬種觀點，卻無不以之為美好的象徵。從空山不見人的幽靜，到空無為用的反思…無不處處表現出「空」之境界，其實是在於需心的重新審視身邊的一切。</p>
+                                    <p>「龍崎光節」之所以以「空山」為題，有兩種表徵。<br>「空山」一詞，源自於現代社會對「人口流失」的村落之一種想像。在對於當地居民、文化未知的情況下，現代社會容易對鄉里地方產生一種「曠野無人」的刻板印象；這種虛構的想像不僅是在龍崎區，而是全球化的現象，是「都市化」人口集中產生的後遺症。對此種想像的放任，最終會對人類社會造成撕裂，和人文歷史珍貴的流失。另一層意涵則包含了「謙虛」之意，要讓所有觀眾從「空」見到「滿」，從「空空的山」見到「滿滿的生命」。見到龍崎的美麗，看見自己、也「看見台灣」。</p>
+                                    <p>「空空的山」為反思之義，衝擊性的標題和畫面，展示出一種淒涼；與之對照的是「滿滿的生命」，這生命不只是自然、花鳥蟲魚，還有人文、歷史和社會的命脈。 </p>
+                                </div>
+                            </div>
+                            <div class="info-issue eng-info">
+                                <h3 class="title">Origin</h3>
+                                <div class="inner">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="info-issue tw-info">
+                                <h3 class="title">關於看見</h3>
+                                <div class="inner">
+                                    <p>無休止的資訊浪潮，讓我們看見了一切，又忽視了一切；現代社會，人們生活在無限的可能性之中，卻又沉溺在一片精神荒蕪的荒洋。藝術創作原是意圖填補人們內心的那些空曠，在急速視覺得流轉之中，即使能夠創作出視覺上令人驚訝的效果，往往也換來的只是「驚鴻一瞥」的水花。「創作是一種吶喊」，這吶喊所蘊含的，是讓人們停下腳步，好好的看看身周事物的一種呼喚。那是這「龍崎光節：空山祭」背後最最重要的理念：「看見生命」。</p>
+                                    <p>藝評者約翰‧博格曾認為，一切以金錢為主的概念，造就了現代社會的消費觀，是把「過去賣給未來」。本質上，媒體創造出來的影像，是一種將人類共同的「回憶和希望」打包創作出來的幻覺，讓消費者不斷去追求這些鄉愁所帶來的溫暖的美好，去拼命試圖用金錢購買一種難以達到的未來…所以，藝術祭「龍崎光節」想做的，就是「價值的選擇：看見生命」。</p>
+                                    <p>這指的是看見生命的當下，我們已經擁有的、曾經建設的、龍崎的鄉民與政府攜手共同構築的「現在」。用一個藝術光節，一群投身藝術創作的熱血藝術家們的作品、和一個寓言故事「空空的山」，來傳達一個「看見」的訊息，不僅僅是看見龍崎，更是看見台灣。「空空的山」做為「龍崎光節空山祭」的核心故事，在敘述之中，想讓讀者們看見的，那絕對不是參觀人次、不是攤販商機；不完全是引起懷舊鄉愁的過去，也未必是什麼華麗奇詭的未來幻想。「空山祭」所寄望的是真正的看見，藝術祭做為一種吶喊的手段，所招引來的目光，能夠注視到的：「現在的現在，當下的當下」，那些已經存在於此的美好。空山是由漠視到關注，從心中的無到眼底的有，重新「看見生命」的哲學。</p>
+                                </div>
+                            </div>
+                            <div class="info-issue eng-info">
+                                <h3 class="title">Origin</h3>
+                                <div class="inner">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates. </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
                 <section class="chapter chapter1-3">
                     <div class="scoll-check" id="chapter1-3">
-                        <div class="fake-block">
-                            <p>龍崎光節／空山祭 </p>
-                            <p>龍崎介紹</p>
+                        <div class="content">
+                            <div class="item">
+                                <div class="img-issue"><img src="images/fake.jpg" alt="空山祭-龍崎資訊"></div>
+                                <div class="info-issue tw-info">
+                                    <h3 class="title">龍崎資訊</h3>
+                                    <div class="inner">
+                                        <p>龍崎早期原為平埔西拉雅族新港社的舊墾地，多為丘陵地形，尤其龍崎地區地質多為青灰岩所覆蓋，地形與產物均獨樹一格。主要農特產為竹筍及鳳梨。因具有特殊的沙質土壤，別有特殊風味。竹林在四季裡都呈現彩色景觀，素有「采竹之鄉」的美名。農會在本區建造傳統竹炭窯，製造竹醋液、竹炭片等各式各樣的竹炭產品成為特色。</p>
+                                    </div>
+                                </div>
+                                <div class="info-issue eng-info">
+                                    <h3 class="title">Origin</h3>
+                                    <div class="inner">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="img-issue"><img src="images/fake.jpg" alt="空山祭-牛埔農塘"></div>
+                                <div class="info-issue tw-info">
+                                    <h3 class="title">牛埔農塘</h3>
+                                    <h3 class="other-issue">牛埔泥岩水土保持教學園區</h3>
+                                    <div class="inner">
+                                        <p>位於二仁溪上游集水區，範圍內多屬黃砂土及青灰岩地質，因此形成光禿禿的祼露惡地，交錯排列於高低起伏的丘陵與溪谷，造就了景觀獨特的月世界風貌。</p>
+                                    </div>
+                                </div>
+                                <div class="info-issue eng-info">
+                                    <h3 class="title">Origin</h3>
+                                    <div class="inner">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="img-issue"><img src="images/fake.jpg" alt=""></div>
+                                <div class="info-issue tw-info">
+                                    <h3 class="title">虎形山公園</h3>
+                                    <div class="inner">
+                                        <p>因其山勢有如猛虎雄踞一般，故有此威武名稱。遊客常沿著環山步道健行一圈，經過美麗的望龍吊橋，在森林裡來場芬多精浴，夏日夜間，可以尋覓一閃一閃的螢火蟲在身邊飛舞，是台南後山的秘密生態教室。</p>
+                                    </div>
+                                </div>
+                                <div class="info-issue eng-info">
+                                    <h3 class="title">Origin</h3>
+                                    <div class="inner">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="img-issue"><img src="images/fake.jpg" alt=""></div>
+                                <div class="info-issue tw-info">
+                                    <h3 class="title">文衡殿</h3>
+                                    <div class="inner">
+                                        <p>龍崎區中坑村內的關聖帝君文衡殿，巍峨聳立，氣度非凡。廟方廣植林木，建休閒設施，提供帝君信眾、遊客、鄰近縣市住居民眾茹沐神恩；亦設有販賣部提供茶點零食、飲料、伴手禮，適合一家大小悠閒渡過一個下午。休憩去處。</p>
+                                        <p>文衡殿奉玉皇上帝旨意興建，廟身是以二進式建築屋深，分為前殿與後殿，莊嚴靜穆、巍峨聳立、氣度非凡。前殿供奉本廟主神　祖上帝君文衡聖帝；後殿特地奉請　南海普陀山觀音佛祖駐駕，大慈大悲、浩瀚佛光，為眾善信消災祈福，廣佑國泰民安，庇護四時無災。鳳娘聖母、紫雲聖母隻神衹於建廟之時，即奉玉旨於菩薩座中修行，待功德圓滿後，與觀音佛祖共同鎮守【龍崎文衡殿】同享香火。</p>
+                                    </div>
+                                </div>
+                                <div class="info-issue eng-info">
+                                    <h3 class="title">Origin</h3>
+                                    <div class="inner">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
                 <section class="chapter chapter2-1">
                     <div class="scoll-check" id="chapter2-1">
-                        <div class="fake-block">
-                            <p>空山作品</p>
-                            <p>動畫：空空的山</p>
+                        <div class="content">
+                            <div class="item">
+                                <div class="img-issue gallery-block">
+                                    <div class="video-block">
+                                        <div class="cover" v-if="!player2.state" @click="play('player2')"><img src="images/video1.png" alt=""></div>
+                                        <div id="player2"></div>
+                                    </div>
+                                    <div class="gallery-group">
+                                        <div class="g-item"><img src="images/fake.jpg" alt=""></div>
+                                        <div class="g-item"><img src="images/fake.jpg" alt=""></div>
+                                        <div class="g-item"><img src="images/fake.jpg" alt=""></div>
+                                        <div class="g-item"><img src="images/fake.jpg" alt=""></div>
+                                        <div class="g-item"><img src="images/fake.jpg" alt=""></div>
+                                        <div class="g-item"><img src="images/fake.jpg" alt=""></div>
+                                    </div>
+                                </div>
+                                <div class="info-issue tw-info">
+                                    <h3 class="title">空空的山</h3>
+                                    <h4 class="subtitle">劇本｜辛綺┼陳雋中／動畫設計｜朱為鄰／配樂設計｜林信樺┼蔡痞諺</h4>
+                                    <div class="inner">
+                                        <p>動畫故事「空空的山」是本次龍崎光節：空山祭的主題故事。開頭，我們「看」見一隻發光的光蟲自都會出發，向外飛去。飛往都市之外的鄉野之處，牠「看見」一片「空空蕩蕩」的山脈。身為觀眾的我們也隨著光蟲的視角，往山中漸漸行去，往我們平時所不熟悉，感覺陌生又荒寂的「空山」而去…隨著向山的旅程之中，我們與光蟲都發現，山並非真空；在旅程上有著許多夥伴，有“鳥獸魚蟲”(龍崎當地的生物)，有各種大自然的風光景緻、好山好水，也有百年的人文歷史，空山不空。</p>
+                                        <p>但危機也潛伏在前方等著我們去克服...</p>
+                                    </div>
+                                </div>
+                                <div class="info-issue eng-info">
+                                    <h3 class="title">Origin</h3>
+                                    <div class="inner">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
+                                    </div>
+                                </div>
+                                <div class="notice-issue">
+                                    <div class="inner">
+                                        <p>更多故事的精彩內容請見：「龍崎光節-空山祭」官方網頁，或在「空山祭」展場：入口意象Ａ與大家共同欣賞。</p>
+                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo ut corrupti, quod sint provident sapiente doloremque voluptatem officia ex eligendi iusto voluptate nostrum aliquam delectus cupiditate quibusdam porro, optio nulla!</p>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                            <div class="item">
+                                <div class="info-issue tw-info">
+                                    <h3 class="title">角色介紹</h3>
+                                    <div class="person-list">
+                                        <div class="person-item">
+                                            <div class="pic-group">
+                                                <div class="pic-item"><img src="images/fake.jpg" alt=""></div>
+                                                <div class="pic-item"><img src="images/fake.jpg" alt=""></div>
+                                            </div>
+                                            <div class="info-issue tw-info">
+                                                <h3 class="title">光蟲</h3>
+                                                <div class="inner">
+                                                    <p>光蟲是本書的"嚮導"；光蟲經歷了每一次情節的轉化，逐漸的帶著讀者認識到「空滿轉化」。是讀者的好朋友、劇情的主軸，同時也是藝術力的象徵。</p>
+                                                </div>
+                                            </div>
+                                            <div class="info-issue eng-info">
+                                                <h3 class="title">Origin</h3>
+                                                <div class="inner">
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="person-item">
+                                            <div class="pic-group">
+                                                <div class="pic-item"><img src="images/fake.jpg" alt=""></div>
+                                                <div class="pic-item"><img src="images/fake.jpg" alt=""></div>
+                                            </div>
+                                            <div class="info-issue tw-info">
+                                                <h3 class="title">烏雲</h3>
+                                                <div class="inner">
+                                                    <p>烏雲彰顯著現代社會都市化的價值觀。在人口聚集、流失，現代社會產生很多關於環保、都市規劃、和文化議題；最終烏雲將被藝術力量轉化，一改前面漠視的態度，真正的「看見生命」。</p>
+                                                </div>
+                                            </div>
+                                            <div class="info-issue eng-info">
+                                                <h3 class="title">Origin</h3>
+                                                <div class="inner">
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="person-item">
+                                            <div class="pic-group">
+                                                <div class="pic-item"><img src="images/fake.jpg" alt=""></div>
+                                                <div class="pic-item"><img src="images/fake.jpg" alt=""></div>
+                                            </div>
+                                            <div class="info-issue tw-info">
+                                                <h3 class="title">山</h3>
+                                                <div class="inner">
+                                                    <p>表面上空空的、綠綠的山；實際上是充滿自然豐富生態的孕育地。光蟲在山裡發現很多朋友：當地的螞蟻、蜘蛛、鳥類等等…也有獨特的泥岩地形。山其實對自己獨特的地質環境很得意。</p>
+                                                </div>
+                                            </div>
+                                            <div class="info-issue eng-info">
+                                                <h3 class="title">Origin</h3>
+                                                <div class="inner">
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="person-item">
+                                            <div class="pic-group">
+                                                <div class="pic-item"><img src="images/fake.jpg" alt=""></div>
+                                                <div class="pic-item"><img src="images/fake.jpg" alt=""></div>
+                                            </div>
+                                            <div class="info-issue tw-info">
+                                                <h3 class="title">山中的朋友們</h3>
+                                                <div class="inner">
+                                                    <p>龍崎當地的生物，是光蟲在旅程上遇到的夥伴。螞蟻在山中堆砌建築物，展現力與美的結構性，以當地常用建材竹編表現象徵；蜘蛛織取團結織網，龍崎特有生物金姬蛛，擁有為人稱道的護卵本能，表現家庭團結溫暖；虎形山公園多有珍稀的鳥類群據，社群齊唱多元文化之歌。</p>
+                                                </div>
+                                            </div>
+                                            <div class="info-issue eng-info">
+                                                <h3 class="title">Origin</h3>
+                                                <div class="inner">
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates. </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="item">
+                                <div class="info-issue tw-info">
+                                    <h3 class="title">空山讀後</h3>
+                                    <div class="inner">
+                                        <p>「空空的山」的故事隱喻了，龍崎區被決定為垃圾掩埋區之時，社會對”人口流失”的村落之一種想像。在對於當地居民、文化未知的情況下，現代社會容易對鄉里地方產生一種”曠野無人”的刻板印象；這種虛構的想像不僅是在龍崎區，而是全球化的現象，是「都市化」人口集中產生的後遺症。對此種想像的放任，最終會對人類社會造成撕裂，和人文歷史珍貴的流失；對整體經濟上造成的損害更超越一個簡單的垃圾場。「空空的山」為反思之義，衝擊性的標題和畫面，展示出一種淒涼；與之對照的是「滿滿的生命」，這生命不只是自然、花鳥蟲魚，還有人文、歷史和社會的”命脈。</p>
+                                    </div>
+                                </div>
+                                <div class="info-issue eng-info">
+                                    <h3 class="title">Origin</h3>
+                                    <div class="inner">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
+                                    </div>
+                                </div>
+                                <div class="notice-issue">
+                                    <div class="inner">
+                                        <p>整體故事要表達的意識：「價值的轉化 (看見生命) 」。</p>
+                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo ut corrupti, quod sint provident sapiente doloremque voluptatem officia ex eligendi iusto voluptate nostrum aliquam delectus cupiditate quibusdam porro, optio nulla!</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -154,64 +452,430 @@
                 </section>
                 <section class="chapter chapter2-3">
                     <div class="scoll-check" id="chapter2-3">
-                        <div class="fake-block">
-                            <p>空山作品</p>
-                            <p>作品概述</p>
+                        <div class="content">
+                            <div class="img-issue"><img src="images/fake.jpg" alt=""></div>
+                            <div class="project-list">
+                                <div class="project p1" @click="scrollTo('#p1')"></div>
+                                <div class="project p2" @click="scrollTo('#p2')"></div>
+                                <div class="project p3" @click="scrollTo('#p3')"></div>
+                                <div class="project p4" @click="scrollTo('#p4')"></div>
+                                <div class="project p5" @click="scrollTo('#p5')"></div>
+                                <div class="project p6" @click="scrollTo('#p6')"></div>
+                                <div class="project p7" @click="scrollTo('#p7')"></div>
+                                <div class="project p8" @click="scrollTo('#p8')"></div>
+                                <div class="project p9" @click="scrollTo('#p9')"></div>
+                                <div class="project p10" @click="scrollTo('#p10')"></div>
+                            </div>
+                            <div class="notice-issue">
+                                <div class="inner">
+                                    <p>「龍崎光節：空山祭」的藝術裝置，是藝術家們根據「空空的山」的故事情節，讀後的心得感想所創作出來的、專屬於當地的獨一無二的藝術品。 這些作品不但具有原創性，也結合當地也結合當地環境製作，更是只有在今年燈節才能看到的「期間限定」創作。</p>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo ut corrupti, quod sint provident sapiente doloremque voluptatem officia ex eligendi iusto voluptate nostrum aliquam delectus cupiditate quibusdam porro, optio nulla!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content gray" id="p1">
+                            <div class="project-view">
+                                <div class="left-block"><img src="images/fake.jpg" alt=""></div>
+                                <div class="right-block">
+                                    <div class="ani-pic"><img src="images/fake.jpg" alt=""></div>
+                                    <div class="author-list">
+                                        <div class="author-item">
+                                            <p class="name">辛綺</p>
+                                            <div class="author-pic a1"></div>
+                                        </div>
+                                        <div class="author-item">
+                                            <p class="name">張永旺</p>
+                                            <div class="author-pic a2"></div>
+                                        </div>
+                                        <div class="author-item">
+                                            <p class="name">瓦豆</p>
+                                            <div class="author-pic a3"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info-issue tw-info">
+                                <h3 class="title">光蟲與竹燈</h3>
+                                <div class="inner">
+                                    <p>在整個「燈節」的路徑，隨處可見艸非火團隊所製作的小光蟲、燈光設計-瓦豆、張永旺工作室合作的竹編小燈籠出沒於各處；入展場前的望龍吊橋旁設有第二服務台，提供光蟲小燈籠供遊客手持入場，象徵動畫中的光蟲將帶領觀眾遊山，並在參觀展覽後歸還。同時也有和當地居民、大小朋友合作的「竹燈、竹片」擺件點亮藝術道路。</p>
+                                </div>
+                            </div>
+                            <div class="info-issue eng-info">
+                                <h3 class="title">Origin</h3>
+                                <div class="inner">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content" id="p2">
+                            <div class="project-view">
+                                <div class="left-block"><img src="images/fake.jpg" alt=""></div>
+                                <div class="right-block">
+                                    <div class="ani-pic"><img src="images/fake.jpg" alt=""></div>
+                                    <div class="author-list slide">
+                                        <div class="author-item no-icon">
+                                            <p class="name">張永旺</p>
+                                            <div class="author-pic a2"></div>
+                                        </div>
+                                        <div class="author-item">
+                                            <p class="name">辛綺</p>
+                                            <div class="author-pic a1"></div>
+                                        </div>
+                                        <div class="author-item">
+                                            <p class="name">陳雋中</p>
+                                            <div class="author-pic a4"></div>
+                                        </div>
+                                        <div class="author-item">
+                                            <p class="name">朱為麟</p>
+                                            <div class="author-pic a5"></div>
+                                        </div>
+                                        <div class="author-item">
+                                            <p class="name">林信樺</p>
+                                            <div class="author-pic a6"></div>
+                                        </div>
+                                        <div class="author-item">
+                                            <p class="name">蔡痞諺</p>
+                                            <div class="author-pic a7"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info-issue tw-info">
+                                <h3 class="title">竹苗/空空的山</h3>
+                                <div class="inner">
+                                    <p>入口意象竹編、服務台、和影像欣賞區三部曲，是步步深入「空山祭」的儀式。龍崎產竹，為竹之故鄉；竹藝師張永旺老師在當地傳承竹編技藝，反映當地濃厚的人文氣息。在入口處，竹藝師編織出竹苗拱門，展現在地竹之美，又帶來「進入」的意念，種下一顆竹苗，承襲一世風霜，再造一代新象。</p>
+                                </div>
+                            </div>
+                            <div class="info-issue eng-info">
+                                <h3 class="title">Origin</h3>
+                                <div class="inner">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content gray" id="p3">
+                            <div class="project-view">
+                                <div class="left-block"><img src="images/fake.jpg" alt=""></div>
+                                <div class="right-block">
+                                    <div class="ani-pic"><img src="images/fake.jpg" alt=""></div>
+                                    <div class="author-list slide">
+                                        <div class="author-item no-icon">
+                                            <p class="name">辛綺</p>
+                                            <div class="author-pic a1"></div>
+                                        </div>
+                                        <div class="author-item">
+                                            <p class="name">瓦豆</p>
+                                            <div class="author-pic a3"></div>
+                                        </div>
+                                        <div class="author-item">
+                                            <p class="name">龍崎國小<br>及<br>龍船分校</p>
+                                            <div class="author-pic a8"></div>
+                                        </div>
+                                        <div class="author-item">
+                                            <p class="name">龍崎國中</p>
+                                            <div class="author-pic a9"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info-issue tw-info">
+                                <h3 class="title">龍崎之想像生物</h3>
+                                <div class="inner">
+                                    <p>藝術家辛綺結合在地材料，設計出利用竹筒特性的投光走廊。這段前往展場的路上，是與當地小朋友合作繪畫出他們所想像的龍崎生物，並由團隊製作投影片，結合竹燈籠的光，使燈籠下面產生各種不同動植物的光影呈現。帶來栩栩如生的映射，表現「滿滿生態」的象徵。</p>
+                                </div>
+                            </div>
+                            <div class="info-issue eng-info">
+                                <h3 class="title">Origin</h3>
+                                <div class="inner">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content" id="p4">
+                            <div class="project-view">
+                                <div class="left-block"><img src="images/fake.jpg" alt=""></div>
+                                <div class="right-block">
+                                    <div class="ani-pic"><img src="images/fake.jpg" alt=""></div>
+                                    <div class="author-list">
+                                        <div class="author-item">
+                                            <p class="name">高德亮</p>
+                                            <div class="author-pic a10"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info-issue tw-info">
+                                <h3 class="title">尚未確認</h3>
+                                <div class="inner">
+                                    <p>尚未確認</p>
+                                </div>
+                            </div>
+                            <div class="info-issue eng-info">
+                                <h3 class="title">Origin</h3>
+                                <div class="inner">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content gray" id="p5">
+                            <div class="project-view">
+                                <div class="left-block"><img src="images/fake.jpg" alt=""></div>
+                                <div class="right-block">
+                                    <div class="ani-pic"><img src="images/fake.jpg" alt=""></div>
+                                    <div class="author-list">
+                                        <div class="author-item">
+                                            <p class="name">大橋頭藝術<br>工作室</p>
+                                            <div class="author-pic a11"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info-issue tw-info">
+                                <h3 class="title">習作</h3>
+                                <div class="inner">
+                                    <p>「大橋頭藝術工作室」是周學涵與姜名駿兩位藝術家為核心的藝術創作團體。以「結構」作為裝置藝術的核心。不單純是造型面向的「結構」，也包含環境、城市、人與社群之間的「關係」，重視人、時間、空間共創的美好關係，追尋適合的媒材、聆聽在地故事，做出與地方具有連結性的創作。</p>
+                                </div>
+                            </div>
+                            <div class="info-issue eng-info">
+                                <h3 class="title">Origin</h3>
+                                <div class="inner">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content" id="p6">
+                            <div class="project-view">
+                                <div class="left-block"><img src="images/fake.jpg" alt=""></div>
+                                <div class="right-block">
+                                    <div class="ani-pic"><img src="images/fake.jpg" alt=""></div>
+                                    <div class="author-list">
+                                        <div class="author-item">
+                                            <p class="name">楊芳宜</p>
+                                            <div class="author-pic a12"></div>
+                                        </div>
+                                        <div class="author-item">
+                                            <p class="name">崎頂里<br>民眾</p>
+                                            <div class="author-pic a13"></div>
+                                        </div>
+                                        <div class="author-item">
+                                            <p class="name">牛埔里<br>民眾</p>
+                                            <div class="author-pic a14"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info-issue tw-info">
+                                <h3 class="title">團結織網</h3>
+                                <div class="inner">
+                                    <p>藝術家楊芳宜重視環保議題，在生活中誕生了以塑膠袋回收做為作品素材的想法。金姬蛛是虎形山特有的生物，其護卵的本能為人稱道。本作品由回收資源編織而呈蜘蛛網狀，加上卵形象徵；帶領當地居民製作花形、蜘蛛卵等象徵著社群意識。巨大的織網懸掛在樹林之間，予觀者帶來震撼。蜘蛛網意味著團結也意味著光蟲和眾生物已然融合，觀眾已和當地文化融合，共造再生。</p>
+                                </div>
+                            </div>
+                            <div class="info-issue eng-info">
+                                <h3 class="title">Origin</h3>
+                                <div class="inner">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content gray" id="p7">
+                            <div class="project-view">
+                                <div class="left-block"><img src="images/fake.jpg" alt=""></div>
+                                <div class="right-block">
+                                    <div class="ani-pic"><img src="images/fake.jpg" alt=""></div>
+                                    <div class="author-list">
+                                        <div class="author-item">
+                                            <p class="name">蕭聖健</p>
+                                            <div class="author-pic a15"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info-issue tw-info"></div>
+                            <div class="info-issue tw-info">
+                                <h3 class="title">月夜</h3>
+                                <div class="inner">
+                                    <p>藝術家蕭聖健的機械式鳥群是榮獲台北獎之創作。以復古機械方式模擬抽象的鳥巢形、發出鳥鳴。作品的結構配合精細的月光投射出幻影，籠罩著整個虎形山的泡茶休息區域，長坐於此休息、欣賞，可以體悟人類心中對於抽象概念的無限可能性，更拓展視野觀點的靈活性與生命之禪意。</p>
+                                </div>
+                            </div>
+                            <div class="info-issue eng-info">
+                                <h3 class="title">Origin</h3>
+                                <div class="inner">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content" id="p8">
+                            <div class="project-view">
+                                <div class="left-block"><img src="images/fake.jpg" alt=""></div>
+                                <div class="right-block">
+                                    <div class="ani-pic"><img src="images/fake.jpg" alt=""></div>
+                                    <div class="author-list">
+                                        <div class="author-item">
+                                            <p class="name">辛綺</p>
+                                            <div class="author-pic a1"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info-issue tw-info">
+                                <h3 class="title">寧靜‧秘境</h3>
+                                <div class="inner">
+                                    <p>秘境作品的本質是一片紫霧螢光；光照在身上，會讓大家身著的白色衣物或配件發出螢光，在此，觀者真正的「參與」進來整個故事。光蟲由引導介紹一個故事，變成與人同行，所有通過秘境的人都真正的進入到光蟲的奇幻世界之中。</p>
+                                </div>
+                            </div>
+                            <div class="info-issue eng-info">
+                                <h3 class="title">Origin</h3>
+                                <div class="inner">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content gray" id="p9">
+                            <div class="project-view">
+                                <div class="left-block"><img src="images/fake.jpg" alt=""></div>
+                                <div class="right-block">
+                                    <div class="ani-pic"><img src="images/fake.jpg" alt=""></div>
+                                    <div class="author-list">
+                                        <div class="author-item">
+                                            <p class="name">廖昭豪</p>
+                                            <div class="author-pic a16"></div>
+                                        </div>
+                                        <div class="author-item">
+                                            <p class="name">辛綺</p>
+                                            <div class="author-pic a1"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info-issue tw-info">
+                                <h3 class="title">烏雲來了</h3>
+                                <div class="inner">
+                                    <p>藝術家廖昭豪利用紙漿製作日常生活常見的紐澤西式護欄，藉由呈現紙漿的材質特性，點出含混泥土成分的工程所需物，不利回收卻佔據自然環境而衍生的議題。藝術家辛綺的光蟲則是以回收物聚集光源所但生的生命創作。 “烏雲來了”是故事的轉折點，是一件量體巨大的敘事藝術作品，布置在兒童遊戲區，地貌完整的呈現出兩位藝術家：廖昭豪與辛綺作品之間的衝突、聯結、張力與拉力。</p>
+                                </div>
+                            </div>
+                            <div class="info-issue eng-info">
+                                <h3 class="title">Origin</h3>
+                                <div class="inner">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content gray" id="p10">
+                            <div class="project-view">
+                                <div class="left-block"><img src="images/fake.jpg" alt=""></div>
+                                <div class="right-block">
+                                    <div class="ani-pic"><img src="images/fake.jpg" alt=""></div>
+                                    <div class="author-list">
+                                        <div class="author-item">
+                                            <p class="name">辛綺</p>
+                                            <div class="author-pic a1"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info-issue tw-info">
+                                <h3 class="title">共生</h3>
+                                <div class="inner">
+                                    <p>整個故事的終章，以生命價值觀的勝利為尾聲；這是一個慶祝的場景。光蟲、和夥伴們以三個同心圓為繞，正中央以裝置象徵營火。一個具有團結、慶祝、共榮共生的「地方創生」概念作品。一片充滿生機的草地，這片草地乾淨自然，本身就突出滿滿的生命力；自開頭的吊橋處，可隱約看到此處，是一個呼應的過程。光蟲與在地生物共榮，也是整個故事的歡樂大結局。</p>
+                                </div>
+                            </div>
+                            <div class="info-issue eng-info">
+                                <h3 class="title">Origin</h3>
+                                <div class="inner">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
                 <section class="chapter chapter3-1">
                     <div class="scoll-check" id="chapter3-1">
-                        <div class="fake-block">
-                            <p>空山活動</p>
-                            <p>活動時程表</p>
+                        <div class="content">
+                            <div class="img-issue">
+                                <div class="green-block">
+                                    <div class="icon c1"> <img src="images/cs1.png" alt="空山祭 comimg soon"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
                 <section class="chapter chapter3-2">
                     <div class="scoll-check" id="chapter3-2">
-                        <div class="fake-block">
-                            <p>空山活動</p>
-                            <p>活動介紹 </p>
+                        <div class="content gray">
+                            <div class="img-issue">
+                                <div class="green-block">
+                                    <div class="icon c2"><img src="images/cs2.png" alt="空山祭 comimg soon"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
                 <section class="chapter chapter3-3">
                     <div class="scoll-check" id="chapter3-3">
-                        <div class="fake-block">
-                            <p>空山活動</p>
-                            <p>工作坊介紹</p>
+                        <div class="content">
+                            <div class="img-issue"><img src="images/fake.jpg" alt=""></div>
+                            <div class="img-issue"><img src="images/fake.jpg" alt=""></div>
                         </div>
                     </div>
                 </section>
                 <section class="chapter chapter4-1">
                     <div class="scoll-check" id="chapter4-1">
-                        <div class="fake-block">
-                            <p>參觀／交通</p>
-                            <p>展期</p>
+                        <div class="content">
+                            <div class="img-issue"><img src="images/date-issue.png" alt="空山祭 展期"></div>
                         </div>
                     </div>
                 </section>
                 <section class="chapter chapter4-2">
                     <div class="scoll-check" id="chapter4-2">
-                        <div class="fake-block">
-                            <p>參觀／交通</p>
-                            <p>地點</p>
+                        <div class="content">
+                            <div class="map-issue">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14694.481980803515!2d120.3601126!3d22.9641996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6964e4c90577ab9f!2z6JmO5b2i5bGx5YWs5ZyS!5e0!3m2!1szh-TW!2stw!4v1573370575038!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                            </div>
+                            <hr>
                         </div>
                     </div>
                 </section>
                 <section class="chapter chapter4-3">
                     <div class="scoll-check" id="chapter4-3">
-                        <div class="fake-block">
-                            <p>參觀／交通</p>
-                            <p>交通資訊</p>
+                        <div class="content">
+                            <div class="img-issue"><img src="images/fake.jpg" alt=""></div>
                         </div>
                     </div>
                 </section>
                 <section class="chapter chapter5-1">
                     <div class="scoll-check" id="chapter5-1">
-                        <div class="fake-block">
-                            <p>南關線觀光</p>
+                        <div class="content">
+                            <div class="img-issue"><img src="images/fake.jpg" alt=""></div>
+                            <div class="info-issue tw-info">
+                                <h3 class="title">南關線</h3>
+                                <div class="inner">
+                                    <p>南關線是以台南龍崎區為啟程地，經由台86快速公路串聯台南關廟區、歸仁區、仁德區、南區的帶狀路線，從山區到濱海沿線觀光資源及地形景觀豐富，非常值得前來體驗探索。</p>
+                                </div>
+                            </div>
+                            <div class="info-issue eng-info">
+                                <h3 class="title">Origin</h3>
+                                <div class="inner">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="threeadd-issue">
+                                <div class="threeadd-item"></div>
+                                <div class="threeadd-item"></div>
+                                <div class="threeadd-item"></div>
+                            </div>
+                            <div class="notice-issue">
+                                <div class="inner">
+                                    <p>關廟有三寶：鳳梨、綠竹筍、關廟麵；關廟麵成為人氣食品，用自然陽光曝晒製成的麵條，久煮不會糊掉、香滑順口。無論大街小巷都可經常性地看到曬麵景觀，畫面溫暖動人。</p>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo ut corrupti, quod sint provident sapiente doloremque voluptatem officia ex eligendi iusto voluptate nostrum aliquam delectus cupiditate quibusdam porro, optio nulla!</p>
+                                </div>
+                            </div>
+                            <div class="notice-issue">
+                                <div class="inner">
+                                    <p>新光里經過完善社區營造，聚落老街和民宅上，透過插畫家們的各類繪圖，一座座繽紛的牆面，讓人眼睛為之一亮，為老農村帶來活潑的新氣氛。歸仁位在仁德和關廟的中間，舊名叫「紅瓦厝」，因為這裡以前的房屋屋頂大多是使用紅瓦蓋成，如今仍有多處保留這樣的古意風貌。</p>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo ut corrupti, quod sint provident sapiente doloremque voluptatem officia ex eligendi iusto voluptate nostrum aliquam delectus cupiditate quibusdam porro, optio nulla!</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -263,8 +927,8 @@
     <script type="text/javascript" src="js/vendor.js"></script>
     <script type="text/javascript" src="js/lib.js"></script>
     <script type="text/javascript" src="js/components/video.js"></script>
-    <script type="text/javascript" id="appjs" src="js/app.js?v=1572790040457" data-mode="false" data-site=""></script>
-    <script src="js/index.js?v=1572790040457"></script>
+    <script type="text/javascript" id="appjs" src="js/app.js?v=1573394832796" data-mode="false" data-site=""></script>
+    <script src="js/index.js?v=1573394832796"></script>
     <script type="text/javascript"></script>
 </body>
 
