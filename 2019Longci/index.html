@@ -31,6 +31,7 @@
         <div id="loading-part"></div>
         <div class="l-main">
             <div class="index" id="index">
+                <div class="totop" id="totop" @click="scrollTo('.index')"><img src="images/totop.png" alt="龍崎光節 totop"></div>
                 <section class="kv-area">
                     <div class="kv scoll-check" id="kv">
                         <div class="scrolldown" @click="scrollTo('#nav-block')"><img src="images/scoll-down.png" alt=""></div>
@@ -53,7 +54,7 @@
                         <nav class="nav" itemscope itemtype="http://schema.org/SiteNavigationElement">
                             <div class="l-container">
                                 <div class="nav-bd">
-                                    <h1 class="nav-logo"><a href="index.html" alt="LOGO" title="LOGO"><img src="images/logo.png" alt=""></a></h1>
+                                    <h1 class="nav-logo"><a @click="scrollTo('.index')" alt="LOGO" title="LOGO"><img src="images/logo.png" alt=""></a></h1>
                                     <div class="nav-btn">
                                         <div class="one"></div>
                                         <div class="two"></div>
@@ -61,48 +62,58 @@
                                     </div>
                                     <div class="nav-menu" role="navigation">
                                         <ul class="clearfix">
-                                            <li class="nav-item"><a alt="龍崎光節／空山祭" title="龍崎光節／空山祭"> <span>龍崎光節／空山祭</span></a>
+                                            <li class="nav-item"><a alt="龍崎光節／空山祭" title="龍崎光節／空山祭">
+                                                    <div class="u-title"> <img src="images/u1.png" alt="龍崎光節／空山祭"></div>
+                                                </a>
                                                 <div class="drop-block">
                                                     <ul>
-                                                        <li @click="menuClick('#chapter1-1')"> <a> <span class="tw">展覽簡介 </span><span class="eng">Exhibition Introduction </span></a></li>
-                                                        <li @click="menuClick('#chapter1-2')"> <a> <span class="tw">展覽概念 </span><span class="eng">Exhibition Concept </span></a></li>
-                                                        <li @click="menuClick('#chapter1-3')"> <a> <span class="tw">龍崎介紹 </span><span class="eng">Longci Introduction</span></a></li>
+                                                        <li @click="menuClick('#chapter1-1')"> <a> <span class="tw"><img src="images/hd1.png" alt="展覽簡介"></span><span class="eng"><img src="images/hd1-s.png" alt="Exhibition Introduction"></span></a></li>
+                                                        <li @click="menuClick('#chapter1-2')"> <a> <span class="tw"><img src="images/hd2.png" alt="展覽概念"></span><span class="eng"><img src="images/hd2-s.png" alt="xhibition Concept"></span></a></li>
+                                                        <li @click="menuClick('#chapter1-3')"> <a> <span class="tw"><img src="images/hd3.png" alt="龍崎介紹"></span><span class="eng"><img src="images/hd3-s.png" alt="Longci Introduction"></span></a></li>
                                                     </ul>
                                                 </div>
                                             </li>
-                                            <li class="nav-item"><a alt="空山作品" title="空山作品"><span>空山作品</span></a>
+                                            <li class="nav-item"><a alt="空山作品" title="空山作品">
+                                                    <div class="u-title"> <img src="images/u2.png" alt="空山作品"></div>
+                                                </a>
                                                 <div class="drop-block">
                                                     <ul>
-                                                        <li @click="menuClick('#chapter2-1')"> <a> <span class="tw">動畫：空空的山 </span><span class="eng">Animation: Story About Void Mountain</span></a></li>
-                                                        <li @click="menuClick('#chapter2-2')"> <a> <span class="tw">藝術地圖／集章 </span><span class="eng">Art Map／Stamp Collection</span></a></li>
-                                                        <li @click="menuClick('#chapter2-3')"> <a> <span class="tw">作品概述 </span><span class="eng">Concept Of Art Works</span></a></li>
+                                                        <li @click="menuClick('#chapter2-1')"> <a> <span class="tw"><img src="images/hd4.png" alt="動畫：空空的山"></span><span class="eng"><img src="images/hd4-s.png" alt="Animation: Story About Void Mountain"></span></a></li>
+                                                        <li @click="menuClick('#chapter2-2')"> <a> <span class="tw"><img src="images/hd5.png" alt="藝術地圖／集章"></span><span class="eng"><img src="images/hd5-s.png" alt="Art Map／Stamp Collection"></span></a></li>
+                                                        <li @click="menuClick('#chapter2-3')"> <a> <span class="tw"><img src="images/hd6.png" alt="作品概述"></span><span class="eng"><img src="images/hd6-s.png" alt="Concept Of Art Works"></span></a></li>
                                                     </ul>
                                                 </div>
                                             </li>
-                                            <li class="nav-item"><a alt="空山活動" title="空山活動"><span>空山活動</span></a>
+                                            <li class="nav-item"><a alt="空山活動" title="空山活動">
+                                                    <div class="u-title"> <img src="images/u3.png" alt="空山活動"></div>
+                                                </a>
                                                 <div class="drop-block">
                                                     <ul>
-                                                        <li @click="menuClick('#chapter3-1')"> <a> <span class="tw">活動時程表 </span><span class="eng">Schedule</span></a></li>
-                                                        <li @click="menuClick('#chapter3-2')"> <a> <span class="tw">活動介紹 </span><span class="eng">Event Introduction</span></a></li>
-                                                        <li @click="menuClick('#chapter3-3')"> <a> <span class="tw">工作坊介紹 </span><span class="eng">Workshop Introduction</span></a></li>
+                                                        <li @click="menuClick('#chapter3-1')"> <a> <span class="tw"><img src="images/hd7.png" alt="活動時程表"></span><span class="eng"><img src="images/hd7-s.png" alt="Schedule"></span></a></li>
+                                                        <li @click="menuClick('#chapter3-2')"> <a> <span class="tw"><img src="images/hd8.png" alt="活動介紹"></span><span class="eng"><img src="images/hd8-s.png" alt="Event Introduction"></span></a></li>
+                                                        <li @click="menuClick('#chapter3-3')"> <a> <span class="tw"><img src="images/hd9.png" alt="工作坊介紹"></span><span class="eng"><img src="images/hd9-s.png" alt="Workshop Introduction"></span></a></li>
                                                     </ul>
                                                 </div>
                                             </li>
-                                            <li class="nav-item"><a alt="參觀／交通" title="參觀╱交通"><span>參觀／交通</span></a>
+                                            <li class="nav-item"><a alt="參觀／交通" title="參觀╱交通">
+                                                    <div class="u-title"> <img src="images/u4.png" alt="參觀／交通"></div>
+                                                </a>
                                                 <div class="drop-block">
                                                     <ul>
-                                                        <li @click="menuClick('#chapter4-1')"> <a> <span class="tw">展期 </span><span class="eng">Exhibition Time</span></a></li>
-                                                        <li @click="menuClick('#chapter4-2')"> <a> <span class="tw">地點 </span><span class="eng">Exhibition Location </span></a></li>
-                                                        <li @click="menuClick('#chapter4-3')"> <a> <span class="tw">交通資訊 </span><span class="eng">Traffic Information</span></a></li>
+                                                        <li @click="menuClick('#chapter4-1')"> <a> <span class="tw"><img src="images/hd10.png" alt="展期"></span><span class="eng"><img src="images/hd10-s.png" alt="Exhibition Time"></span></a></li>
+                                                        <li @click="menuClick('#chapter4-2')"> <a> <span class="tw"><img src="images/hd11.png" alt="地點"></span><span class="eng"><img src="images/hd11-s.png" alt="Exhibition Location"></span></a></li>
+                                                        <li @click="menuClick('#chapter4-3')"> <a> <span class="tw"><img src="images/hd12.png" alt="交通資訊"></span><span class="eng"><img src="images/hd12-s.png" alt="Traffic Information"></span></a></li>
                                                     </ul>
                                                 </div>
                                             </li>
-                                            <li class="nav-item"><a @click="menuClick('#chapter5-1')" alt="南關線觀光" itemprop="url" title="南關線觀光"><span>南關線觀光</span></a>
+                                            <li class="nav-item" @click="menuClick('#chapter5-1')"><a @click="menuClick('#chapter5-1')" alt="南關線觀光" itemprop="url" title="南關線觀光">
+                                                    <div class="u-title"> <img src="images/u5.png" alt="南關線觀光"></div>
+                                                </a>
                                                 <div class="drop-block">
-                                                    <div class="star"></div>
+                                                    <div class="star" @click="menuClick('#chapter5-1')"></div>
                                                 </div>
                                             </li>
-                                            <li class="nav-item soical"><a class="yt" href="#"> </a><a class="fb" href="#"> </a><a class="ig" href="#"> </a></li>
+                                            <li class="nav-item soical"><a class="yt" href="https://www.youtube.com/channel/UCUggTwoyFG1TdKmF280QIxg?fbclid=IwAR1YUYGs_zNakQp1L73A2Bzfgi-Y8KUxXGD9bov4LexPZ5EY4U5fhui_Wus" target="_blank"> </a><a class="fb" href="https://www.facebook.com/longcilightfestival/?modal=admin_todo_tour" target="_blank"> </a><a class="ig" href="https://www.instagram.com/longci_light_festival/?hl=zh-tw&amp;fbclid=IwAR2oQrKSo7OR1vD8FyiWgwK33T8CgdDFLIc1Vb9XFwiWHTii5RaGc8OEuyg" target="_blank"> </a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -115,15 +126,19 @@
                         </div>
                         <div class="content">
                             <div class="video-block">
-                                <div class="cover" v-if="!player1.state" @click="play('player1')"><img src="images/video1.png" alt=""></div>
+                                <div class="cover" v-if="!player1.state" @click="play('player1')"><img src="images/video-show.png" alt="龍崎光節＿空山祭 前導片"></div>
                                 <div id="player1"></div>
                             </div>
                         </div>
                     </div>
                 </section>
                 <section class="chapter chapter1-1">
-                    <div class="scoll-check" id="chapter1-1">
-                        <div class="content">
+                    <div id="chapter1-1">
+                        <div class="fixed-title" id="fixed-title">
+                            <div class="main-title"><img :src="mainTitle" alt=""></div>
+                            <div class="sub-title"><img :src="subTitle" alt=""></div>
+                        </div>
+                        <div class="content scoll-check scoll-check-sub">
                             <div class="img-issue"><img src="images/fake.jpg" alt="空山祭-緣起"></div>
                             <div class="info-issue tw-info">
                                 <h3 class="title">緣起</h3>
@@ -148,7 +163,7 @@
                             <div class="img-issue"><img src="images/fake.jpg" alt="空山祭-藝術團隊介紹：艸非火"></div>
                             <div class="info-issue tw-info">
                                 <h3 class="title">藝術團隊介紹：艸非火</h3>
-                                <h4 class="subtitle">策展人｜陳雋中／藝術統籌｜辛綺／專案助理｜胡敦雅／執行助理｜陳瑋勛</h4>
+                                <h4 class="subtitle">策展人｜<span>陳雋中</span>；藝術統籌｜<span>辛綺</span>；專案助理｜<span>胡敦雅</span>；執行助理｜<span>陳瑋勛</span></h4>
                                 <div class="inner">
                                     <div class="quote">
                                         <p>「朝真暮偽何人辨，古往今來底事無。但愛臧生能詐聖，可知寧子解佯愚。草螢有耀終非火，荷露雖團豈是珠。不取燔柴兼照乘，可憐光彩亦何殊。」 </p>
@@ -171,8 +186,8 @@
                     </div>
                 </section>
                 <section class="chapter chapter1-2">
-                    <div class="scoll-check" id="chapter1-2">
-                        <div class="content">
+                    <div id="chapter1-2">
+                        <div class="content scoll-check-sub">
                             <div class="img-issue"><img src="images/fake.jpg" alt="龍崎光節-空山祭"></div>
                             <div class="info-issue tw-info">
                                 <h3 class="title">關於策展：龍崎光節-空山祭</h3>
@@ -232,8 +247,8 @@
                     </div>
                 </section>
                 <section class="chapter chapter1-3">
-                    <div class="scoll-check" id="chapter1-3">
-                        <div class="content">
+                    <div id="chapter1-3">
+                        <div class="content scoll-check-sub">
                             <div class="item">
                                 <div class="img-issue"><img src="images/fake.jpg" alt="空山祭-龍崎資訊"></div>
                                 <div class="info-issue tw-info">
@@ -300,8 +315,8 @@
                     </div>
                 </section>
                 <section class="chapter chapter2-1">
-                    <div class="scoll-check" id="chapter2-1">
-                        <div class="content">
+                    <div id="chapter2-1">
+                        <div class="content scoll-check scoll-check-sub">
                             <div class="item">
                                 <div class="img-issue gallery-block">
                                     <div class="video-block">
@@ -319,7 +334,7 @@
                                 </div>
                                 <div class="info-issue tw-info">
                                     <h3 class="title">空空的山</h3>
-                                    <h4 class="subtitle">劇本｜辛綺┼陳雋中／動畫設計｜朱為鄰／配樂設計｜林信樺┼蔡痞諺</h4>
+                                    <h4 class="subtitle">劇本｜<span>辛綺</span>┼<span>陳雋中</span>／動畫設計｜<span>朱為鄰</span>／配樂設計｜<span>林信樺</span>┼<span>蔡痞諺</span></h4>
                                     <div class="inner">
                                         <p>動畫故事「空空的山」是本次龍崎光節：空山祭的主題故事。開頭，我們「看」見一隻發光的光蟲自都會出發，向外飛去。飛往都市之外的鄉野之處，牠「看見」一片「空空蕩蕩」的山脈。身為觀眾的我們也隨著光蟲的視角，往山中漸漸行去，往我們平時所不熟悉，感覺陌生又荒寂的「空山」而去…隨著向山的旅程之中，我們與光蟲都發現，山並非真空；在旅程上有著許多夥伴，有“鳥獸魚蟲”(龍崎當地的生物)，有各種大自然的風光景緻、好山好水，也有百年的人文歷史，空山不空。</p>
                                         <p>但危機也潛伏在前方等著我們去克服...</p>
@@ -443,16 +458,24 @@
                     </div>
                 </section>
                 <section class="chapter chapter2-2">
-                    <div class="scoll-check" id="chapter2-2">
-                        <div class="fake-block">
-                            <p>空山作品</p>
-                            <p>藝術地圖／集章</p>
+                    <div id="chapter2-2">
+                        <div class="content scoll-check-sub">
+                            <div class="img-issue">
+                                <div class="green-block">
+                                    <div class="icon c1"> <img src="images/cs1.png" alt="空山祭 comimg soon"></div>
+                                </div>
+                            </div>
+                            <div class="img-issue">
+                                <div class="green-block">
+                                    <div class="icon c2"><img src="images/cs2.png" alt="空山祭 comimg soon"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
                 <section class="chapter chapter2-3">
-                    <div class="scoll-check" id="chapter2-3">
-                        <div class="content">
+                    <div id="chapter2-3">
+                        <div class="content scoll-check-sub">
                             <div class="img-issue"><img src="images/fake.jpg" alt=""></div>
                             <div class="project-list">
                                 <div class="project p1" @click="scrollTo('#p1')"></div>
@@ -510,14 +533,17 @@
                         <div class="content" id="p2">
                             <div class="project-view">
                                 <div class="left-block"><img src="images/fake.jpg" alt=""></div>
-                                <div class="right-block">
-                                    <div class="ani-pic"><img src="images/fake.jpg" alt=""></div>
-                                    <div class="author-list slide">
-                                        <div class="author-item no-icon">
-                                            <p class="name">張永旺</p>
-                                            <div class="author-pic a2"></div>
-                                        </div>
+                                <div class="right-block addtitle">
+                                    <div class="at">竹苗</div>
+                                    <div class="author-list issue">
                                         <div class="author-item">
+                                            <p class="name">張永旺</p>
+                                            <div class="author-pic"></div>
+                                        </div>
+                                    </div>
+                                    <div class="at at2">空空的山</div>
+                                    <div class="author-list slide at2">
+                                        <div class="author-item no-icon">
                                             <p class="name">辛綺</p>
                                             <div class="author-pic a1"></div>
                                         </div>
@@ -541,7 +567,7 @@
                                 </div>
                             </div>
                             <div class="info-issue tw-info">
-                                <h3 class="title">竹苗/空空的山</h3>
+                                <h3 class="title">竹苗／空空的山</h3>
                                 <div class="inner">
                                     <p>入口意象竹編、服務台、和影像欣賞區三部曲，是步步深入「空山祭」的儀式。龍崎產竹，為竹之故鄉；竹藝師張永旺老師在當地傳承竹編技藝，反映當地濃厚的人文氣息。在入口處，竹藝師編織出竹苗拱門，展現在地竹之美，又帶來「進入」的意念，種下一顆竹苗，承襲一世風霜，再造一代新象。</p>
                                 </div>
@@ -562,10 +588,6 @@
                                         <div class="author-item no-icon">
                                             <p class="name">辛綺</p>
                                             <div class="author-pic a1"></div>
-                                        </div>
-                                        <div class="author-item">
-                                            <p class="name">瓦豆</p>
-                                            <div class="author-pic a3"></div>
                                         </div>
                                         <div class="author-item">
                                             <p class="name">龍崎國小<br>及<br>龍船分校</p>
@@ -789,8 +811,8 @@
                     </div>
                 </section>
                 <section class="chapter chapter3-1">
-                    <div class="scoll-check" id="chapter3-1">
-                        <div class="content">
+                    <div id="chapter3-1">
+                        <div class="content scoll-check scoll-check-sub">
                             <div class="img-issue">
                                 <div class="green-block">
                                     <div class="icon c1"> <img src="images/cs1.png" alt="空山祭 comimg soon"></div>
@@ -800,8 +822,8 @@
                     </div>
                 </section>
                 <section class="chapter chapter3-2">
-                    <div class="scoll-check" id="chapter3-2">
-                        <div class="content gray">
+                    <div id="chapter3-2">
+                        <div class="content gray scoll-check-sub">
                             <div class="img-issue">
                                 <div class="green-block">
                                     <div class="icon c2"><img src="images/cs2.png" alt="空山祭 comimg soon"></div>
@@ -811,23 +833,31 @@
                     </div>
                 </section>
                 <section class="chapter chapter3-3">
-                    <div class="scoll-check" id="chapter3-3">
-                        <div class="content">
-                            <div class="img-issue"><img src="images/fake.jpg" alt=""></div>
-                            <div class="img-issue"><img src="images/fake.jpg" alt=""></div>
+                    <div id="chapter3-3">
+                        <div class="content scoll-check-sub">
+                            <div class="img-issue">
+                                <div class="green-block">
+                                    <div class="icon c1"><img src="images/cs1.png" alt="空山祭 comimg soon"></div>
+                                </div>
+                            </div>
+                            <div class="img-issue">
+                                <div class="green-block">
+                                    <div class="icon c2"><img src="images/cs2.png" alt="空山祭 comimg soon"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
                 <section class="chapter chapter4-1">
-                    <div class="scoll-check" id="chapter4-1">
-                        <div class="content">
+                    <div id="chapter4-1">
+                        <div class="content scoll-check scoll-check-sub">
                             <div class="img-issue"><img src="images/date-issue.png" alt="空山祭 展期"></div>
                         </div>
                     </div>
                 </section>
                 <section class="chapter chapter4-2">
-                    <div class="scoll-check" id="chapter4-2">
-                        <div class="content">
+                    <div id="chapter4-2">
+                        <div class="content scoll-check-sub">
                             <div class="map-issue">
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14694.481980803515!2d120.3601126!3d22.9641996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6964e4c90577ab9f!2z6JmO5b2i5bGx5YWs5ZyS!5e0!3m2!1szh-TW!2stw!4v1573370575038!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                             </div>
@@ -836,15 +866,19 @@
                     </div>
                 </section>
                 <section class="chapter chapter4-3">
-                    <div class="scoll-check" id="chapter4-3">
-                        <div class="content">
-                            <div class="img-issue"><img src="images/fake.jpg" alt=""></div>
+                    <div id="chapter4-3">
+                        <div class="content scoll-check-sub">
+                            <div class="img-issue">
+                                <div class="green-block">
+                                    <div class="icon c1"><img src="images/cs1.png" alt="空山祭 comimg soon"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
                 <section class="chapter chapter5-1">
-                    <div class="scoll-check" id="chapter5-1">
-                        <div class="content">
+                    <div id="chapter5-1">
+                        <div class="content scoll-check scoll-check-sub">
                             <div class="img-issue"><img src="images/fake.jpg" alt=""></div>
                             <div class="info-issue tw-info">
                                 <h3 class="title">南關線</h3>
@@ -882,9 +916,27 @@
             </div>
             <!--render main view-->
         </div>
-        <div class="l-footer footer">
+        <div class="l-footer footer" id="footer">
             <div class="l-container">
-                <p>Copyright © 2009-2019 The Clorox Company. All rights reserved.</p>
+                <ul>
+                    <li class="f1">
+                        <p>展覽期間&nbsp;｜&nbsp;2019.12.21――2020.2.2&nbsp; </p>
+                        <p> <span class="pc">｜ </span>&nbsp;平日<span class="mb">｜ </span>&nbsp;17:30――21:00&nbsp;</p>
+                        <p> <span class="pc">｜ </span>&nbsp;假日 <span class="mb">｜</span>&nbsp;17:30――22:00</p>
+                    </li>
+                    <li class="f2">
+                        <p>展出地點&nbsp;｜&nbsp;龍崎虎形山公園&nbsp;｜&nbsp;台南市龍崎區崎頂里</p>
+                    </li>
+                    <li class="f3">
+                        <p>主辦單位&nbsp;｜&nbsp;<img class="pc" src="images/f1.png" alt="台南市政府文化局"><span class="mb">台南市政府文化局</span></p>
+                        <p>協辦單位 &nbsp;｜&nbsp;龍崎區公所</p>
+                        <p>執行單位&nbsp;｜&nbsp;艸非火藝術</p>
+                        <p>贊助單位 &nbsp;｜&nbsp; <img class="pc" src="images/f2.png" alt="皇龍建設"><img class="pc" src="images/f3.png" alt="龍崎文衡殿"><span class="mb">皇龍建設、龍崎文衡殿</span></p>
+                    </li>
+                    <li class="f4">
+                        <p>© 2019 Longci Light Festival_void Mountain. All Rights Reserved.</p>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
@@ -927,8 +979,8 @@
     <script type="text/javascript" src="js/vendor.js"></script>
     <script type="text/javascript" src="js/lib.js"></script>
     <script type="text/javascript" src="js/components/video.js"></script>
-    <script type="text/javascript" id="appjs" src="js/app.js?v=1573395215169" data-mode="false" data-site=""></script>
-    <script src="js/index.js?v=1573395215169"></script>
+    <script type="text/javascript" id="appjs" src="js/app.js?v=1573978176959" data-mode="false" data-site=""></script>
+    <script src="js/index.js?v=1573978176959"></script>
     <script type="text/javascript"></script>
 </body>
 
