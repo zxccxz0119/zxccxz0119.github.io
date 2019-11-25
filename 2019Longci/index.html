@@ -31,22 +31,25 @@
         <div id="loading-part"></div>
         <div class="l-main">
             <div class="index" id="index">
-                <div class="totop" id="totop" @click="scrollTo('.index')"><img src="images/totop.png" alt="龍崎光節 totop"></div>
+                <div class="totop" id="totop" v-if="!isMb" @click="scrollTo('.index')"><img src="images/totop.png" alt="龍崎光節 totop"></div>
                 <section class="kv-area">
                     <div class="kv scoll-check" id="kv">
-                        <div class="scrolldown" @click="scrollTo('#nav-block')"><img src="images/scoll-down.png" alt=""></div>
-                        <div class="kv-eyes"><img src="images/kv-eyes.png" alt="空山祭-眼睛"></div>
-                        <div class="kv-eyes2"><img src="images/kv-eyes2.png" alt="空山祭-眼睛2"></div>
-                        <div class="kv-draw"></div>
-                        <div class="txt-area">
-                            <div class="kv-txt1"> <img src="images/kv-txt1.png" alt="龍崎光節-空山祭 2019.12.21-2020.2.2"></div>
-                            <div class="kv-txt2"> <img src="images/kv-txt2.png" alt="龍崎光節-空山祭 void mountain"></div>
-                            <div class="kv-txt3"> <img src="images/kv-txt3.png" alt="龍崎光節 Longci light festival"></div>
+                        <div class="scrolldown" @click="scrollTo('#nav-block')"><img :src="`images/scoll-down${navTitle}.png`" alt=""></div>
+                        <div class="pc-part" v-if="!isMb">
+                            <div class="kv-eyes"><img src="images/kv-eyes.png" alt="空山祭-眼睛"></div>
+                            <div class="kv-eyes2"><img src="images/kv-eyes2.png" alt="空山祭-眼睛2"></div>
+                            <div class="kv-draw"></div>
+                            <div class="txt-area">
+                                <div class="kv-txt1"> <img src="images/kv-txt1.png" alt="龍崎光節-空山祭 2019.12.21-2020.2.2"></div>
+                                <div class="kv-txt2"> <img src="images/kv-txt2.png" alt="龍崎光節-空山祭 void mountain"></div>
+                                <div class="kv-txt3"> <img src="images/kv-txt3.png" alt="龍崎光節 Longci light festival"></div>
+                            </div>
+                            <div class="txt-area2">
+                                <div class="kv-date1"><img src="images/kv-date.png" alt="龍崎光節 平日17:30-21:00"></div>
+                                <div class="kv-date2"><img src="images/kv-date2.png" alt="龍崎光節 假日17:30-22:00"></div>
+                            </div>
                         </div>
-                        <div class="txt-area2">
-                            <div class="kv-date1"><img src="images/kv-date.png" alt="龍崎光節 平日17:30-21:00"></div>
-                            <div class="kv-date2"><img src="images/kv-date2.png" alt="龍崎光節 假日17:30-22:00"></div>
-                        </div>
+                        <div class="mb-part" v-if="isMb"> <img src="images/mbkv.jpg" alt=""></div>
                     </div>
                 </section>
                 <section class="nav-area">
@@ -55,59 +58,62 @@
                             <div class="l-container">
                                 <div class="nav-bd">
                                     <h1 class="nav-logo"><a @click="scrollTo('.index')" alt="LOGO" title="LOGO"><img src="images/logo.png" alt=""></a></h1>
+                                    <div class="soical" v-if="isMb"><a class="yt" href="https://www.youtube.com/channel/UCUggTwoyFG1TdKmF280QIxg?fbclid=IwAR1YUYGs_zNakQp1L73A2Bzfgi-Y8KUxXGD9bov4LexPZ5EY4U5fhui_Wus" target="_blank"> <img src="images/icon-yt-h.png" alt=""></a><a class="fb" href="https://www.facebook.com/longcilightfestival/?modal=admin_todo_tour" target="_blank"> <img src="images/icon-fb-h.png" alt=""></a><a class="ig" href="https://www.instagram.com/longci_light_festival/?hl=zh-tw&amp;fbclid=IwAR2oQrKSo7OR1vD8FyiWgwK33T8CgdDFLIc1Vb9XFwiWHTii5RaGc8OEuyg" target="_blank"> <img src="images/icon-ig-h.png" alt=""></a></div>
                                     <div class="nav-btn">
-                                        <div class="one"></div>
-                                        <div class="two"></div>
-                                        <div class="three"></div>
+                                        <div class="btn-block">
+                                            <div class="one"></div>
+                                            <div class="two"></div>
+                                            <div class="three"></div>
+                                        </div>
                                     </div>
                                     <div class="nav-menu" role="navigation">
                                         <ul class="clearfix">
                                             <li class="nav-item"><a alt="龍崎光節／空山祭" title="龍崎光節／空山祭">
-                                                    <div class="u-title"> <img src="images/u1.png" alt="龍崎光節／空山祭"></div>
+                                                    <div class="u-title"> <img :src="`images/u1${navTitle}.png`" alt="龍崎光節／空山祭"></div>
                                                 </a>
                                                 <div class="drop-block">
                                                     <ul>
-                                                        <li @click="menuClick('#chapter1-1')"> <a> <span class="tw"><img src="images/hd1.png" alt="展覽簡介"></span><span class="eng"><img src="images/hd1-s.png" alt="Exhibition Introduction"></span></a></li>
-                                                        <li @click="menuClick('#chapter1-2')"> <a> <span class="tw"><img src="images/hd2.png" alt="展覽概念"></span><span class="eng"><img src="images/hd2-s.png" alt="xhibition Concept"></span></a></li>
-                                                        <li @click="menuClick('#chapter1-3')"> <a> <span class="tw"><img src="images/hd3.png" alt="龍崎介紹"></span><span class="eng"><img src="images/hd3-s.png" alt="Longci Introduction"></span></a></li>
+                                                        <li @click="menuClick('#chapter1-1')"> <a> <span class="tw"><img :src="`images/hd1${navTitle}.png`" alt="展覽簡介"></span><span class="eng"><img src="images/hd1-s.png" alt="Exhibition Introduction"></span></a></li>
+                                                        <li @click="menuClick('#chapter1-2')"> <a> <span class="tw"><img :src="`images/hd2${navTitle}.png`" alt="展覽概念"></span><span class="eng"><img src="images/hd2-s.png" alt="xhibition Concept"></span></a></li>
+                                                        <li @click="menuClick('#chapter1-3')"> <a> <span class="tw"><img :src="`images/hd3${navTitle}.png`" alt="龍崎介紹"></span><span class="eng"><img src="images/hd3-s.png" alt="Longci Introduction"></span></a></li>
                                                     </ul>
                                                 </div>
                                             </li>
                                             <li class="nav-item"><a alt="空山作品" title="空山作品">
-                                                    <div class="u-title"> <img src="images/u2.png" alt="空山作品"></div>
+                                                    <div class="u-title"> <img :src="`images/u2${navTitle}.png`" alt="空山作品"></div>
                                                 </a>
                                                 <div class="drop-block">
                                                     <ul>
-                                                        <li @click="menuClick('#chapter2-1')"> <a> <span class="tw"><img src="images/hd4.png" alt="動畫：空空的山"></span><span class="eng"><img src="images/hd4-s.png" alt="Animation: Story About Void Mountain"></span></a></li>
-                                                        <li @click="menuClick('#chapter2-2')"> <a> <span class="tw"><img src="images/hd5.png" alt="藝術地圖／集章"></span><span class="eng"><img src="images/hd5-s.png" alt="Art Map／Stamp Collection"></span></a></li>
-                                                        <li @click="menuClick('#chapter2-3')"> <a> <span class="tw"><img src="images/hd6.png" alt="作品概述"></span><span class="eng"><img src="images/hd6-s.png" alt="Concept Of Art Works"></span></a></li>
+                                                        <li @click="menuClick('#chapter2-1')"> <a> <span class="tw"><img :src="`images/hd4${navTitle}.png`" alt="動畫：空空的山"></span><span class="eng"><img src="images/hd4-s.png" alt="Animation: Story About Void Mountain"></span></a></li>
+                                                        <li @click="menuClick('#chapter2-2')"> <a> <span class="tw"><img :src="`images/hd5${navTitle}.png`" alt="藝術地圖／集章"></span><span class="eng"><img src="images/hd5-s.png" alt="Art Map／Stamp Collection"></span></a></li>
+                                                        <li @click="menuClick('#chapter2-3')"> <a> <span class="tw"><img :src="`images/hd6${navTitle}.png`" alt="作品概述"></span><span class="eng"><img src="images/hd6-s.png" alt="Concept Of Art Works"></span></a></li>
                                                     </ul>
                                                 </div>
                                             </li>
                                             <li class="nav-item"><a alt="空山活動" title="空山活動">
-                                                    <div class="u-title"> <img src="images/u3.png" alt="空山活動"></div>
+                                                    <div class="u-title"> <img :src="`images/u3${navTitle}.png`" alt="空山活動"></div>
                                                 </a>
                                                 <div class="drop-block">
                                                     <ul>
-                                                        <li @click="menuClick('#chapter3-1')"> <a> <span class="tw"><img src="images/hd7.png" alt="活動時程表"></span><span class="eng"><img src="images/hd7-s.png" alt="Schedule"></span></a></li>
-                                                        <li @click="menuClick('#chapter3-2')"> <a> <span class="tw"><img src="images/hd8.png" alt="活動介紹"></span><span class="eng"><img src="images/hd8-s.png" alt="Event Introduction"></span></a></li>
-                                                        <li @click="menuClick('#chapter3-3')"> <a> <span class="tw"><img src="images/hd9.png" alt="工作坊介紹"></span><span class="eng"><img src="images/hd9-s.png" alt="Workshop Introduction"></span></a></li>
+                                                        <li @click="menuClick('#chapter3-1')"> <a> <span class="tw"><img :src="`images/hd7${navTitle}.png`" alt="活動時程表"></span><span class="eng"><img src="images/hd7-s.png" alt="Schedule"></span></a></li>
+                                                        <li @click="menuClick('#chapter3-2')"> <a> <span class="tw"><img :src="`images/hd8${navTitle}.png`" alt="活動介紹"></span><span class="eng"><img src="images/hd8-s.png" alt="Event Introduction"></span></a></li>
+                                                        <li @click="menuClick('#chapter3-3')"> <a> <span class="tw"><img :src="`images/hd9${navTitle}.png`" alt="工作坊介紹"></span><span class="eng"><img src="images/hd9-s.png" alt="Workshop Introduction"></span></a></li>
                                                     </ul>
                                                 </div>
                                             </li>
                                             <li class="nav-item"><a alt="參觀／交通" title="參觀╱交通">
-                                                    <div class="u-title"> <img src="images/u4.png" alt="參觀／交通"></div>
+                                                    <div class="u-title"> <img :src="`images/u4${navTitle}.png`" alt="參觀／交通"></div>
                                                 </a>
                                                 <div class="drop-block">
                                                     <ul>
-                                                        <li @click="menuClick('#chapter4-1')"> <a> <span class="tw"><img src="images/hd10.png" alt="展期"></span><span class="eng"><img src="images/hd10-s.png" alt="Exhibition Time"></span></a></li>
-                                                        <li @click="menuClick('#chapter4-2')"> <a> <span class="tw"><img src="images/hd11.png" alt="地點"></span><span class="eng"><img src="images/hd11-s.png" alt="Exhibition Location"></span></a></li>
-                                                        <li @click="menuClick('#chapter4-3')"> <a> <span class="tw"><img src="images/hd12.png" alt="交通資訊"></span><span class="eng"><img src="images/hd12-s.png" alt="Traffic Information"></span></a></li>
+                                                        <li @click="menuClick('#chapter4-1')"> <a> <span class="tw"><img :src="`images/hd10${navTitle}.png`" alt="展期"></span><span class="eng"><img src="images/hd10-s.png" alt="Exhibition Time"></span></a></li>
+                                                        <li @click="menuClick('#chapter4-2')"> <a> <span class="tw"><img :src="`images/hd11${navTitle}.png`" alt="地點"></span><span class="eng"><img src="images/hd11-s.png" alt="Exhibition Location"></span></a></li>
+                                                        <li @click="menuClick('#chapter4-3')"> <a> <span class="tw"><img :src="`images/hd12${navTitle}.png`" alt="交通資訊"></span><span class="eng"><img src="images/hd12-s.png" alt="Traffic Information"></span></a></li>
                                                     </ul>
                                                 </div>
                                             </li>
-                                            <li class="nav-item" @click="menuClick('#chapter5-1')"><a @click="menuClick('#chapter5-1')" alt="南關線觀光" itemprop="url" title="南關線觀光">
-                                                    <div class="u-title"> <img src="images/u5.png" alt="南關線觀光"></div>
+                                            <li class="nav-item nanguan" @click="menuClick('#chapter5-1')"><a @click="menuClick('#chapter5-1')" alt="南關線觀光" itemprop="url" title="南關線觀光">
+                                                    <div class="u-title"> <img :src="`images/u5${navTitle}.png`" alt="南關線觀光"></div>
                                                 </a>
                                                 <div class="drop-block">
                                                     <div class="star" @click="menuClick('#chapter5-1')"></div>
@@ -121,7 +127,7 @@
                         </nav>
                     </div>
                     <div class="main-video chapter">
-                        <div class="fixed-area">
+                        <div class="fixed-area" v-if="!isMb">
                             <div class="title"> <img src="images/f-title1.png" alt=""></div>
                         </div>
                         <div class="content">
@@ -134,12 +140,12 @@
                 </section>
                 <section class="chapter chapter1-1">
                     <div id="chapter1-1">
-                        <div class="fixed-title" id="fixed-title">
-                            <div class="main-title"><img :src="mainTitle" alt=""></div>
-                            <div class="sub-title"><img :src="subTitle" alt=""></div>
+                        <div class="fixed-title" id="fixed-title" v-if="!isMb">
+                            <div class="main-title"><img :src="mainTitle" alt="空山祭 title"></div>
+                            <div class="sub-title"><img :src="subTitle" alt="空山祭 sub title"></div>
                         </div>
-                        <div class="content scoll-check scoll-check-sub">
-                            <div class="img-issue"><img src="images/fake.jpg" alt="空山祭-緣起"></div>
+                        <div class="content scoll-check scoll-check-sub"><img class="mb-title" v-if="isMb" src="images/f1-title1-m.png" alt="龍崎光節 展覽簡介">
+                            <div class="img-issue"><img src="images/mk1.jpg" alt="空山祭-緣起"></div>
                             <div class="info-issue tw-info">
                                 <h3 class="title">緣起</h3>
                                 <div class="inner">
@@ -152,18 +158,18 @@
                             <div class="info-issue eng-info">
                                 <h3 class="title">Origin</h3>
                                 <div class="inner">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
+                                    <p>Longci and Hu Xing Shan Park, one of the famous spots here, are known for their rather unique rugged chalk soil landforms. It is said that people relate these landforms to dragons and tigers and thus come up with these names ("Long" means "dragon," "ci" means "rugged," and "Hu Xing" actually means "tiger-shaped" in Chinese). Settlements were formed here since the 19th century, and they bring about precious histories and stories for Longci.</p>
+                                    <p>Astonishing natural scenery, rugged landform, combined with its lessening population, Longci gradually becomes the symbol of "void mountain." It is considered a classic mountainside village—a place we only know little about and not familiar with. But at the same time, there are more and more art-related projects here in the Longci district. The district office and the locals worked together and established the Longci Markets, "The stair of cats," and Longci Bamboo Charcoal, just to name a few.</p>
+                                    <p>"In terms of agriculture value, the lands here are quite worthless. But they are beautiful lands if we change our point of view."</p>
+                                    <p>The twists and turns of Longci's history imply the common issue we human beings have to face: the choice of value. Such history and choices are the origins of "Longci Light Festival."</p>
                                 </div>
                             </div>
                         </div>
                         <div class="content gray">
-                            <div class="img-issue"><img src="images/fake.jpg" alt="空山祭-藝術團隊介紹：艸非火"></div>
+                            <div class="img-issue"><img src="images/mk2.jpg" alt="空山祭-藝術團隊介紹：艸非火"></div>
                             <div class="info-issue tw-info">
                                 <h3 class="title">藝術團隊介紹：艸非火</h3>
-                                <h4 class="subtitle">策展人｜<span>陳雋中</span>；藝術統籌｜<span>辛綺</span>；專案助理｜<span>胡敦雅</span>；執行助理｜<span>陳瑋勛</span></h4>
+                                <h4 class="subtitle">策展人｜<span>陳雋中</span>；藝術統籌｜<span>辛綺</span>；專案助理｜<span>胡敦雅</span>；<br v-if='isMb'>執行助理｜<span>陳瑋勛</span></h4>
                                 <div class="inner">
                                     <div class="quote">
                                         <p>「朝真暮偽何人辨，古往今來底事無。但愛臧生能詐聖，可知寧子解佯愚。草螢有耀終非火，荷露雖團豈是珠。不取燔柴兼照乘，可憐光彩亦何殊。」 </p>
@@ -174,12 +180,9 @@
                                 </div>
                             </div>
                             <div class="info-issue eng-info">
-                                <h3 class="title">Origin</h3>
+                                <h3 class="title">EXHIBITION TEAM—Fake Fire</h3>
                                 <div class="inner">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
+                                    <p>"Fireflies glow, yet they are not real fire,/ The round dew on lotus is far from pearl." Inspired from Bai Juyi’s Speaking Freely, the team tries to present the powerful aspect of artwork, which is to cross the borderline between true and false, real and unreal, and material and spiritual. In the world of art, the glow of fireflies is not fire, yet superior to it, for the glow is able to evoke people’s feelings. The Light Insect by the team is an attempt to create a world where truth and false being redefined, and with the arrangement of artworks and symbols, they would eventually mingle together. </p>
                                 </div>
                             </div>
                         </div>
@@ -187,8 +190,8 @@
                 </section>
                 <section class="chapter chapter1-2">
                     <div id="chapter1-2">
-                        <div class="content scoll-check-sub">
-                            <div class="img-issue"><img src="images/fake.jpg" alt="龍崎光節-空山祭"></div>
+                        <div class="content scoll-check-sub"><img class="mb-title" v-if="isMb" src="images/f1-title2-m.png" alt="龍崎光節 展覽概念">
+                            <div class="img-issue"><img src="images/mk3.jpg" alt="龍崎光節-空山祭"></div>
                             <div class="info-issue tw-info">
                                 <h3 class="title">關於策展：龍崎光節-空山祭</h3>
                                 <div class="inner">
@@ -197,17 +200,18 @@
                                 </div>
                             </div>
                             <div class="info-issue eng-info">
-                                <h3 class="title">Origin</h3>
+                                <h3 class="title">About the Festival</h3>
                                 <div class="inner">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
+                                    <p>What we hope to achieve through "Longci Light Festival" is to convey the concept "The Choice of Value: Seeing Life."</p>
+                                    <p>It means to focus on the very moment we are living, what we have now, what the government and people in Longci have accomplished before, and most important of all, the current moment of Longci. "Light Festival," the artworks by passionate artists, and the fabled tale "Void Mountain" are our message and hope toward every visitors. We want our visitors to "see" our life, Longci, and Taiwan. </p>
+                                    <p>Longci, as a little village in Southern Taiwan, does have some interesting stories and historic background, and this is why it becomes the perfect choice for "Light Festival." Once there was a protest against the construction of landfill, and such protest shows that Taiwanese people do care about and love our homeland. After the protest, more and more people, young or old, start visiting Longci and begin to "see" the beauty here. The beauty of wildlife and historic heritage/stories here are values celebrated by all kinds of people. "Void Mountain Festival" will be the next chapter of the dramatic and vigorous story of Longci. There will be a brand new start.</p>
+                                    <p>Since the invention of the Internet, the rampaging globalization seems to slow down now. The trend now is to return to our hometown instead of pursing the same value. Such trend has already existed since late 20th century, and now it grows even stronger and redefines our hometown/countryside. </p>
+                                    <p>No longer simply meaning nostalgic, tradition-oriented, The new concept of place/location is a geopolitical one. People renew and understand once again about their homelands and cultures, sharing them to the whole world through Internet or other forms of media. It is, at the same time, the redefining of globalization. We are now living in the era of glocalization.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="content gray">
-                            <div class="img-issue"><img src="images/mountain.png" alt="空山祭的空和滿"></div>
+                            <div class="img-issue"><img src="images/mk4.png" alt="空山祭的空和滿"></div>
                             <div class="info-issue tw-info">
                                 <h3 class="title">空山祭的空和滿</h3>
                                 <div class="inner">
@@ -217,15 +221,15 @@
                                 </div>
                             </div>
                             <div class="info-issue eng-info">
-                                <h3 class="title">Origin</h3>
+                                <h3 class="title">The Full and Void of the Mountain</h3>
                                 <div class="inner">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
+                                    <p>Traditionally, "void" appears to be a rather positive symbol in our culture: the tranquility of a "void" mountain, and the retrospective aspect of "void." Both of the symbols suggest the same thing: being humble and mindful about our world. <br>The main theme of Longci Light Festival is "Void Mountain," and it is presented in two different ways. The word "Void Mountain" originates from the imagery of countryside villages losing their population. Without proper understandings of local communities and cultures, modern-day people tend to consider these villages as "void" or "deserted." Such misleading imagery not only exists in Longci but the whole world. It is a worldwide aftereffect of globalization. Worse yet, if no one cares about correcting such wrong imagery, our valuable heritages of human history and culture would be at risk.</p>
+                                    <p>"Void Mountain" implies the imagery of "humbleness." We expect our visitors to experience a journey of "void" and "full." With imagery of an empty and void mountain being the start, we would end up appreciating a mountain full of life. We could relish the beauty of Longci, rethink about ourselves and eventually gain a further understanding of Taiwan.</p>
+                                    <p>The humble imagery of "Void Mountain" is also retrospective. Through its impactful title and key visual, a sense of misery is presented at first. In contrast to such misery, we could also experience "a mountain full of life." The "mountain full of life" is the symbol of wildlife and at the same time, the ley lines of humanity, history, and society.</p>
                                 </div>
                             </div>
-                            <hr>
+                            <hr :class="isMb? 'h1-color':''">
+                            <div class="img-issue"><img src="images/mk5.jpg" alt="關於看見"></div>
                             <div class="info-issue tw-info">
                                 <h3 class="title">關於看見</h3>
                                 <div class="inner">
@@ -235,12 +239,12 @@
                                 </div>
                             </div>
                             <div class="info-issue eng-info">
-                                <h3 class="title">Origin</h3>
+                                <h3 class="title">About Seeing</h3>
                                 <div class="inner">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates. </p>
+                                    <p>We live in a world with flooded information. Modern people seem to "see" everything, but nothing really stays in our mind. We live in a world with numerous possibility, but inside our heart and mind is nothing but barren void. Artworks are meant to fill the emptiness of our heart. In such a fast-changing world, we might be surprised by a visually astonishing piece of art, but that’s it. Nothing else would leave in our mind. "Creating is a form of calling." Such calling is to ask people to stop being so busy all the time and try to appreciate things around us. This is the most important concept behind "Longci Light Festival: Void Mountain," "Seeing the Life."</p>
+                                    <p>Curator John Berger once mentioned that the modern value is mostly money-oriented. It is "selling the past to the future." The nature of what the media is trying to create is an illusion of the common memories and hopes of human beings. The customers are urged to constantly pursue the warmth and happiness from such nostalgic feelings. We are trying to buy ourselves a dream of future that is actually hard to achieve.</p>
+                                    <p>Therefore, the aim of "Longci Light Festival" is "The choice of values: Seeing Life." It means to focus on the very moment we are living, what we have now, what we have accomplished before, and most important of all, the efforts the people in Longci have done. "Light Festival," the artworks by passionate artists, and the fabled tale "Void Mountain" are our messages and hopes for every visitors. We want our visitors to "see" our life, Longci, and Taiwan.</p>
+                                    <p>The story of "Void Mountain" is the core of "Longci Light Festival: Void Mountain Festival." What we want to show to the visitors through narrative is definitely not boasting how much visitors we have or the commercial value we would make. It is certainly not simply showing people a sense of nostology, nor is it some kinds of fancy images of future. "Seeing" and rediscovering the value of life is the key element of the festival. From being indifference to mindful, "Void Mountain" symbolizes the philosophy of "Seeing the Life" again.</p>
                                 </div>
                             </div>
                         </div>
@@ -248,9 +252,9 @@
                 </section>
                 <section class="chapter chapter1-3">
                     <div id="chapter1-3">
-                        <div class="content scoll-check-sub">
+                        <div class="content scoll-check-sub"><img class="mb-title" v-if="isMb" src="images/f1-title3-m.png" alt="龍崎光節 龍崎介紹">
                             <div class="item">
-                                <div class="img-issue"><img src="images/fake.jpg" alt="空山祭-龍崎資訊"></div>
+                                <div class="img-issue"><img src="images/mk6.jpg" alt="空山祭-龍崎資訊"></div>
                                 <div class="info-issue tw-info">
                                     <h3 class="title">龍崎資訊</h3>
                                     <div class="inner">
@@ -258,14 +262,14 @@
                                     </div>
                                 </div>
                                 <div class="info-issue eng-info">
-                                    <h3 class="title">Origin</h3>
+                                    <h3 class="title">Introduction of Longci</h3>
                                     <div class="inner">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
+                                        <p>In the early days, Longci was originally settlements of Siraya people. Longci is famous for its unique chalk soil landform and its local products. Because of the soil and landform, the main crops here, bamboo shoot and pineapple, taste extraordinary well. With its various kinds and colors of bamboos, Longci is also named as "The Land of Colorful Bamboos." Local Farmers’ Association builds traditional bamboo charcoal kiln, producing various bamboo charcoal related goods like bamboo vinegar and chips.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="item">
-                                <div class="img-issue"><img src="images/fake.jpg" alt="空山祭-牛埔農塘"></div>
+                                <div class="img-issue"><img src="images/mk7.jpg" alt="空山祭-牛埔農塘"></div>
                                 <div class="info-issue tw-info">
                                     <h3 class="title">牛埔農塘</h3>
                                     <h3 class="other-issue">牛埔泥岩水土保持教學園區</h3>
@@ -274,14 +278,14 @@
                                     </div>
                                 </div>
                                 <div class="info-issue eng-info">
-                                    <h3 class="title">Origin</h3>
+                                    <h3 class="title">Niupu Pond (Niupu Pond Ecoliteracy Garden)</h3>
                                     <div class="inner">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
+                                        <p>Niupu Pond is located in the watershed of the upstream of Erren River. The sandy soil and chalk soil landform here both contribute to the famous "moon world" scenery, a waste-lands landform. Featuring the undulating hills and vales, Niupu Pond is really worth visiting.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="item">
-                                <div class="img-issue"><img src="images/fake.jpg" alt=""></div>
+                                <div class="img-issue"><img src="images/mk8.jpg" alt=""></div>
                                 <div class="info-issue tw-info">
                                     <h3 class="title">虎形山公園</h3>
                                     <div class="inner">
@@ -289,14 +293,14 @@
                                     </div>
                                 </div>
                                 <div class="info-issue eng-info">
-                                    <h3 class="title">Origin</h3>
+                                    <h3 class="title">Hu Xing Shan Park</h3>
                                     <div class="inner">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
+                                        <p>Local people give the name "Hu Xing Shan" because the shape of the mountain actually resembles a fierce tiger ("Hu Xing" means "tiger-shaped"). Tourists often go around the Circle Trail of the park and pass by the Wanglong Suspension Bridge ("Wanglong" means "dragon seeing"). Breathing fresh air in the forest is also a popular choice. During summer nights, tourists come here and enjoy the glowing fireflies around. Hu Xing Shan Park is the secret spot in the countryside of Tainan, welcoming tourists for a glimpse of local wildlife.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="item">
-                                <div class="img-issue"><img src="images/fake.jpg" alt=""></div>
+                                <div class="img-issue"><img src="images/mk9.jpg" alt=""></div>
                                 <div class="info-issue tw-info">
                                     <h3 class="title">文衡殿</h3>
                                     <div class="inner">
@@ -305,9 +309,9 @@
                                     </div>
                                 </div>
                                 <div class="info-issue eng-info">
-                                    <h3 class="title">Origin</h3>
+                                    <h3 class="title">Longci Wenheng Temple</h3>
                                     <div class="inner">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
+                                        <p>Longci Wenheng Temple is located in Zhongkeng Village, Longci. Famous for its majestic exterior, it is a great choice for families wanting to have a leisure break. The temple itself is divided into two sections: the front and the rear temple. The front temple enshrines Wen Heng (Holy Emperor Lord Gaun), while the rear temple enshrines Bodhisattva Guanyin of Mount Putuo. </p>
                                     </div>
                                 </div>
                             </div>
@@ -317,46 +321,42 @@
                 <section class="chapter chapter2-1">
                     <div id="chapter2-1">
                         <div class="content scoll-check scoll-check-sub">
-                            <div class="item">
-                                <div class="img-issue gallery-block">
-                                    <div class="video-block">
-                                        <div class="cover" v-if="!player2.state" @click="play('player2')"><img src="images/video1.png" alt=""></div>
-                                        <div id="player2"></div>
-                                    </div>
-                                    <div class="gallery-group">
-                                        <div class="g-item"><img src="images/fake.jpg" alt=""></div>
-                                        <div class="g-item"><img src="images/fake.jpg" alt=""></div>
-                                        <div class="g-item"><img src="images/fake.jpg" alt=""></div>
-                                        <div class="g-item"><img src="images/fake.jpg" alt=""></div>
-                                        <div class="g-item"><img src="images/fake.jpg" alt=""></div>
-                                        <div class="g-item"><img src="images/fake.jpg" alt=""></div>
+                            <div class="item"><img class="mb-title" v-if="isMb" src="images/f2-title1-m.png" alt="龍崎光節 空空的山">
+                                <div class="img-issue">
+                                    <div class="green-block">
+                                        <div class="icon c2"><img :src="`images/cs2${navTitle}.png`" alt="空山祭 comimg soon"></div>
                                     </div>
                                 </div>
                                 <div class="info-issue tw-info">
                                     <h3 class="title">空空的山</h3>
-                                    <h4 class="subtitle">劇本｜<span>辛綺</span>┼<span>陳雋中</span>／動畫設計｜<span>朱為鄰</span>／配樂設計｜<span>林信樺</span>┼<span>蔡痞諺</span></h4>
+                                    <h4 class="subtitle">劇本｜<span>辛綺</span>┼<span>陳雋中</span>；動畫設計｜<span>朱為鄰</span>；配樂設計｜<span>林信樺</span>┼<span>蔡痞諺</span></h4>
                                     <div class="inner">
-                                        <p>動畫故事「空空的山」是本次龍崎光節：空山祭的主題故事。開頭，我們「看」見一隻發光的光蟲自都會出發，向外飛去。飛往都市之外的鄉野之處，牠「看見」一片「空空蕩蕩」的山脈。身為觀眾的我們也隨著光蟲的視角，往山中漸漸行去，往我們平時所不熟悉，感覺陌生又荒寂的「空山」而去…隨著向山的旅程之中，我們與光蟲都發現，山並非真空；在旅程上有著許多夥伴，有“鳥獸魚蟲”(龍崎當地的生物)，有各種大自然的風光景緻、好山好水，也有百年的人文歷史，空山不空。</p>
-                                        <p>但危機也潛伏在前方等著我們去克服...</p>
+                                        <p>動畫故事「空空的山」是本次龍崎光節：空山祭的主題故事。開頭，我們「看」見一隻發光的光蟲自都會出發，向外飛去。飛往都市之外的鄉野之處，牠「看見」一片「空空蕩蕩」的山脈。身為觀眾的我們也隨著光蟲的視角，往山中漸漸行去，往我們平時所不熟悉，感覺陌生又荒寂的「空山」而去…</p>
+                                        <p>隨著向山的旅程之中，我們與光蟲都發現，山並非真空；在旅程上有著許多夥伴，有"鳥獸魚蟲"(龍崎當地的生物)，有各種大自然的風光景緻、好山好水，也有百年的人文歷史，空山不空。<br>但危機也潛伏在前方等著我們去克服…</p>
                                     </div>
                                 </div>
                                 <div class="info-issue eng-info">
-                                    <h3 class="title">Origin</h3>
+                                    <h3 class="title">Void Mountain</h3>
                                     <div class="inner">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
+                                        <p>The animation "Void Mountain" is the main story of Longci Light Festival. In the beginning of the story, we can "see" The Light Insect starting its journey from the city. It is heading toward the countryside—the mountain, which seems to be empty and void from its point of view. We audiences then follow The Light Insect, going deeper to the mountains, deep into the area that we might consider as void and foreign. We know little about these areas. As our journey with The Light Insect goes further in the mountain, we then will notice that there are actually various types of life here. The local creatures of Longci will accompany us throughout the journey. The beauty of nature and historic stories are also our companions, together we will explore the "void mountain" that is actually full of treasures. But remember, we need to take care of the lurking crisis around us too…</p>
                                     </div>
                                 </div>
                                 <div class="notice-issue">
                                     <div class="inner">
                                         <p>更多故事的精彩內容請見：「龍崎光節-空山祭」官方網頁，或在「空山祭」展場：入口意象Ａ與大家共同欣賞。</p>
-                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo ut corrupti, quod sint provident sapiente doloremque voluptatem officia ex eligendi iusto voluptate nostrum aliquam delectus cupiditate quibusdam porro, optio nulla!</p>
+                                        <p>For more exciting stories, please visit our official website. You can choose to take part in the story by visiting the Longci Light Festival in person. Imagery A in the entrance of the festival will be a great choice to appreciate the story.</p>
                                     </div>
                                 </div>
-                                <hr>
+                                <hr :class="isMb? 'h2-color':''">
                             </div>
                             <div class="item">
-                                <div class="info-issue tw-info">
+                                <div class="info-issue tw-info pb0">
                                     <h3 class="title">角色介紹</h3>
+                                </div>
+                                <div class="info-issue eng-info pb0">
+                                    <h3 class="title">Characters</h3>
+                                </div>
+                                <div class="info-issue tw-info">
                                     <div class="person-list">
                                         <div class="person-item">
                                             <div class="pic-group">
@@ -370,9 +370,9 @@
                                                 </div>
                                             </div>
                                             <div class="info-issue eng-info">
-                                                <h3 class="title">Origin</h3>
+                                                <h3 class="title">The Light Insect</h3>
                                                 <div class="inner">
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
+                                                    <p>The Light Insect is the "tour guide" of the whole story. Whenever it undergoes a plot twist, the viewers also know more about the conversion from "void" to "full." It is a good companion for the viewers. In terms of the story, it is the protagonist of the plots and the manifestation of the power of art.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -388,9 +388,9 @@
                                                 </div>
                                             </div>
                                             <div class="info-issue eng-info">
-                                                <h3 class="title">Origin</h3>
+                                                <h3 class="title">The Dark Clouds</h3>
                                                 <div class="inner">
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
+                                                    <p>The Dark Clouds symbolizes the value of urbanized modern people. Issues of environmental protection, urban planning and culture emerge as human beings gather and scatter all around in modern days. At the end of the story, the Dark Clouds is converted by the power of art, and it no longer disregards the world and learns "seeing life."</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -406,9 +406,9 @@
                                                 </div>
                                             </div>
                                             <div class="info-issue eng-info">
-                                                <h3 class="title">Origin</h3>
+                                                <h3 class="title">The Mountain</h3>
                                                 <div class="inner">
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
+                                                    <p>The Mountain seems to be a green yet empty, void place, but it is actually the breeding ground for various kinds of wildlife. The Light Insect finds a bunch of friends in The Mountain: ants, spiders and birds. The chalk soil landform is also a feature of The Mountain, and it is quite proud of such uniqueness.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -424,33 +424,34 @@
                                                 </div>
                                             </div>
                                             <div class="info-issue eng-info">
-                                                <h3 class="title">Origin</h3>
+                                                <h3 class="title">The Friends in The Mountain</h3>
                                                 <div class="inner">
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates. </p>
+                                                    <p>They are native creatures of Longci, including ants, spiders and birds. The Light Insect meet them during his journey, and they become its great companions too. In the story, the ants are doing some constructions in the mountain, using bamboo weavings to present the beauty and power of great structures. Bamboo weavings are common materials for the locals, using them is a way to symbolize the connection between the locals and the story. Chrysso scintillans, also known as "golden princess spiders," are weaving webs together. Famous for their instinct of protecting theirs eggs, Chrysso scintillans is the endemic species of Longci. They represent the love of a unified and heart-warming family. The birds are inspired by bird communities in Hu Xing Shan. They are singing harmonious songs of diverse cultures. </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <hr>
+                            <hr :class="isMb? 'h2-color':''">
                             <div class="item">
                                 <div class="info-issue tw-info">
                                     <h3 class="title">空山讀後</h3>
                                     <div class="inner">
-                                        <p>「空空的山」的故事隱喻了，龍崎區被決定為垃圾掩埋區之時，社會對”人口流失”的村落之一種想像。在對於當地居民、文化未知的情況下，現代社會容易對鄉里地方產生一種”曠野無人”的刻板印象；這種虛構的想像不僅是在龍崎區，而是全球化的現象，是「都市化」人口集中產生的後遺症。對此種想像的放任，最終會對人類社會造成撕裂，和人文歷史珍貴的流失；對整體經濟上造成的損害更超越一個簡單的垃圾場。「空空的山」為反思之義，衝擊性的標題和畫面，展示出一種淒涼；與之對照的是「滿滿的生命」，這生命不只是自然、花鳥蟲魚，還有人文、歷史和社會的”命脈。</p>
+                                        <p>「空空的山」的故事隱喻了，龍崎區被決定為垃圾掩埋區之時，社會對"人口流失"的村落之一種想像。在對於當地居民、文化未知的情況下，現代社會容易對鄉里地方產生一種"曠野無人"的刻板印象；這種虛構的想像不僅是在龍崎區，而是全球化的現象，是「都市化」人口集中產生的後遺症。對此種想像的放任，最終會對人類社會造成撕裂，和人文歷史珍貴的流失；對整體經濟上造成的損害更超越一個簡單的垃圾場。「空空的山」為反思之義，衝擊性的標題和畫面，展示出一種淒涼；與之對照的是「滿滿的生命」，這生命不只是自然、花鳥蟲魚，還有人文、歷史和社會的"命脈。</p>
                                     </div>
                                 </div>
                                 <div class="info-issue eng-info">
-                                    <h3 class="title">Origin</h3>
+                                    <h3 class="title">Afterthoughts</h3>
                                     <div class="inner">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
+                                        <p>The word "Void Mountain" originates from the imagery of countryside villages losing their population. Such imagery appeared when a landfill was about to be built in Longci. Without proper understandings of local communities and cultures, modern-day people tend to consider these villages as "void" or "deserted." Such misleading imagery not only exists in Longci but the whole world. It is a worldwide aftereffect of globalization. Worse yet, if no one cares about correcting such wrong imagery, our valuable heritages of human history and culture would be at risk. The lost we might suffer is way greater than the negative effects of a landfill.</p>
+                                        <p>The humble imagery of "Void Mountain" is also retrospective. Through its impactful title and key visual, a sense of misery is presented. In contrast to such misery, we could also experience "a mountain full of life." The "mountain full of life" is the symbol of wildlife and at the same time, the ley lines of humanity, history, and society.</p>
                                     </div>
                                 </div>
                                 <div class="notice-issue">
                                     <div class="inner">
                                         <p>整體故事要表達的意識：「價值的轉化 (看見生命) 」。</p>
-                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo ut corrupti, quod sint provident sapiente doloremque voluptatem officia ex eligendi iusto voluptate nostrum aliquam delectus cupiditate quibusdam porro, optio nulla!</p>
+                                        <p>The core of the story is "The changes of values: Seeing Life."</p>
                                     </div>
                                 </div>
                             </div>
@@ -459,15 +460,10 @@
                 </section>
                 <section class="chapter chapter2-2">
                     <div id="chapter2-2">
-                        <div class="content scoll-check-sub">
+                        <div class="content scoll-check-sub"><img class="mb-title" v-if="isMb" src="images/f2-title2-m.png" alt="龍崎光節 藝術地圖／集章">
                             <div class="img-issue">
                                 <div class="green-block">
-                                    <div class="icon c1"> <img src="images/cs1.png" alt="空山祭 comimg soon"></div>
-                                </div>
-                            </div>
-                            <div class="img-issue">
-                                <div class="green-block">
-                                    <div class="icon c2"><img src="images/cs2.png" alt="空山祭 comimg soon"></div>
+                                    <div class="icon c1"> <img :src="`images/cs1${navTitle}.png`" alt="空山祭 comimg soon"></div>
                                 </div>
                             </div>
                         </div>
@@ -475,7 +471,7 @@
                 </section>
                 <section class="chapter chapter2-3">
                     <div id="chapter2-3">
-                        <div class="content scoll-check-sub">
+                        <div class="content scoll-check-sub"><img class="mb-title" v-if="isMb" src="images/f2-title3-m.png" alt="龍崎光節 作品概述">
                             <div class="img-issue"><img src="images/fake.jpg" alt=""></div>
                             <div class="project-list">
                                 <div class="project p1" @click="scrollTo('#p1')"></div>
@@ -492,7 +488,7 @@
                             <div class="notice-issue">
                                 <div class="inner">
                                     <p>「龍崎光節：空山祭」的藝術裝置，是藝術家們根據「空空的山」的故事情節，讀後的心得感想所創作出來的、專屬於當地的獨一無二的藝術品。 這些作品不但具有原創性，也結合當地也結合當地環境製作，更是只有在今年燈節才能看到的「期間限定」創作。</p>
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo ut corrupti, quod sint provident sapiente doloremque voluptatem officia ex eligendi iusto voluptate nostrum aliquam delectus cupiditate quibusdam porro, optio nulla!</p>
+                                    <p>The artworks of "LongCi Light Festival: Void Mountain" are unique masterpieces just for LongCi. The artists created these works through their understandings and thoughts after reading the story of "Void Mountain."</p>
                                 </div>
                             </div>
                         </div>
@@ -517,6 +513,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="sub-issue"><span>整體展場設置</span><span>｜</span><span>EXHIBITION ARTWORKS</span></div>
                             <div class="info-issue tw-info">
                                 <h3 class="title">光蟲與竹燈</h3>
                                 <div class="inner">
@@ -524,9 +521,9 @@
                                 </div>
                             </div>
                             <div class="info-issue eng-info">
-                                <h3 class="title">Origin</h3>
+                                <h3 class="title">The Light Insect and Bamboo Lanterns</h3>
                                 <div class="inner">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    <p>The smaller sized light insect can be seen throughout the whole festival. The small bamboo-weaved lanterns by light design team—瓦豆 and 張永旺工作室 are also a feature of the festival. In front of the entrance is the Wanglong Suspension Bridge and the second information desk. Visitors are provided with small lantern featuring The Light Insect, just like the plot of the animation—The Light Insect will lead our way through the festival. Visitors have to return the lantern after finishing the visit. Lastly, there are also some bigger bamboo lanterns and decorations lighting up the way. </p>
                                 </div>
                             </div>
                         </div>
@@ -534,38 +531,43 @@
                             <div class="project-view">
                                 <div class="left-block"><img src="images/fake.jpg" alt=""></div>
                                 <div class="right-block addtitle">
-                                    <div class="at">竹苗</div>
-                                    <div class="author-list issue">
-                                        <div class="author-item">
-                                            <p class="name">張永旺</p>
-                                            <div class="author-pic"></div>
+                                    <div class="part pp1">
+                                        <div class="at">竹苗</div>
+                                        <div class="author-list issue">
+                                            <div class="author-item">
+                                                <p class="name">張永旺</p>
+                                                <div class="author-pic"></div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="at at2">空空的山</div>
-                                    <div class="author-list slide at2">
-                                        <div class="author-item no-icon">
-                                            <p class="name">辛綺</p>
-                                            <div class="author-pic a1"></div>
-                                        </div>
-                                        <div class="author-item">
-                                            <p class="name">陳雋中</p>
-                                            <div class="author-pic a4"></div>
-                                        </div>
-                                        <div class="author-item">
-                                            <p class="name">朱為麟</p>
-                                            <div class="author-pic a5"></div>
-                                        </div>
-                                        <div class="author-item">
-                                            <p class="name">林信樺</p>
-                                            <div class="author-pic a6"></div>
-                                        </div>
-                                        <div class="author-item">
-                                            <p class="name">蔡痞諺</p>
-                                            <div class="author-pic a7"></div>
+                                    <div class="part pp2">
+                                        <div class="at at2">空空的山</div>
+                                        <div class="author-list slide at2">
+                                            <div class="author-item no-icon">
+                                                <p class="name">辛綺</p>
+                                                <div class="author-pic a1"></div>
+                                            </div>
+                                            <div class="author-item">
+                                                <p class="name">陳雋中</p>
+                                                <div class="author-pic a4"></div>
+                                            </div>
+                                            <div class="author-item">
+                                                <p class="name">朱為麟</p>
+                                                <div class="author-pic a5"></div>
+                                            </div>
+                                            <div class="author-item">
+                                                <p class="name">林信樺</p>
+                                                <div class="author-pic a6"></div>
+                                            </div>
+                                            <div class="author-item">
+                                                <p class="name">蔡痞諺</p>
+                                                <div class="author-pic a7"></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="sub-issue sp1"><span>入口意象</span><span>｜</span><span>ENTRANCE IMAGERY</span><span>｜</span><span class="icon">A</span></div>
                             <div class="info-issue tw-info">
                                 <h3 class="title">竹苗／空空的山</h3>
                                 <div class="inner">
@@ -573,9 +575,9 @@
                                 </div>
                             </div>
                             <div class="info-issue eng-info">
-                                <h3 class="title">Origin</h3>
+                                <h3 class="title">Seedling of Bamboo / Void Mountain</h3>
                                 <div class="inner">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    <p>The imagery of bamboo weaves, followed by information desk and section of clips and visual works, are the start of “Void Mountain Festival.” “The land of bamboo,” Longci, is known for having various kinds of bamboos. The bamboo weaving artist, 張永旺, works on passing down his artistic skills here. The arch of bamboo seedling is presented at the entrance, welcoming visitors with the beauty of local bamboos. A seedling of bamboo, with all the stories and memories behind it, will lead to a brand new start. </p>
                                 </div>
                             </div>
                         </div>
@@ -584,7 +586,7 @@
                                 <div class="left-block"><img src="images/fake.jpg" alt=""></div>
                                 <div class="right-block">
                                     <div class="ani-pic"><img src="images/fake.jpg" alt=""></div>
-                                    <div class="author-list slide">
+                                    <div class="author-list">
                                         <div class="author-item no-icon">
                                             <p class="name">辛綺</p>
                                             <div class="author-pic a1"></div>
@@ -600,6 +602,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="sub-issue"><span>入口意象</span><span>｜</span><span>ENTRANCE IMAGERY</span><span>｜</span><span class="icon">B</span></div>
                             <div class="info-issue tw-info">
                                 <h3 class="title">龍崎之想像生物</h3>
                                 <div class="inner">
@@ -607,9 +610,9 @@
                                 </div>
                             </div>
                             <div class="info-issue eng-info">
-                                <h3 class="title">Origin</h3>
+                                <h3 class="title">The Fantasy Creatures of Longci</h3>
                                 <div class="inner">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    <p>辛綺 uses local material and creates a corridor with various light projections. On the way to the exhibition, all kinds of animals and plants are projected through the light of bamboo lanterns. Local children create these creatures and plants with their imaginations. The vivid projection is the symbol of a mountain full of life.</p>
                                 </div>
                             </div>
                         </div>
@@ -626,16 +629,19 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="sub-issue"><span>作品</span><span>｜</span><span>ART WORK</span><span>｜</span><span class="icon">1</span></div>
                             <div class="info-issue tw-info">
-                                <h3 class="title">尚未確認</h3>
+                                <h3 class="title">流光橋</h3>
                                 <div class="inner">
-                                    <p>尚未確認</p>
+                                    <p>以日治時期的舊橋遺址為基座的望龍吊橋，為人們在地形崎嶇的山林提供了入口，在橋上的每一步都會看到樹叢中不同的生命在竄動。正是因爲這空空的山，山林裡不同的生命才顯得如此豐盈而神秘。</p>
+                                    <p>以光線勾勒出一道虛幻的空山入口，開啟一道通往未知的道路。流動的光線彷佛像暗示著鳥蟲從深山飛翔並環繞在山谷中，人工的照明工具也因這空間獨有的氛圍轉化成詩意的表現，形成一道由無數銀光閃閃的生命橫跨於山谷之間的虛實路徑，並引領觀眾渡過吊橋進入空山。</p>
                                 </div>
                             </div>
                             <div class="info-issue eng-info">
-                                <h3 class="title">Origin</h3>
+                                <h3 class="title">The Bridge of Flowing Light</h3>
                                 <div class="inner">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    <p>Rebuilt from an old bridge during Japanese Ruling Era, Wanglong Suspension Bridge is now the entrance of the rugged mountain and forest.<br>Every step on the bridge is a glimpse of vigorous life in the bushes. The mountain might seem “void” and empty, yet such emptiness makes the various life in mountain even more mysterious and lively.</p>
+                                    <p>A beam of light sketches in a seemingly unreal entrance of the void mountain, showing the way to the unknown for the visitors. The flowing light seems to imply birds and insects are flying and circling around the mountain. In such a mysterious atmosphere, the artificial light has become rather poetic, leading a shimmering passage among the valleys. The visitors are welcomed to the void mountain by following such a path of life.</p>
                                 </div>
                             </div>
                         </div>
@@ -652,16 +658,17 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="sub-issue"><span>作品</span><span>｜</span><span>ART WORK</span><span>｜</span><span class="icon">2</span></div>
                             <div class="info-issue tw-info">
-                                <h3 class="title">習作</h3>
+                                <h3 class="title">勞作</h3>
                                 <div class="inner">
                                     <p>「大橋頭藝術工作室」是周學涵與姜名駿兩位藝術家為核心的藝術創作團體。以「結構」作為裝置藝術的核心。不單純是造型面向的「結構」，也包含環境、城市、人與社群之間的「關係」，重視人、時間、空間共創的美好關係，追尋適合的媒材、聆聽在地故事，做出與地方具有連結性的創作。</p>
                                 </div>
                             </div>
                             <div class="info-issue eng-info">
-                                <h3 class="title">Origin</h3>
+                                <h3 class="title">Work of Structure</h3>
                                 <div class="inner">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    <p>“Structure” is the core element of the whole artwork. Such concept of “structure” does not only indicate its style, but also the “relation” between cities and the environment, an individual and the community. The harmonious balance among human beings, time, and space is also the concept behind the work. The artist seeks for proper materials and local stories, creating works with strong connection with Longci.</p>
                                 </div>
                             </div>
                         </div>
@@ -686,6 +693,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="sub-issue"><span>作品</span><span>｜</span><span>ART WORK</span><span>｜</span><span class="icon">3</span></div>
                             <div class="info-issue tw-info">
                                 <h3 class="title">團結織網</h3>
                                 <div class="inner">
@@ -693,9 +701,9 @@
                                 </div>
                             </div>
                             <div class="info-issue eng-info">
-                                <h3 class="title">Origin</h3>
+                                <h3 class="title">Weaving Solidarity</h3>
                                 <div class="inner">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    <p>The artist, 楊芳宜, cares a lot about environmental issues. Yang came up with the idea of using recycled plastic bags as material for her art. The artwork is weaved by recycled material, forming a web with an egg-like symbol. One of her inspirations is Chrysso scintillans, a kind of spider only lives in Longci, well-known for its instinct of protecting eggs. The flower pattern and spider eggs both convey a sense of caring the community. The big web hanging among the tree will be astonishing, also meaning that The Light Insect is bonded with the other creatures. The visitors share a similar bond with the local cultures. Everyone is a part of a new, bright world.</p>
                                 </div>
                             </div>
                         </div>
@@ -712,7 +720,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="info-issue tw-info"></div>
+                            <div class="sub-issue"><span>作品</span><span>｜</span><span>ART WORK</span><span>｜</span><span class="icon">4</span></div>
                             <div class="info-issue tw-info">
                                 <h3 class="title">月夜</h3>
                                 <div class="inner">
@@ -720,9 +728,9 @@
                                 </div>
                             </div>
                             <div class="info-issue eng-info">
-                                <h3 class="title">Origin</h3>
+                                <h3 class="title">Moon Night</h3>
                                 <div class="inner">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    <p>The machine birds created by Hsiao Sheng-Chien is an awarding winning artwork. It is a part of Post-Nature—A Museum as an Ecosystem, an exhibition held by Taipei Fine Art Museum. Hsiao uses retro machines to present an imagery of nest and birdcalls. The actual “Moonlight” is a structure projecting various illusions through moonlight, covering the area where people rest and having tea breaks in Hu Xing Shan Park. Resting and enjoying the view here is a way to explore limitless thoughts toward abstract concepts for human beings. </p>
                                 </div>
                             </div>
                         </div>
@@ -739,6 +747,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="sub-issue"><span>作品</span><span>｜</span><span>ART WORK</span><span>｜</span><span class="icon">5</span></div>
                             <div class="info-issue tw-info">
                                 <h3 class="title">寧靜‧秘境</h3>
                                 <div class="inner">
@@ -746,9 +755,9 @@
                                 </div>
                             </div>
                             <div class="info-issue eng-info">
-                                <h3 class="title">Origin</h3>
+                                <h3 class="title">The Secluded Tranquility</h3>
                                 <div class="inner">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    <p>The nature of the work is the combination of the use of glow, purple light and misty effect. With the purple light projecting onto clothes or ornaments, the visitors are now glowing too, and they become the part of the whole story. The Light Insect switches its role of a tour guide into a companion. Everyone is now entering the mysterious world of The Light Insect.</p>
                                 </div>
                             </div>
                         </div>
@@ -769,16 +778,17 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="sub-issue"><span>作品</span><span>｜</span><span>ART WORK</span><span>｜</span><span class="icon">6</span></div>
                             <div class="info-issue tw-info">
                                 <h3 class="title">烏雲來了</h3>
                                 <div class="inner">
-                                    <p>藝術家廖昭豪利用紙漿製作日常生活常見的紐澤西式護欄，藉由呈現紙漿的材質特性，點出含混泥土成分的工程所需物，不利回收卻佔據自然環境而衍生的議題。藝術家辛綺的光蟲則是以回收物聚集光源所但生的生命創作。 “烏雲來了”是故事的轉折點，是一件量體巨大的敘事藝術作品，布置在兒童遊戲區，地貌完整的呈現出兩位藝術家：廖昭豪與辛綺作品之間的衝突、聯結、張力與拉力。</p>
+                                    <p>藝術家廖昭豪利用紙漿製作日常生活常見的紐澤西式護欄，藉由呈現紙漿的材質特性，點出含混泥土成分的工程所需物，不利回收卻佔據自然環境而衍生的議題。藝術家辛綺的光蟲則是以回收物聚集光源所但生的生命創作。 "烏雲來了"是故事的轉折點，是一件量體巨大的敘事藝術作品，布置在兒童遊戲區，地貌完整的呈現出兩位藝術家：廖昭豪與辛綺作品之間的衝突、聯結、張力與拉力。</p>
                                 </div>
                             </div>
                             <div class="info-issue eng-info">
-                                <h3 class="title">Origin</h3>
+                                <h3 class="title">Here comes the cloud</h3>
                                 <div class="inner">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    <p>“Here comes the cloud” is a combination of two works: the Jersey barrier and The Light Insect. A common Jersey barrier by pulp is presented here, but there is a serious environmental issue behind the material of pulp. The substance used for making concrete is a part of the pulp. Liao tries to tell us that these substances, though a part of our life, is hard to recycle and will do harm to the environment. The Light Insect created by 辛綺, on the other hand, presents a work of life using recyclable materials. “Here comes the cloud” is a huge work with its narrative style, serving as the turning point of the whole story of “Void Mountain.” “Here comes the cloud” is set in children’s playground. Along with the landform around, the work presents the conflicts, connections and power of these two pieces of artworks.</p>
                                 </div>
                             </div>
                         </div>
@@ -795,6 +805,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="sub-issue"><span>作品</span><span>｜</span><span>ART WORK</span><span>｜</span><span class="icon">7</span></div>
                             <div class="info-issue tw-info">
                                 <h3 class="title">共生</h3>
                                 <div class="inner">
@@ -802,9 +813,9 @@
                                 </div>
                             </div>
                             <div class="info-issue eng-info">
-                                <h3 class="title">Origin</h3>
+                                <h3 class="title">Harmonious Life</h3>
                                 <div class="inner">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    <p>The story ends with the triumph of life. This is a scene of celebration. The Light Insect and its friends circle around three concentric circles, and in the center is a symbol of campfire. This is a work representing unity, celebration and “placemaking.” The grass ground is clean and vigorous, showing the power of life. The happy ending is foreshadowed at the beginning of the journey; you can see “Harmonious Life” faintly at the suspension bridge at the entrance. The Light Insect lives harmoniously with local creatures at the end.</p>
                                 </div>
                             </div>
                         </div>
@@ -812,10 +823,10 @@
                 </section>
                 <section class="chapter chapter3-1">
                     <div id="chapter3-1">
-                        <div class="content scoll-check scoll-check-sub">
+                        <div class="content scoll-check scoll-check-sub"><img class="mb-title" v-if="isMb" src="images/f3-title1-m.png" alt="龍崎光節 活動時程表">
                             <div class="img-issue">
                                 <div class="green-block">
-                                    <div class="icon c1"> <img src="images/cs1.png" alt="空山祭 comimg soon"></div>
+                                    <div class="icon c1"> <img :src="`images/cs1${navTitle}.png`" alt="空山祭 comimg soon"></div>
                                 </div>
                             </div>
                         </div>
@@ -823,10 +834,10 @@
                 </section>
                 <section class="chapter chapter3-2">
                     <div id="chapter3-2">
-                        <div class="content gray scoll-check-sub">
+                        <div class="content gray scoll-check-sub mbbg"><img class="mb-title" v-if="isMb" src="images/f3-title2-m.png" alt="龍崎光節 活動介紹 ">
                             <div class="img-issue">
                                 <div class="green-block">
-                                    <div class="icon c2"><img src="images/cs2.png" alt="空山祭 comimg soon"></div>
+                                    <div class="icon c2"><img :src="`images/cs2${navTitle}.png`" alt="空山祭 comimg soon"></div>
                                 </div>
                             </div>
                         </div>
@@ -834,15 +845,10 @@
                 </section>
                 <section class="chapter chapter3-3">
                     <div id="chapter3-3">
-                        <div class="content scoll-check-sub">
+                        <div class="content scoll-check-sub"><img class="mb-title" v-if="isMb" src="images/f3-title3-m.png" alt="龍崎光節 工作坊介紹">
                             <div class="img-issue">
                                 <div class="green-block">
-                                    <div class="icon c1"><img src="images/cs1.png" alt="空山祭 comimg soon"></div>
-                                </div>
-                            </div>
-                            <div class="img-issue">
-                                <div class="green-block">
-                                    <div class="icon c2"><img src="images/cs2.png" alt="空山祭 comimg soon"></div>
+                                    <div class="icon c2"><img :src="`images/cs2${navTitle}.png`" alt="空山祭 comimg soon"></div>
                                 </div>
                             </div>
                         </div>
@@ -850,27 +856,27 @@
                 </section>
                 <section class="chapter chapter4-1">
                     <div id="chapter4-1">
-                        <div class="content scoll-check scoll-check-sub">
+                        <div class="content scoll-check scoll-check-sub"><img class="mb-title" v-if="isMb" src="images/f4-title1-m.png" alt="龍崎光節 展期">
                             <div class="img-issue"><img src="images/date-issue.png" alt="空山祭 展期"></div>
                         </div>
                     </div>
                 </section>
                 <section class="chapter chapter4-2">
                     <div id="chapter4-2">
-                        <div class="content scoll-check-sub">
+                        <div class="content scoll-check-sub"><img class="mb-title" v-if="isMb" src="images/f4-title2-m.png" alt="龍崎光節 地點">
                             <div class="map-issue">
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14694.481980803515!2d120.3601126!3d22.9641996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6964e4c90577ab9f!2z6JmO5b2i5bGx5YWs5ZyS!5e0!3m2!1szh-TW!2stw!4v1573370575038!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                             </div>
-                            <hr>
+                            <hr v-if="!isMb">
                         </div>
                     </div>
                 </section>
                 <section class="chapter chapter4-3">
                     <div id="chapter4-3">
-                        <div class="content scoll-check-sub">
+                        <div class="content scoll-check-sub"><img class="mb-title" v-if="isMb" src="images/f4-title3-m.png" alt="龍崎光節 交通資訊">
                             <div class="img-issue">
                                 <div class="green-block">
-                                    <div class="icon c1"><img src="images/cs1.png" alt="空山祭 comimg soon"></div>
+                                    <div class="icon c1"><img :src="`images/cs1${navTitle}.png`" alt="空山祭 comimg soon"></div>
                                 </div>
                             </div>
                         </div>
@@ -878,7 +884,7 @@
                 </section>
                 <section class="chapter chapter5-1">
                     <div id="chapter5-1">
-                        <div class="content scoll-check scoll-check-sub">
+                        <div class="content scoll-check scoll-check-sub"><img class="mb-title" v-if="isMb" src="images/f5-title1-m.png" alt="龍崎光節 南關線觀光">
                             <div class="img-issue"><img src="images/fake.jpg" alt=""></div>
                             <div class="info-issue tw-info">
                                 <h3 class="title">南關線</h3>
@@ -887,12 +893,12 @@
                                 </div>
                             </div>
                             <div class="info-issue eng-info">
-                                <h3 class="title">Origin</h3>
+                                <h3 class="title">Nan Guan Line</h3>
                                 <div class="inner">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo adipisci est, labore ducimus sint distinctio quidem ut enim libero totam harum iste tempora eveniet ad. Aut in assumenda voluptates.</p>
+                                    <p>Nan Guan Line is a route starting from Longci, Tainan, covering Guanmiao district, Gueiren district, Rende district and South district. Following Provincial Highway 86, tourists can enjoy both mountainside and seaside scenic spots. It is a worth-visiting route.</p>
                                 </div>
                             </div>
-                            <hr>
+                            <hr v-if="!isMb">
                             <div class="threeadd-issue">
                                 <div class="threeadd-item"></div>
                                 <div class="threeadd-item"></div>
@@ -901,13 +907,13 @@
                             <div class="notice-issue">
                                 <div class="inner">
                                     <p>關廟有三寶：鳳梨、綠竹筍、關廟麵；關廟麵成為人氣食品，用自然陽光曝晒製成的麵條，久煮不會糊掉、香滑順口。無論大街小巷都可經常性地看到曬麵景觀，畫面溫暖動人。</p>
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo ut corrupti, quod sint provident sapiente doloremque voluptatem officia ex eligendi iusto voluptate nostrum aliquam delectus cupiditate quibusdam porro, optio nulla!</p>
+                                    <p>There are three famous specialties in Guanmiao: pineapple, green bamboo shoot, and Gaunmiao noodles. Dried under the sunlight, Guanmiao noodles do not soften easily when cooked, and it tastes really good. It is common for people to dry their homemade noodles with their family just in front of their home, what a heart-warming scene!</p>
                                 </div>
                             </div>
                             <div class="notice-issue">
                                 <div class="inner">
                                     <p>新光里經過完善社區營造，聚落老街和民宅上，透過插畫家們的各類繪圖，一座座繽紛的牆面，讓人眼睛為之一亮，為老農村帶來活潑的新氣氛。歸仁位在仁德和關廟的中間，舊名叫「紅瓦厝」，因為這裡以前的房屋屋頂大多是使用紅瓦蓋成，如今仍有多處保留這樣的古意風貌。</p>
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo ut corrupti, quod sint provident sapiente doloremque voluptatem officia ex eligendi iusto voluptate nostrum aliquam delectus cupiditate quibusdam porro, optio nulla!</p>
+                                    <p>Xinguang Village is a great example of community development. All kinds of artworks and paintings can be seen around the village. The colorful walls flourish the old street, bringing a breathe of art and new life here.<br>Gueiren is in the middle of Rende and Guanmaio, was called “Hongwacuo” in the old days. The reason is simply: many houses in Gueiren are made of “Hongwa” (red tiles), and even today there are still lots of these old yet interesting style of houses here.</p>
                                 </div>
                             </div>
                         </div>
@@ -918,7 +924,7 @@
         </div>
         <div class="l-footer footer" id="footer">
             <div class="l-container">
-                <ul>
+                <ul v-if="!isMb">
                     <li class="f1">
                         <p>展覽期間&nbsp;｜&nbsp;2019.12.21――2020.2.2&nbsp; </p>
                         <p> <span class="pc">｜ </span>&nbsp;平日<span class="mb">｜ </span>&nbsp;17:30――21:00&nbsp;</p>
@@ -929,12 +935,26 @@
                     </li>
                     <li class="f3">
                         <p>主辦單位&nbsp;｜&nbsp;<img class="pc" src="images/f1.png" alt="台南市政府文化局"><span class="mb">台南市政府文化局</span></p>
-                        <p>協辦單位 &nbsp;｜&nbsp;龍崎區公所</p>
+                        <p>協辦單位&nbsp;｜&nbsp;龍崎區公所</p>
                         <p>執行單位&nbsp;｜&nbsp;艸非火藝術</p>
                         <p>贊助單位 &nbsp;｜&nbsp; <img class="pc" src="images/f2.png" alt="皇龍建設"><img class="pc" src="images/f3.png" alt="龍崎文衡殿"><span class="mb">皇龍建設、龍崎文衡殿</span></p>
                     </li>
                     <li class="f4">
-                        <p>© 2019 Longci Light Festival_void Mountain. All Rights Reserved.</p>
+                        <p>© 2019 Longci Light Festival_Void Mountain. All Rights Reserved.</p>
+                    </li>
+                </ul>
+                <ul v-if="isMb">
+                    <li class="f1">
+                        <p>展覽期間｜2019.12.21 <span class="arrow">＞</span> 2020.2.2</p>
+                        <p>平日｜17:30 <span class="arrow a2">＞</span> 21:00</p>
+                        <p>假日｜17:30 <span class="arrow a2">＞</span> 21:00</p>
+                        <p>展出地點｜龍崎虎形山公園｜台南市龍崎區崎頂里</p>
+                    </li>
+                    <li class="f2">
+                        <p>主辦單位｜台南市政府文化局 ／ 協辦單位｜龍崎區公所 ／ 執行單位｜艸非火藝術 ／ 贊助單位｜皇龍建設、龍崎文衡殿</p>
+                    </li>
+                    <li class="f3">
+                        <p>© 2019 Longci Light Festival_void Mountain.<br>All Rights Reserved.</p>
                     </li>
                 </ul>
             </div>
@@ -979,8 +999,8 @@
     <script type="text/javascript" src="js/vendor.js"></script>
     <script type="text/javascript" src="js/lib.js"></script>
     <script type="text/javascript" src="js/components/video.js"></script>
-    <script type="text/javascript" id="appjs" src="js/app.js?v=1574003485849" data-mode="false" data-site=""></script>
-    <script src="js/index.js?v=1574003485849"></script>
+    <script type="text/javascript" id="appjs" src="js/app.js?v=1574656594667" data-mode="false" data-site=""></script>
+    <script src="js/index.js?v=1574656594667"></script>
     <script type="text/javascript"></script>
 </body>
 
