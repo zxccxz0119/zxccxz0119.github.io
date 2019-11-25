@@ -475,9 +475,44 @@
                 <section class="chapter chapter2-2">
                     <div id="chapter2-2">
                         <div class="content scoll-check-sub"><img class="mb-title" v-if="isMb" src="images/f2-title2-m.png" alt="龍崎光節 藝術地圖／集章">
-                            <div class="img-issue">
-                                <div class="green-block">
-                                    <div class="icon c1"> <img :src="`images/cs1${navTitle}.png`" alt="空山祭 comimg soon"></div>
+                            <div class="img-issue"><img src="images/issue.png" alt=""></div>
+                            <div class="circle-list">
+                                <div class="line" v-if="isMb"> <span class="l1"></span><span class="l2"></span><span class="l3"></span><span class="l4"></span></div>
+                                <div class="circle-item top">
+                                    <div class="num">A </div>
+                                    <div class="pic"></div>
+                                </div>
+                                <div class="circle-item top">
+                                    <div class="num">B </div>
+                                    <div class="pic"></div>
+                                </div>
+                                <div class="circle-item top">
+                                    <div class="num">1 </div>
+                                    <div class="pic"></div>
+                                </div>
+                                <div class="circle-item top mg">
+                                    <div class="num">2 </div>
+                                    <div class="pic"></div>
+                                </div>
+                                <div class="circle-item top mg">
+                                    <div class="num">3 </div>
+                                    <div class="pic"></div>
+                                </div>
+                                <div class="circle-item bottom b1 mg">
+                                    <div class="num">4 </div>
+                                    <div class="pic"></div>
+                                </div>
+                                <div class="circle-item bottom">
+                                    <div class="num">5 </div>
+                                    <div class="pic"></div>
+                                </div>
+                                <div class="circle-item bottom">
+                                    <div class="num">6 </div>
+                                    <div class="pic"></div>
+                                </div>
+                                <div class="circle-item bottom">
+                                    <div class="num">7 </div>
+                                    <div class="pic"></div>
                                 </div>
                             </div>
                         </div>
@@ -488,16 +523,33 @@
                         <div class="content scoll-check-sub"><img class="mb-title" v-if="isMb" src="images/f2-title3-m.png" alt="龍崎光節 作品概述">
                             <div class="img-issue"><img src="images/fake.jpg" alt=""></div>
                             <div class="project-list">
-                                <div class="project p1" @click="scrollTo('#p1')"></div>
-                                <div class="project p2" @click="scrollTo('#p2')"></div>
-                                <div class="project p3" @click="scrollTo('#p3')"></div>
-                                <div class="project p4" @click="scrollTo('#p4')"></div>
-                                <div class="project p5" @click="scrollTo('#p5')"></div>
-                                <div class="project p6" @click="scrollTo('#p6')"></div>
-                                <div class="project p7" @click="scrollTo('#p7')"></div>
-                                <div class="project p8" @click="scrollTo('#p8')"></div>
-                                <div class="project p9" @click="scrollTo('#p9')"></div>
-                                <div class="project p10" @click="scrollTo('#p10')"></div>
+                                <div class="project top p2" @click="scrollTo('#p2')">
+                                    <div class="num">A </div>
+                                </div>
+                                <div class="project top p3" @click="scrollTo('#p3')">
+                                    <div class="num">B</div>
+                                </div>
+                                <div class="project top p4" @click="scrollTo('#p4')">
+                                    <div class="num">1</div>
+                                </div>
+                                <div class="project top p5" @click="scrollTo('#p5')">
+                                    <div class="num">2</div>
+                                </div>
+                                <div class="project top p6" @click="scrollTo('#p6')">
+                                    <div class="num">3 </div>
+                                </div>
+                                <div class="project bottom p7" @click="scrollTo('#p7')">
+                                    <div class="num">4 </div>
+                                </div>
+                                <div class="project bottom p8" @click="scrollTo('#p8')">
+                                    <div class="num">5 </div>
+                                </div>
+                                <div class="project bottom p9" @click="scrollTo('#p9')">
+                                    <div class="num">6</div>
+                                </div>
+                                <div class="project bottom p10" @click="scrollTo('#p10')">
+                                    <div class="num">7 </div>
+                                </div>
                             </div>
                             <div class="notice-issue">
                                 <div class="inner">
@@ -674,7 +726,7 @@
                             </div>
                             <div class="sub-issue"><span>作品</span><span>｜</span><span>ART WORK</span><span>｜</span><span class="icon">2</span></div>
                             <div class="info-issue tw-info">
-                                <h3 class="title">勞作</h3>
+                                <h3 class="title">習作</h3>
                                 <div class="inner">
                                     <p>「大橋頭藝術工作室」是周學涵與姜名駿兩位藝術家為核心的藝術創作團體。以「結構」作為裝置藝術的核心。不單純是造型面向的「結構」，也包含環境、城市、人與社群之間的「關係」，重視人、時間、空間共創的美好關係，追尋適合的媒材、聆聽在地故事，做出與地方具有連結性的創作。</p>
                                 </div>
@@ -1013,8 +1065,8 @@
     <script type="text/javascript" src="js/vendor.js"></script>
     <script type="text/javascript" src="js/lib.js"></script>
     <script type="text/javascript" src="js/components/video.js"></script>
-    <script type="text/javascript" id="appjs" src="js/app.js?v=1574677509517" data-mode="false" data-site=""></script>
-    <script src="js/index.js?v=1574677509517"></script>
+    <script type="text/javascript" id="appjs" src="js/app.js?v=1574687617685" data-mode="false" data-site=""></script>
+    <script src="js/index.js?v=1574687617685"></script>
     <script type="text/javascript"></script>
 </body>
 
