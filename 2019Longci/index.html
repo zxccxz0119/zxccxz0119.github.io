@@ -22,6 +22,7 @@
     <link href="https://fonts.googleapis.com/css?family=BioRhyme&amp;display=swap" rel="stylesheet">
     <link href="static/slick.css" rel="stylesheet">
     <link href="static/slick-theme.css" rel="stylesheet">
+    <link href="static/magnific-popup.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <!--html body-->
@@ -72,7 +73,7 @@
                             <div class="l-container">
                                 <div class="nav-bd">
                                     <h1 class="nav-logo"><a @click="scrollTo('.index')" alt="LOGO" title="LOGO"><img src="images/logo.png" alt=""></a></h1>
-                                    <div class="soical" v-if="isMb"><a class="yt" href="https://www.youtube.com/channel/UCUggTwoyFG1TdKmF280QIxg?fbclid=IwAR1YUYGs_zNakQp1L73A2Bzfgi-Y8KUxXGD9bov4LexPZ5EY4U5fhui_Wus" target="_blank"> <img src="images/icon-yt-h.png" alt=""></a><a class="fb" href="https://www.facebook.com/longcilightfestival/?modal=admin_todo_tour" target="_blank"> <img src="images/icon-fb-h.png" alt=""></a><a class="ig" href="https://www.instagram.com/longci_light_festival/?hl=zh-tw&amp;fbclid=IwAR2oQrKSo7OR1vD8FyiWgwK33T8CgdDFLIc1Vb9XFwiWHTii5RaGc8OEuyg" target="_blank"> <img src="images/icon-ig-h.png" alt=""></a></div>
+                                    <div class="soical mb" v-if="isMb"><a class="yt" href="https://www.youtube.com/channel/UCUggTwoyFG1TdKmF280QIxg?fbclid=IwAR1YUYGs_zNakQp1L73A2Bzfgi-Y8KUxXGD9bov4LexPZ5EY4U5fhui_Wus" target="_blank"> <img src="images/icon-yt-h.png" alt=""></a><a class="fb" href="https://www.facebook.com/longcilightfestival/?modal=admin_todo_tour" target="_blank"> <img src="images/icon-fb-h.png" alt=""></a><a class="ig" href="https://www.instagram.com/longci_light_festival/?hl=zh-tw&amp;fbclid=IwAR2oQrKSo7OR1vD8FyiWgwK33T8CgdDFLIc1Vb9XFwiWHTii5RaGc8OEuyg" target="_blank"> <img src="images/icon-ig-h.png" alt=""></a></div>
                                     <div class="nav-btn">
                                         <div class="btn-block">
                                             <div class="one"></div>
@@ -112,6 +113,8 @@
                                                         <li @click="menuClick('#chapter3-1')"> <a> <span class="tw"><img :src="`images/hd7${navTitle}.png`" alt="活動時程表"></span><span class="eng"><img src="images/hd7-s.png" alt="Schedule"></span></a></li>
                                                         <li @click="menuClick('#chapter3-2')"> <a> <span class="tw"><img :src="`images/hd8${navTitle}.png`" alt="活動介紹"></span><span class="eng"><img src="images/hd8-s.png" alt="Event Introduction"></span></a></li>
                                                         <li @click="menuClick('#chapter3-3')"> <a> <span class="tw"><img :src="`images/hd9${navTitle}.png`" alt="工作坊介紹"></span><span class="eng"><img src="images/hd9-s.png" alt="Workshop Introduction"></span></a></li>
+                                                        <li @click="menuClick('#chapter3-4')"> <a> <span class="tw"><img :src="`images/hd13${navTitle}.png`" alt="生態導覽介紹"></span><span class="eng"><img src="images/hd13-s.png" alt="Activity Introduction"></span></a></li>
+                                                        <li @click="menuClick('#chapter3-5')"> <a> <span class="tw"><img :src="`images/hd14${navTitle}.png`" alt="藝術家創作座談"></span><span class="eng"><img src="images/hd14-s.png" alt="Artist Lecture"></span></a></li>
                                                     </ul>
                                                 </div>
                                             </li>
@@ -195,6 +198,7 @@
                             </div>
                             <div class="info-issue eng-info">
                                 <h3 class="title">EXHIBITION TEAM—Fake Fire</h3>
+                                <h4 class="subtitle">Curator｜<span>Chun Chung Chen</span>；<br v-if='isMb'>Design Coordinator｜<span>Xin Qi</span>；<br>Project assistant｜<span>Dun Ya Hu</span>；<br v-if='isMb'>Executive assistant｜<span>Wei Shiun Chen</span></h4>
                                 <div class="inner">
                                     <p>"Fireflies glow, yet they are not real fire,/ The round dew on lotus is far from pearl." Inspired from Bai Juyi’s Speaking Freely, the team tries to present the powerful aspect of artwork, which is to cross the borderline between true and false, real and unreal, and material and spiritual. In the world of art, the glow of fireflies is not fire, yet superior to it, for the glow is able to evoke people’s feelings. The Light Insect by the team is an attempt to create a world where truth and false being redefined, and with the arrangement of artworks and symbols, they would eventually mingle together. </p>
                                 </div>
@@ -337,13 +341,13 @@
                         <div class="content scoll-check scoll-check-sub">
                             <div class="item"><img class="mb-title" v-if="isMb" src="images/f2-title1-m.png" alt="龍崎光節 空空的山">
                                 <div class="img-issue">
-                                    <div class="green-block">
-                                        <div class="icon c2"><img :src="`images/cs2${navTitle}.png`" alt="空山祭 comimg soon"></div>
+                                    <div class="cs-block purple-block">
+                                        <div class="icon c2"></div>
                                     </div>
                                 </div>
                                 <div class="info-issue tw-info">
                                     <h3 class="title">空空的山</h3>
-                                    <h4 class="subtitle">劇本｜<span>辛綺</span>┼<span>陳雋中</span>；動畫設計｜<span>朱為鄰</span>；配樂設計｜<span>林信樺</span>┼<span>蔡痞諺</span></h4>
+                                    <h4 class="subtitle">劇本｜<span>辛綺</span>┼<span>陳雋中</span>；動畫設計｜<span>朱為麟</span>；<br v-if="isMb">配樂設計｜<span>林信樺</span>┼<span>蔡痞諺</span></h4>
                                     <div class="inner">
                                         <p>動畫故事「空空的山」是本次龍崎光節：空山祭的主題故事。開頭，我們「看」見一隻發光的光蟲自都會出發，向外飛去。飛往都市之外的鄉野之處，牠「看見」一片「空空蕩蕩」的山脈。身為觀眾的我們也隨著光蟲的視角，往山中漸漸行去，往我們平時所不熟悉，感覺陌生又荒寂的「空山」而去…</p>
                                         <p>隨著向山的旅程之中，我們與光蟲都發現，山並非真空；在旅程上有著許多夥伴，有"鳥獸魚蟲"(龍崎當地的生物)，有各種大自然的風光景緻、好山好水，也有百年的人文歷史，空山不空。<br>但危機也潛伏在前方等著我們去克服…</p>
@@ -351,6 +355,7 @@
                                 </div>
                                 <div class="info-issue eng-info">
                                     <h3 class="title">Void Mountain</h3>
+                                    <h4 class="subtitle">Script ｜<span>Xin Qi</span>&<span>Chun Chung Chen</span>；<br v-if="isMb">Animation｜<span>Wei Lin Zhu</span>；<br>Soundtrack｜<span>Lin Hsin Hua</span>┼<span>Noodles Tsai</span></h4>
                                     <div class="inner">
                                         <p>The animation "Void Mountain" is the main story of Longci Light Festival. In the beginning of the story, we can "see" The Light Insect starting its journey from the city. It is heading toward the countryside—the mountain, which seems to be empty and void from its point of view. We audiences then follow The Light Insect, going deeper to the mountains, deep into the area that we might consider as void and foreign. We know little about these areas. As our journey with The Light Insect goes further in the mountain, we then will notice that there are actually various types of life here. The local creatures of Longci will accompany us throughout the journey. The beauty of nature and historic stories are also our companions, together we will explore the "void mountain" that is actually full of treasures. But remember, we need to take care of the lurking crisis around us too…</p>
                                     </div>
@@ -373,9 +378,10 @@
                                 <div class="info-issue tw-info">
                                     <div class="person-list">
                                         <div class="person-item">
-                                            <div class="pic-group">
-                                                <div class="pic-item"><img src="images/fake.jpg" alt=""></div>
-                                                <div class="pic-item"><img src="images/fake.jpg" alt=""></div>
+                                            <div class="img-issue">
+                                                <div class="cs-block purple-block">
+                                                    <div class="icon c1"></div>
+                                                </div>
                                             </div>
                                             <div class="info-issue tw-info">
                                                 <h3 class="title">光蟲</h3>
@@ -391,9 +397,10 @@
                                             </div>
                                         </div>
                                         <div class="person-item">
-                                            <div class="pic-group">
-                                                <div class="pic-item"><img src="images/fake.jpg" alt=""></div>
-                                                <div class="pic-item"><img src="images/fake.jpg" alt=""></div>
+                                            <div class="img-issue">
+                                                <div class="cs-block purple-block">
+                                                    <div class="icon c1"></div>
+                                                </div>
                                             </div>
                                             <div class="info-issue tw-info">
                                                 <h3 class="title">烏雲</h3>
@@ -409,9 +416,10 @@
                                             </div>
                                         </div>
                                         <div class="person-item">
-                                            <div class="pic-group">
-                                                <div class="pic-item"><img src="images/fake.jpg" alt=""></div>
-                                                <div class="pic-item"><img src="images/fake.jpg" alt=""></div>
+                                            <div class="img-issue">
+                                                <div class="cs-block purple-block">
+                                                    <div class="icon c1"></div>
+                                                </div>
                                             </div>
                                             <div class="info-issue tw-info">
                                                 <h3 class="title">山</h3>
@@ -427,9 +435,10 @@
                                             </div>
                                         </div>
                                         <div class="person-item">
-                                            <div class="pic-group">
-                                                <div class="pic-item"><img src="images/fake.jpg" alt=""></div>
-                                                <div class="pic-item"><img src="images/fake.jpg" alt=""></div>
+                                            <div class="img-issue">
+                                                <div class="cs-block purple-block">
+                                                    <div class="icon c1"></div>
+                                                </div>
                                             </div>
                                             <div class="info-issue tw-info">
                                                 <h3 class="title">山中的朋友們</h3>
@@ -440,7 +449,7 @@
                                             <div class="info-issue eng-info">
                                                 <h3 class="title">The Friends in The Mountain</h3>
                                                 <div class="inner">
-                                                    <p>They are native creatures of Longci, including ants, spiders and birds. The Light Insect meet them during his journey, and they become its great companions too. In the story, the ants are doing some constructions in the mountain, using bamboo weavings to present the beauty and power of great structures. Bamboo weavings are common materials for the locals, using them is a way to symbolize the connection between the locals and the story. Chrysso scintillans, also known as "golden princess spiders," are weaving webs together. Famous for their instinct of protecting theirs eggs, Chrysso scintillans is the endemic species of Longci. They represent the love of a unified and heart-warming family. The birds are inspired by bird communities in Hu Xing Shan. They are singing harmonious songs of diverse cultures. </p>
+                                                    <p>They are native creatures of Longci, including ants, spiders and birds. The Light Insect meet them during his journey, and they become its great companions too. In the story, the ants are using bamboo weavings to present the beauty and power of great structures. Chrysso scintillans, also known as “golden princess spiders,” are weaving webs together. Famous for their instinct of protecting theirs eggs.The birds are singing harmonious songs of diverse cultures. </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -475,7 +484,7 @@
                 <section class="chapter chapter2-2">
                     <div id="chapter2-2">
                         <div class="content scoll-check-sub"><img class="mb-title" v-if="isMb" src="images/f2-title2-m.png" alt="龍崎光節 藝術地圖／集章">
-                            <div class="img-issue"><img src="images/issue.jpg" alt=""></div>
+                            <div class="img-issue"><a class="image-popup-no-margins" href="images/issue.jpg"><img src="images/issue.jpg"></a></div>
                             <div class="circle-list">
                                 <div class="line" v-if="isMb"> <span class="l1"></span><span class="l2"></span><span class="l3"></span><span class="l4"></span></div>
                                 <div class="circle-item top">
@@ -521,33 +530,37 @@
                 <section class="chapter chapter2-3">
                     <div id="chapter2-3">
                         <div class="content scoll-check-sub"><img class="mb-title" v-if="isMb" src="images/f2-title3-m.png" alt="龍崎光節 作品概述">
-                            <div class="img-issue"><img src="images/fake.jpg" alt=""></div>
+                            <div class="img-issue">
+                                <div class="cs-block purple-block">
+                                    <div class="icon c1"></div>
+                                </div>
+                            </div>
                             <div class="project-list">
-                                <div class="project top p2" @click="scrollTo('#p2')">
+                                <div class="project top p2" @click="scrollTo('#p2','mb')">
                                     <div class="num">A </div>
                                 </div>
-                                <div class="project top p3" @click="scrollTo('#p3')">
+                                <div class="project top p3" @click="scrollTo('#p3','mb')">
                                     <div class="num">B</div>
                                 </div>
-                                <div class="project top p4" @click="scrollTo('#p4')">
+                                <div class="project top p4" @click="scrollTo('#p4','mb')">
                                     <div class="num">1</div>
                                 </div>
-                                <div class="project top p5" @click="scrollTo('#p5')">
+                                <div class="project top p5" @click="scrollTo('#p5','mb')">
                                     <div class="num">2</div>
                                 </div>
-                                <div class="project top p6" @click="scrollTo('#p6')">
+                                <div class="project top p6" @click="scrollTo('#p6','mb')">
                                     <div class="num">3 </div>
                                 </div>
-                                <div class="project bottom p7" @click="scrollTo('#p7')">
+                                <div class="project bottom p7" @click="scrollTo('#p7','mb')">
                                     <div class="num">4 </div>
                                 </div>
-                                <div class="project bottom p8" @click="scrollTo('#p8')">
+                                <div class="project bottom p8" @click="scrollTo('#p8','mb')">
                                     <div class="num">5 </div>
                                 </div>
-                                <div class="project bottom p9" @click="scrollTo('#p9')">
+                                <div class="project bottom p9" @click="scrollTo('#p9','mb')">
                                     <div class="num">6</div>
                                 </div>
-                                <div class="project bottom p10" @click="scrollTo('#p10')">
+                                <div class="project bottom p10" @click="scrollTo('#p10','mb')">
                                     <div class="num">7 </div>
                                 </div>
                             </div>
@@ -559,24 +572,9 @@
                             </div>
                         </div>
                         <div class="content gray" id="p1">
-                            <div class="project-view">
-                                <div class="left-block"><img src="images/fake.jpg" alt=""></div>
-                                <div class="right-block">
-                                    <div class="ani-pic"><img src="images/fake.jpg" alt=""></div>
-                                    <div class="author-list">
-                                        <div class="author-item">
-                                            <p class="name">辛綺</p>
-                                            <div class="author-pic a1"></div>
-                                        </div>
-                                        <div class="author-item">
-                                            <p class="name">張永旺</p>
-                                            <div class="author-pic a2"></div>
-                                        </div>
-                                        <div class="author-item">
-                                            <p class="name">瓦豆</p>
-                                            <div class="author-pic a3"></div>
-                                        </div>
-                                    </div>
+                            <div class="img-issue">
+                                <div class="cs-block purple-block">
+                                    <div class="icon c1"></div>
                                 </div>
                             </div>
                             <div class="sub-issue sp0"><span>整體展場設置</span><span>｜</span><span>EXHIBITION ARTWORKS</span></div>
@@ -594,43 +592,9 @@
                             </div>
                         </div>
                         <div class="content" id="p2">
-                            <div class="project-view">
-                                <div class="left-block"><img src="images/fake.jpg" alt=""></div>
-                                <div class="right-block addtitle">
-                                    <div class="part pp1">
-                                        <div class="at">竹苗</div>
-                                        <div class="author-list issue">
-                                            <div class="author-item">
-                                                <p class="name">張永旺</p>
-                                                <div class="author-pic"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="part pp2">
-                                        <div class="at at2">空空的山</div>
-                                        <div class="author-list slide at2">
-                                            <div class="author-item no-icon">
-                                                <p class="name">辛綺</p>
-                                                <div class="author-pic a1"></div>
-                                            </div>
-                                            <div class="author-item">
-                                                <p class="name">陳雋中</p>
-                                                <div class="author-pic a4"></div>
-                                            </div>
-                                            <div class="author-item">
-                                                <p class="name">朱為麟</p>
-                                                <div class="author-pic a5"></div>
-                                            </div>
-                                            <div class="author-item">
-                                                <p class="name">林信樺</p>
-                                                <div class="author-pic a6"></div>
-                                            </div>
-                                            <div class="author-item">
-                                                <p class="name">蔡痞諺</p>
-                                                <div class="author-pic a7"></div>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <div class="img-issue">
+                                <div class="cs-block purple-block">
+                                    <div class="icon c2"></div>
                                 </div>
                             </div>
                             <div class="sub-issue sp1 bb1"><span>入口意象</span><span>｜</span><span>ENTRANCE IMAGERY</span><span>｜</span><span class="icon">A</span></div>
@@ -648,24 +612,9 @@
                             </div>
                         </div>
                         <div class="content gray" id="p3">
-                            <div class="project-view">
-                                <div class="left-block"><img src="images/fake.jpg" alt=""></div>
-                                <div class="right-block">
-                                    <div class="ani-pic"><img src="images/fake.jpg" alt=""></div>
-                                    <div class="author-list">
-                                        <div class="author-item no-icon">
-                                            <p class="name">辛綺</p>
-                                            <div class="author-pic a1"></div>
-                                        </div>
-                                        <div class="author-item">
-                                            <p class="name">龍崎國小<br>及<br>龍船分校</p>
-                                            <div class="author-pic a8"></div>
-                                        </div>
-                                        <div class="author-item">
-                                            <p class="name">龍崎國中</p>
-                                            <div class="author-pic a9"></div>
-                                        </div>
-                                    </div>
+                            <div class="img-issue">
+                                <div class="cs-block purple-block">
+                                    <div class="icon c2"></div>
                                 </div>
                             </div>
                             <div class="sub-issue sp2"><span>入口意象</span><span>｜</span><span>ENTRANCE IMAGERY</span><span>｜</span><span class="icon">B</span></div>
@@ -683,16 +632,9 @@
                             </div>
                         </div>
                         <div class="content" id="p4">
-                            <div class="project-view">
-                                <div class="left-block"><img src="images/fake.jpg" alt=""></div>
-                                <div class="right-block">
-                                    <div class="ani-pic"><img src="images/fake.jpg" alt=""></div>
-                                    <div class="author-list">
-                                        <div class="author-item">
-                                            <p class="name">高德亮</p>
-                                            <div class="author-pic a10"></div>
-                                        </div>
-                                    </div>
+                            <div class="img-issue">
+                                <div class="cs-block purple-block">
+                                    <div class="icon c2"></div>
                                 </div>
                             </div>
                             <div class="sub-issue bb1"><span>作品</span><span>｜</span><span>ART WORK</span><span>｜</span><span class="icon">1</span></div>
@@ -712,21 +654,14 @@
                             </div>
                         </div>
                         <div class="content gray" id="p5">
-                            <div class="project-view">
-                                <div class="left-block"><img src="images/fake.jpg" alt=""></div>
-                                <div class="right-block">
-                                    <div class="ani-pic"><img src="images/fake.jpg" alt=""></div>
-                                    <div class="author-list">
-                                        <div class="author-item">
-                                            <p class="name">大橋頭藝術<br>工作室</p>
-                                            <div class="author-pic a11"></div>
-                                        </div>
-                                    </div>
+                            <div class="img-issue">
+                                <div class="cs-block purple-block">
+                                    <div class="icon c2"></div>
                                 </div>
                             </div>
                             <div class="sub-issue"><span>作品</span><span>｜</span><span>ART WORK</span><span>｜</span><span class="icon">2</span></div>
                             <div class="info-issue tw-info">
-                                <h3 class="title">習作</h3>
+                                <h3 class="title">勞作</h3>
                                 <div class="inner">
                                     <p>「大橋頭藝術工作室」是周學涵與姜名駿兩位藝術家為核心的藝術創作團體。以「結構」作為裝置藝術的核心。不單純是造型面向的「結構」，也包含環境、城市、人與社群之間的「關係」，重視人、時間、空間共創的美好關係，追尋適合的媒材、聆聽在地故事，做出與地方具有連結性的創作。</p>
                                 </div>
@@ -739,24 +674,9 @@
                             </div>
                         </div>
                         <div class="content" id="p6">
-                            <div class="project-view">
-                                <div class="left-block"><img src="images/fake.jpg" alt=""></div>
-                                <div class="right-block">
-                                    <div class="ani-pic"><img src="images/fake.jpg" alt=""></div>
-                                    <div class="author-list">
-                                        <div class="author-item">
-                                            <p class="name">楊芳宜</p>
-                                            <div class="author-pic a12"></div>
-                                        </div>
-                                        <div class="author-item">
-                                            <p class="name">崎頂里<br>民眾</p>
-                                            <div class="author-pic a13"></div>
-                                        </div>
-                                        <div class="author-item">
-                                            <p class="name">牛埔里<br>民眾</p>
-                                            <div class="author-pic a14"></div>
-                                        </div>
-                                    </div>
+                            <div class="img-issue">
+                                <div class="cs-block purple-block">
+                                    <div class="icon c2"></div>
                                 </div>
                             </div>
                             <div class="sub-issue bb1"><span>作品</span><span>｜</span><span>ART WORK</span><span>｜</span><span class="icon">3</span></div>
@@ -774,16 +694,9 @@
                             </div>
                         </div>
                         <div class="content gray" id="p7">
-                            <div class="project-view">
-                                <div class="left-block"><img src="images/fake.jpg" alt=""></div>
-                                <div class="right-block">
-                                    <div class="ani-pic"><img src="images/fake.jpg" alt=""></div>
-                                    <div class="author-list">
-                                        <div class="author-item">
-                                            <p class="name">蕭聖健</p>
-                                            <div class="author-pic a15"></div>
-                                        </div>
-                                    </div>
+                            <div class="img-issue">
+                                <div class="cs-block purple-block">
+                                    <div class="icon c2"></div>
                                 </div>
                             </div>
                             <div class="sub-issue"><span>作品</span><span>｜</span><span>ART WORK</span><span>｜</span><span class="icon">4</span></div>
@@ -801,16 +714,9 @@
                             </div>
                         </div>
                         <div class="content" id="p8">
-                            <div class="project-view">
-                                <div class="left-block"><img src="images/fake.jpg" alt=""></div>
-                                <div class="right-block">
-                                    <div class="ani-pic"><img src="images/fake.jpg" alt=""></div>
-                                    <div class="author-list">
-                                        <div class="author-item">
-                                            <p class="name">辛綺</p>
-                                            <div class="author-pic a1"></div>
-                                        </div>
-                                    </div>
+                            <div class="img-issue">
+                                <div class="cs-block purple-block">
+                                    <div class="icon c2"></div>
                                 </div>
                             </div>
                             <div class="sub-issue bb1"><span>作品</span><span>｜</span><span>ART WORK</span><span>｜</span><span class="icon">5</span></div>
@@ -828,20 +734,9 @@
                             </div>
                         </div>
                         <div class="content gray" id="p9">
-                            <div class="project-view">
-                                <div class="left-block"><img src="images/fake.jpg" alt=""></div>
-                                <div class="right-block">
-                                    <div class="ani-pic"><img src="images/fake.jpg" alt=""></div>
-                                    <div class="author-list">
-                                        <div class="author-item">
-                                            <p class="name">廖昭豪</p>
-                                            <div class="author-pic a16"></div>
-                                        </div>
-                                        <div class="author-item">
-                                            <p class="name">辛綺</p>
-                                            <div class="author-pic a1"></div>
-                                        </div>
-                                    </div>
+                            <div class="img-issue">
+                                <div class="cs-block purple-block">
+                                    <div class="icon c2"></div>
                                 </div>
                             </div>
                             <div class="sub-issue"><span>作品</span><span>｜</span><span>ART WORK</span><span>｜</span><span class="icon">6</span></div>
@@ -859,16 +754,9 @@
                             </div>
                         </div>
                         <div class="content gray" id="p10">
-                            <div class="project-view">
-                                <div class="left-block"><img src="images/fake.jpg" alt=""></div>
-                                <div class="right-block">
-                                    <div class="ani-pic"><img src="images/fake.jpg" alt=""></div>
-                                    <div class="author-list">
-                                        <div class="author-item">
-                                            <p class="name">辛綺</p>
-                                            <div class="author-pic a1"></div>
-                                        </div>
-                                    </div>
+                            <div class="img-issue">
+                                <div class="cs-block purple-block">
+                                    <div class="icon c2"></div>
                                 </div>
                             </div>
                             <div class="sub-issue"><span>作品</span><span>｜</span><span>ART WORK</span><span>｜</span><span class="icon">7</span></div>
@@ -891,8 +779,8 @@
                     <div id="chapter3-1">
                         <div class="content scoll-check scoll-check-sub"><img class="mb-title" v-if="isMb" src="images/f3-title1-m.png" alt="龍崎光節 活動時程表">
                             <div class="img-issue">
-                                <div class="green-block">
-                                    <div class="icon c1"> <img :src="`images/cs1${navTitle}.png`" alt="空山祭 comimg soon"></div>
+                                <div class="cs-block green-block">
+                                    <div class="icon c1"> </div>
                                 </div>
                             </div>
                         </div>
@@ -902,8 +790,8 @@
                     <div id="chapter3-2">
                         <div class="content gray scoll-check-sub mbbg"><img class="mb-title" v-if="isMb" src="images/f3-title2-m.png" alt="龍崎光節 活動介紹 ">
                             <div class="img-issue">
-                                <div class="green-block">
-                                    <div class="icon c2"><img :src="`images/cs2${navTitle}.png`" alt="空山祭 comimg soon"></div>
+                                <div class="cs-block green-block">
+                                    <div class="icon c2"></div>
                                 </div>
                             </div>
                         </div>
@@ -913,8 +801,30 @@
                     <div id="chapter3-3">
                         <div class="content scoll-check-sub"><img class="mb-title" v-if="isMb" src="images/f3-title3-m.png" alt="龍崎光節 工作坊介紹">
                             <div class="img-issue">
-                                <div class="green-block">
-                                    <div class="icon c2"><img :src="`images/cs2${navTitle}.png`" alt="空山祭 comimg soon"></div>
+                                <div class="cs-block green-block">
+                                    <div class="icon c2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="chapter chapter3-4">
+                    <div id="chapter3-4">
+                        <div class="content scoll-check-sub gray mbbg"><img class="mb-title" v-if="isMb" src="images/f3-title4-m.png" alt="龍崎光節 生態導覽介紹">
+                            <div class="img-issue">
+                                <div class="cs-block green-block">
+                                    <div class="icon c1"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="chapter chapter3-5">
+                    <div id="chapter3-5">
+                        <div class="content scoll-check-sub"><img class="mb-title" v-if="isMb" src="images/f3-title5-m.png" alt="龍崎光節 藝術家創作座談">
+                            <div class="img-issue">
+                                <div class="cs-block green-block">
+                                    <div class="icon c2"></div>
                                 </div>
                             </div>
                         </div>
@@ -941,8 +851,8 @@
                     <div id="chapter4-3">
                         <div class="content scoll-check-sub"><img class="mb-title" v-if="isMb" src="images/f4-title3-m.png" alt="龍崎光節 交通資訊">
                             <div class="img-issue">
-                                <div class="green-block">
-                                    <div class="icon c1"><img :src="`images/cs1${navTitle}.png`" alt="空山祭 comimg soon"></div>
+                                <div class="cs-block yellow-block">
+                                    <div class="icon c1"></div>
                                 </div>
                             </div>
                         </div>
@@ -1013,11 +923,12 @@
                     <li class="f1">
                         <p>展覽期間｜2019.12.21 <span class="arrow">＞</span> 2020.2.2</p>
                         <p>平日｜17:30 <span class="arrow a2">＞</span> 21:00</p>
-                        <p>假日｜17:30 <span class="arrow a2">＞</span> 21:00</p>
+                        <p>假日｜17:30 <span class="arrow a2">＞</span> 22:00</p>
                         <p>展出地點｜龍崎虎形山公園｜台南市龍崎區崎頂里</p>
                     </li>
                     <li class="f2">
-                        <p>主辦單位｜台南市政府文化局 ／ 協辦單位｜龍崎區公所 ／ 執行單位｜艸非火藝術 ／ 贊助單位｜皇龍建設、龍崎文衡殿</p>
+                        <p>主辦單位｜台南市政府文化局 ／ 協辦單位｜龍崎區公所</p>
+                        <p>執行單位｜艸非火藝術 ／ 贊助單位｜皇龍建設、龍崎文衡殿</p>
                     </li>
                     <li class="f3">
                         <p>© 2019 Longci Light Festival_void Mountain.<br>All Rights Reserved.</p>
@@ -1065,8 +976,8 @@
     <script type="text/javascript" src="js/vendor.js"></script>
     <script type="text/javascript" src="js/lib.js"></script>
     <script type="text/javascript" src="js/components/video.js"></script>
-    <script type="text/javascript" id="appjs" src="js/app.js?v=1574693711096" data-mode="false" data-site=""></script>
-    <script src="js/index.js?v=1574693711096"></script>
+    <script type="text/javascript" id="appjs" src="js/app.js?v=1575204409810" data-mode="false" data-site=""></script>
+    <script src="js/index.js?v=1575204409810"></script>
     <script type="text/javascript"></script>
 </body>
 
