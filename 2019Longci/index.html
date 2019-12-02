@@ -35,7 +35,7 @@
                 <div class="totop" id="totop" v-if="!isMb" @click="scrollTo('.index')"><img src="images/totop.png" alt="龍崎光節 totop"></div>
                 <section class="kv-area">
                     <div class="kv scoll-check" id="kv">
-                        <div class="scrolldown" @click="scrollTo('#nav-block')"><img :src="`images/scoll-down${navTitle}.png`" alt=""></div>
+                        <div class="scrolldown" @click="scrollTo('#nav-block')"><img :src="'images/scoll-down'+navTitle+'.png'" alt=""></div>
                         <div class="pc-part" v-if="!isMb">
                             <div class="kv-eyes"><img src="images/kv-eyes.png" alt="空山祭-眼睛"></div>
                             <div class="kv-eyes2"><img src="images/kv-eyes2.png" alt="空山祭-眼睛2"></div>
@@ -84,53 +84,53 @@
                                     <div class="nav-menu" role="navigation">
                                         <ul class="clearfix">
                                             <li class="nav-item"><a alt="龍崎光節／空山祭" title="龍崎光節／空山祭">
-                                                    <div class="u-title"> <img :src="`images/u1${navTitle}.png`" alt="龍崎光節／空山祭"></div>
+                                                    <div class="u-title"> <img :src="'images/u1'+navTitle+'.png'" alt="龍崎光節／空山祭"></div>
                                                 </a>
                                                 <div class="drop-block">
                                                     <ul>
-                                                        <li @click="menuClick('#chapter1-1')"> <a> <span class="tw"><img :src="`images/hd1${navTitle}.png`" alt="展覽簡介"></span><span class="eng"><img src="images/hd1-s.png" alt="Exhibition Introduction"></span></a></li>
-                                                        <li @click="menuClick('#chapter1-2')"> <a> <span class="tw"><img :src="`images/hd2${navTitle}.png`" alt="展覽概念"></span><span class="eng"><img src="images/hd2-s.png" alt="xhibition Concept"></span></a></li>
-                                                        <li @click="menuClick('#chapter1-3')"> <a> <span class="tw"><img :src="`images/hd3${navTitle}.png`" alt="龍崎介紹"></span><span class="eng"><img src="images/hd3-s.png" alt="Longci Introduction"></span></a></li>
+                                                        <li @click="menuClick('#chapter1-1')"> <a> <span class="tw"><img :src="'images/hd1'+navTitle+'.png'" alt="展覽簡介"></span><span class="eng"><img src="images/hd1-s.png" alt="Exhibition Introduction"></span></a></li>
+                                                        <li @click="menuClick('#chapter1-2')"> <a> <span class="tw"><img :src="'images/hd2'+navTitle+'.png'" alt="展覽概念"></span><span class="eng"><img src="images/hd2-s.png" alt="xhibition Concept"></span></a></li>
+                                                        <li @click="menuClick('#chapter1-3')"> <a> <span class="tw"><img :src="'images/hd3'+navTitle+'.png'" alt="龍崎介紹"></span><span class="eng"><img src="images/hd3-s.png" alt="Longci Introduction"></span></a></li>
                                                     </ul>
                                                 </div>
                                             </li>
                                             <li class="nav-item"><a alt="空山作品" title="空山作品">
-                                                    <div class="u-title"> <img :src="`images/u2${navTitle}.png`" alt="空山作品"></div>
+                                                    <div class="u-title"> <img :src="'images/u2'+navTitle+'.png'" alt="空山作品"></div>
                                                 </a>
                                                 <div class="drop-block">
                                                     <ul>
-                                                        <li @click="menuClick('#chapter2-1')"> <a> <span class="tw"><img :src="`images/hd4${navTitle}.png`" alt="動畫：空空的山"></span><span class="eng"><img src="images/hd4-s.png" alt="Animation: Story About Void Mountain"></span></a></li>
-                                                        <li @click="menuClick('#chapter2-2')"> <a> <span class="tw"><img :src="`images/hd5${navTitle}.png`" alt="藝術地圖／集章"></span><span class="eng"><img src="images/hd5-s.png" alt="Art Map／Stamp Collection"></span></a></li>
-                                                        <li @click="menuClick('#chapter2-3')"> <a> <span class="tw"><img :src="`images/hd6${navTitle}.png`" alt="作品概述"></span><span class="eng"><img src="images/hd6-s.png" alt="Concept Of Art Works"></span></a></li>
+                                                        <li @click="menuClick('#chapter2-1')"> <a> <span class="tw"><img :src="'images/hd4'+navTitle+'.png'" alt="動畫：空空的山"></span><span class="eng"><img src="images/hd4-s.png" alt="Animation: Story About Void Mountain"></span></a></li>
+                                                        <li @click="menuClick('#chapter2-2')"> <a> <span class="tw"><img :src="'images/hd5'+navTitle+'.png'" alt="藝術地圖／集章"></span><span class="eng"><img src="images/hd5-s.png" alt="Art Map／Stamp Collection"></span></a></li>
+                                                        <li @click="menuClick('#chapter2-3')"> <a> <span class="tw"><img :src="'images/hd6'+navTitle+'.png'" alt="作品概述"></span><span class="eng"><img src="images/hd6-s.png" alt="Concept Of Art Works"></span></a></li>
                                                     </ul>
                                                 </div>
                                             </li>
                                             <li class="nav-item"><a alt="空山活動" title="空山活動">
-                                                    <div class="u-title"> <img :src="`images/u3${navTitle}.png`" alt="空山活動"></div>
+                                                    <div class="u-title"> <img :src="'images/u3'+navTitle+'.png'" alt="空山活動"></div>
                                                 </a>
                                                 <div class="drop-block">
                                                     <ul>
-                                                        <li @click="menuClick('#chapter3-1')"> <a> <span class="tw"><img :src="`images/hd7${navTitle}.png`" alt="活動時程表"></span><span class="eng"><img src="images/hd7-s.png" alt="Schedule"></span></a></li>
-                                                        <li @click="menuClick('#chapter3-2')"> <a> <span class="tw"><img :src="`images/hd8${navTitle}.png`" alt="活動介紹"></span><span class="eng"><img src="images/hd8-s.png" alt="Event Introduction"></span></a></li>
-                                                        <li @click="menuClick('#chapter3-3')"> <a> <span class="tw"><img :src="`images/hd9${navTitle}.png`" alt="工作坊介紹"></span><span class="eng"><img src="images/hd9-s.png" alt="Workshop Introduction"></span></a></li>
-                                                        <li @click="menuClick('#chapter3-4')"> <a> <span class="tw"><img :src="`images/hd13${navTitle}.png`" alt="生態導覽介紹"></span><span class="eng"><img src="images/hd13-s.png" alt="Activity Introduction"></span></a></li>
-                                                        <li @click="menuClick('#chapter3-5')"> <a> <span class="tw"><img :src="`images/hd14${navTitle}.png`" alt="藝術家創作座談"></span><span class="eng"><img src="images/hd14-s.png" alt="Artist Lecture"></span></a></li>
+                                                        <li @click="menuClick('#chapter3-1')"> <a> <span class="tw"><img :src="'images/hd7'+navTitle+'.png'" alt="活動時程表"></span><span class="eng"><img src="images/hd7-s.png" alt="Schedule"></span></a></li>
+                                                        <li @click="menuClick('#chapter3-2')"> <a> <span class="tw"><img :src="'images/hd8'+navTitle+'.png'" alt="活動介紹"></span><span class="eng"><img src="images/hd8-s.png" alt="Event Introduction"></span></a></li>
+                                                        <li @click="menuClick('#chapter3-3')"> <a> <span class="tw"><img :src="'images/hd9'+navTitle+'.png'" alt="工作坊介紹"></span><span class="eng"><img src="images/hd9-s.png" alt="Workshop Introduction"></span></a></li>
+                                                        <li @click="menuClick('#chapter3-4')"> <a> <span class="tw"><img :src="'images/hd13'+navTitle+'.png'" alt="生態導覽介紹"></span><span class="eng"><img src="images/hd13-s.png" alt="Activity Introduction"></span></a></li>
+                                                        <li @click="menuClick('#chapter3-5')"> <a> <span class="tw"><img :src="'images/hd14'+navTitle+'.png'" alt="藝術家創作座談"></span><span class="eng"><img src="images/hd14-s.png" alt="Artist Lecture"></span></a></li>
                                                     </ul>
                                                 </div>
                                             </li>
                                             <li class="nav-item"><a alt="參觀／交通" title="參觀╱交通">
-                                                    <div class="u-title"> <img :src="`images/u4${navTitle}.png`" alt="參觀／交通"></div>
+                                                    <div class="u-title"> <img :src="'images/u4'+navTitle+'.png'" alt="參觀／交通"></div>
                                                 </a>
                                                 <div class="drop-block">
                                                     <ul>
-                                                        <li @click="menuClick('#chapter4-1')"> <a> <span class="tw"><img :src="`images/hd10${navTitle}.png`" alt="展期"></span><span class="eng"><img src="images/hd10-s.png" alt="Exhibition Time"></span></a></li>
-                                                        <li @click="menuClick('#chapter4-2')"> <a> <span class="tw"><img :src="`images/hd11${navTitle}.png`" alt="地點"></span><span class="eng"><img src="images/hd11-s.png" alt="Exhibition Location"></span></a></li>
-                                                        <li @click="menuClick('#chapter4-3')"> <a> <span class="tw"><img :src="`images/hd12${navTitle}.png`" alt="交通資訊"></span><span class="eng"><img src="images/hd12-s.png" alt="Traffic Information"></span></a></li>
+                                                        <li @click="menuClick('#chapter4-1')"> <a> <span class="tw"><img :src="'images/hd10'+navTitle+'.png'" alt="展期"></span><span class="eng"><img src="images/hd10-s.png" alt="Exhibition Time"></span></a></li>
+                                                        <li @click="menuClick('#chapter4-2')"> <a> <span class="tw"><img :src="'images/hd11'+navTitle+'.png'" alt="地點"></span><span class="eng"><img src="images/hd11-s.png" alt="Exhibition Location"></span></a></li>
+                                                        <li @click="menuClick('#chapter4-3')"> <a> <span class="tw"><img :src="'images/hd12'+navTitle+'.png'" alt="交通資訊"></span><span class="eng"><img src="images/hd12-s.png" alt="Traffic Information"></span></a></li>
                                                     </ul>
                                                 </div>
                                             </li>
                                             <li class="nav-item nanguan" @click="menuClick('#chapter5-1')"><a @click="menuClick('#chapter5-1')" alt="南關線觀光" itemprop="url" title="南關線觀光">
-                                                    <div class="u-title"> <img :src="`images/u5${navTitle}.png`" alt="南關線觀光"></div>
+                                                    <div class="u-title"> <img :src="'images/u5'+navTitle+'.png'" alt="南關線觀光"></div>
                                                 </a>
                                                 <div class="drop-block">
                                                     <div class="star" @click="menuClick('#chapter5-1')"></div>
@@ -977,8 +977,8 @@
     <script type="text/javascript" src="js/vendor.js"></script>
     <script type="text/javascript" src="js/lib.js"></script>
     <script type="text/javascript" src="js/components/video.js"></script>
-    <script type="text/javascript" id="appjs" src="js/app.js?v=1575208923049" data-mode="false" data-site=""></script>
-    <script src="js/index.js?v=1575208923049"></script>
+    <script type="text/javascript" id="appjs" src="js/app.js?v=1575277925370" data-mode="false" data-site=""></script>
+    <script src="js/index.js?v=1575277925370"></script>
     <script type="text/javascript"></script>
 </body>
 
