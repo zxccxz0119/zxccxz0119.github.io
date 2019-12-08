@@ -129,11 +129,11 @@
                                                     </ul>
                                                 </div>
                                             </li>
-                                            <li class="nav-item nanguan" @click="menuClick('#chapter5-1')"><a @click="menuClick('#chapter5-1')" alt="南關線觀光" itemprop="url" title="南關線觀光">
+                                            <li class="nav-item nanguan" @click="link"><a @click="link" alt="南關線觀光" itemprop="url" title="南關線觀光">
                                                     <div class="u-title"> <img :src="'images/u5'+navTitle+'.png'" alt="南關線觀光"></div>
                                                 </a>
                                                 <div class="drop-block">
-                                                    <div class="star" @click="menuClick('#chapter5-1')"></div>
+                                                    <div class="star" @click="link"></div>
                                                 </div>
                                             </li>
                                             <li class="nav-item soical"><a class="yt" href="https://www.youtube.com/channel/UCUggTwoyFG1TdKmF280QIxg?fbclid=IwAR1YUYGs_zNakQp1L73A2Bzfgi-Y8KUxXGD9bov4LexPZ5EY4U5fhui_Wus" target="_blank"> </a><a class="fb" href="https://www.facebook.com/longcilightfestival/?modal=admin_todo_tour" target="_blank"> </a><a class="ig" href="https://www.instagram.com/longci_light_festival/?hl=zh-tw&amp;fbclid=IwAR2oQrKSo7OR1vD8FyiWgwK33T8CgdDFLIc1Vb9XFwiWHTii5RaGc8OEuyg" target="_blank"> </a></li>
@@ -143,7 +143,7 @@
                             </div>
                         </nav>
                     </div>
-                    <div class="main-video chapter">
+                    <div class="main-video chapter fixed">
                         <div class="fixed-area" v-if="!isMb">
                             <div class="title"> <img src="images/f-title1.png" alt=""></div>
                         </div>
@@ -575,7 +575,7 @@
                         <div class="content gray" id="p1">
                             <div class="img-issue">
                                 <div class="cs-block purple-block">
-                                    <div class="icon c1"></div>
+                                    <div class="icon c1"> </div>
                                 </div>
                             </div>
                             <div class="sub-issue sp0"><span>整體展場設置</span><span>｜</span><span>EXHIBITION ARTWORKS</span></div>
@@ -600,6 +600,7 @@
                             </div>
                             <div class="sub-issue sp1 bb1"><span>入口意象</span><span>｜</span><span>ENTRANCE IMAGERY</span><span>｜</span><span class="icon">A</span></div>
                             <div class="info-issue tw-info">
+                                <div class="nb-issue bb1">A</div>
                                 <h3 class="title">竹苗┼空空的山</h3>
                                 <div class="inner">
                                     <p>入口意象竹編、服務台、和影像欣賞區三部曲，是步步深入「空山祭」的儀式。龍崎產竹，為竹之故鄉；竹藝師張永旺老師在當地傳承竹編技藝，反映當地濃厚的人文氣息。在入口處，竹藝師編織出竹苗拱門，展現在地竹之美，又帶來「進入」的意念，種下一顆竹苗，承襲一世風霜，再造一代新象。</p>
@@ -620,6 +621,7 @@
                             </div>
                             <div class="sub-issue sp2"><span>入口意象</span><span>｜</span><span>ENTRANCE IMAGERY</span><span>｜</span><span class="icon">B</span></div>
                             <div class="info-issue tw-info">
+                                <div class="nb-issue">B</div>
                                 <h3 class="title">龍崎之想像生物</h3>
                                 <div class="inner">
                                     <p>藝術家辛綺結合在地材料，設計出利用竹筒特性的投光走廊。這段前往展場的路上，是與當地小朋友合作繪畫出他們所想像的龍崎生物，並由團隊製作投影片，結合竹燈籠的光，使燈籠下面產生各種不同動植物的光影呈現。帶來栩栩如生的映射，表現「滿滿生態」的象徵。</p>
@@ -640,6 +642,7 @@
                             </div>
                             <div class="sub-issue bb1"><span>作品</span><span>｜</span><span>ART WORK</span><span>｜</span><span class="icon">1</span></div>
                             <div class="info-issue tw-info">
+                                <div class="nb-issue bb1">1</div>
                                 <h3 class="title">流光橋</h3>
                                 <div class="inner">
                                     <p>以日治時期的舊橋遺址為基座的望龍吊橋，為人們在地形崎嶇的山林提供了入口，在橋上的每一步都會看到樹叢中不同的生命在竄動。正是因爲這空空的山，山林裡不同的生命才顯得如此豐盈而神秘。</p>
@@ -662,6 +665,7 @@
                             </div>
                             <div class="sub-issue"><span>作品</span><span>｜</span><span>ART WORK</span><span>｜</span><span class="icon">2</span></div>
                             <div class="info-issue tw-info">
+                                <div class="nb-issue">2</div>
                                 <h3 class="title">勞作</h3>
                                 <div class="inner">
                                     <p>「大橋頭藝術工作室」是周學涵與姜名駿兩位藝術家為核心的藝術創作團體。以「結構」作為裝置藝術的核心。不單純是造型面向的「結構」，也包含環境、城市、人與社群之間的「關係」，重視人、時間、空間共創的美好關係，追尋適合的媒材、聆聽在地故事，做出與地方具有連結性的創作。</p>
@@ -682,6 +686,7 @@
                             </div>
                             <div class="sub-issue bb1"><span>作品</span><span>｜</span><span>ART WORK</span><span>｜</span><span class="icon">3</span></div>
                             <div class="info-issue tw-info">
+                                <div class="nb-issue bb1">3</div>
                                 <h3 class="title">團結織網</h3>
                                 <div class="inner">
                                     <p>藝術家楊芳宜重視環保議題，在生活中誕生了以塑膠袋回收做為作品素材的想法。金姬蛛是虎形山特有的生物，其護卵的本能為人稱道。本作品由回收資源編織而呈蜘蛛網狀，加上卵形象徵；帶領當地居民製作花形、蜘蛛卵等象徵著社群意識。巨大的織網懸掛在樹林之間，予觀者帶來震撼。蜘蛛網意味著團結也意味著光蟲和眾生物已然融合，觀眾已和當地文化融合，共造再生。</p>
@@ -702,6 +707,7 @@
                             </div>
                             <div class="sub-issue"><span>作品</span><span>｜</span><span>ART WORK</span><span>｜</span><span class="icon">4</span></div>
                             <div class="info-issue tw-info">
+                                <div class="nb-issue">4</div>
                                 <h3 class="title">月夜</h3>
                                 <div class="inner">
                                     <p>藝術家蕭聖健的機械式鳥群是榮獲台北獎之創作。以復古機械方式模擬抽象的鳥巢形、發出鳥鳴。作品的結構配合精細的月光投射出幻影，籠罩著整個虎形山的泡茶休息區域，長坐於此休息、欣賞，可以體悟人類心中對於抽象概念的無限可能性，更拓展視野觀點的靈活性與生命之禪意。</p>
@@ -722,6 +728,7 @@
                             </div>
                             <div class="sub-issue bb1"><span>作品</span><span>｜</span><span>ART WORK</span><span>｜</span><span class="icon">5</span></div>
                             <div class="info-issue tw-info">
+                                <div class="nb-issue bb1">5</div>
                                 <h3 class="title">寧靜‧秘境</h3>
                                 <div class="inner">
                                     <p>秘境作品的本質是一片紫霧螢光；光照在身上，會讓大家身著的白色衣物或配件發出螢光，在此，觀者真正的「參與」進來整個故事。光蟲由引導介紹一個故事，變成與人同行，所有通過秘境的人都真正的進入到光蟲的奇幻世界之中。</p>
@@ -742,6 +749,7 @@
                             </div>
                             <div class="sub-issue"><span>作品</span><span>｜</span><span>ART WORK</span><span>｜</span><span class="icon">6</span></div>
                             <div class="info-issue tw-info">
+                                <div class="nb-issue">6</div>
                                 <h3 class="title">烏雲來了</h3>
                                 <div class="inner">
                                     <p>藝術家廖昭豪利用紙漿製作日常生活常見的紐澤西式護欄，藉由呈現紙漿的材質特性，點出含混泥土成分的工程所需物，不利回收卻佔據自然環境而衍生的議題。藝術家辛綺的光蟲則是以回收物聚集光源所但生的生命創作。 "烏雲來了"是故事的轉折點，是一件量體巨大的敘事藝術作品，布置在兒童遊戲區，地貌完整的呈現出兩位藝術家：廖昭豪與辛綺作品之間的衝突、聯結、張力與拉力。</p>
@@ -762,6 +770,7 @@
                             </div>
                             <div class="sub-issue"><span>作品</span><span>｜</span><span>ART WORK</span><span>｜</span><span class="icon">7</span></div>
                             <div class="info-issue tw-info">
+                                <div class="nb-issue bb1">7</div>
                                 <h3 class="title">共生</h3>
                                 <div class="inner">
                                     <p>整個故事的終章，以生命價值觀的勝利為尾聲；這是一個慶祝的場景。光蟲、和夥伴們以三個同心圓為繞，正中央以裝置象徵營火。一個具有團結、慶祝、共榮共生的「地方創生」概念作品。一片充滿生機的草地，這片草地乾淨自然，本身就突出滿滿的生命力；自開頭的吊橋處，可隱約看到此處，是一個呼應的過程。光蟲與在地生物共榮，也是整個故事的歡樂大結局。</p>
@@ -859,43 +868,6 @@
                         </div>
                     </div>
                 </section>
-                <section class="chapter chapter5-1">
-                    <div id="chapter5-1">
-                        <div class="content scoll-check scoll-check-sub"><img class="mb-title" v-if="isMb" src="images/f5-title1-m.png" alt="龍崎光節 南關線觀光">
-                            <div class="img-issue"><img src="images/fake.jpg" alt=""></div>
-                            <div class="info-issue tw-info">
-                                <h3 class="title">南關線</h3>
-                                <div class="inner">
-                                    <p>南關線是以台南龍崎區為啟程地，經由台86快速公路串聯台南關廟區、歸仁區、仁德區、南區的帶狀路線，從山區到濱海沿線觀光資源及地形景觀豐富，非常值得前來體驗探索。</p>
-                                </div>
-                            </div>
-                            <div class="info-issue eng-info">
-                                <h3 class="title">Nan Guan Line</h3>
-                                <div class="inner">
-                                    <p>Nan Guan Line is a route starting from Longci, Tainan, covering Guanmiao district, Gueiren district, Rende district and South district. Following Provincial Highway 86, tourists can enjoy both mountainside and seaside scenic spots. It is a worth-visiting route.</p>
-                                </div>
-                            </div>
-                            <hr v-if="!isMb">
-                            <div class="threeadd-issue">
-                                <div class="threeadd-item"></div>
-                                <div class="threeadd-item"></div>
-                                <div class="threeadd-item"></div>
-                            </div>
-                            <div class="notice-issue">
-                                <div class="inner">
-                                    <p>關廟有三寶：鳳梨、綠竹筍、關廟麵；關廟麵成為人氣食品，用自然陽光曝晒製成的麵條，久煮不會糊掉、香滑順口。無論大街小巷都可經常性地看到曬麵景觀，畫面溫暖動人。</p>
-                                    <p>There are three famous specialties in Guanmiao: pineapple, green bamboo shoot, and Gaunmiao noodles. Dried under the sunlight, Guanmiao noodles do not soften easily when cooked, and it tastes really good. It is common for people to dry their homemade noodles with their family just in front of their home, what a heart-warming scene!</p>
-                                </div>
-                            </div>
-                            <div class="notice-issue">
-                                <div class="inner">
-                                    <p>新光里經過完善社區營造，聚落老街和民宅上，透過插畫家們的各類繪圖，一座座繽紛的牆面，讓人眼睛為之一亮，為老農村帶來活潑的新氣氛。歸仁位在仁德和關廟的中間，舊名叫「紅瓦厝」，因為這裡以前的房屋屋頂大多是使用紅瓦蓋成，如今仍有多處保留這樣的古意風貌。</p>
-                                    <p>Xinguang Village is a great example of community development. All kinds of artworks and paintings can be seen around the village. The colorful walls flourish the old street, bringing a breathe of art and new life here.<br>Gueiren is in the middle of Rende and Guanmaio, was called “Hongwacuo” in the old days. The reason is simply: many houses in Gueiren are made of “Hongwa” (red tiles), and even today there are still lots of these old yet interesting style of houses here.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
             </div>
             <!--render main view-->
         </div>
@@ -977,8 +949,8 @@
     <script type="text/javascript" src="js/vendor.js"></script>
     <script type="text/javascript" src="js/lib.js"></script>
     <script type="text/javascript" src="js/components/video.js"></script>
-    <script type="text/javascript" id="appjs" src="js/app.js?v=1575277925370" data-mode="false" data-site=""></script>
-    <script src="js/index.js?v=1575277925370"></script>
+    <script type="text/javascript" id="appjs" src="js/app.js?v=1575808920693" data-mode="false" data-site=""></script>
+    <script src="js/index.js?v=1575808920693"></script>
     <script type="text/javascript"></script>
 </body>
 
