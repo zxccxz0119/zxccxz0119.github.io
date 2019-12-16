@@ -484,43 +484,55 @@
                 <section class="chapter chapter2-2">
                     <div id="chapter2-2">
                         <div class="content scoll-check-sub"><img class="mb-title" v-if="isMb" src="images/f2-title2-m.png" alt="龍崎光節 藝術地圖／集章">
-                            <div class="img-issue" v-show="!isMb"><a class="image-popup-no-margins" href="images/issue.jpg"><img src="images/issue.jpg" alt="空山祭 藝術地圖"></a></div>
-                            <div class="img-issue" v-show="isMb"><a href="images/issue.jpg" target="_blank" download><img src="images/issue.jpg" alt="空山祭 藝術地圖"></a></div>
-                            <div class="circle-list">
+                            <div class="img-issue" v-show="!isMb"><img class="see-icon map-icon" src="images/see-more.png"><a class="image-popup-no-margins" href="images/issue.jpg"><img src="images/issue.jpg" alt="空山祭 藝術地圖"></a></div>
+                            <div class="img-issue" v-show="isMb"><img class="see-icon map-icon" src="images/see-more-m.png"><a href="images/issue.jpg" target="_blank" download><img src="images/issue.jpg" alt="空山祭 藝術地圖"></a></div>
+                            <div class="info-issue tw-info" v-if="!isMb">
+                                <h3 class="title">集章須知</h3>
+                                <div class="inner">
+                                    <p>展期內可集展區內9個印章圖像，免費兌換每日限量商品，兌換地點平日假日不同，詳情請查詢粉專。</p>
+                                </div>
+                            </div>
+                            <div class="info-issue eng-info" v-if="!isMb">
+                                <h3 class="title">Stamp Collection Info</h3>
+                                <div class="inner">
+                                    <p>The humble imagery of "Void Mountain" is also retrospective. Through its impactful title and key visual, a sense of misery is presented. In contrast to such misery, we could also experience "a mountain full of life." The "mountain full of life" is the symbol of wildlife and at the same time, the ley lines of humanity, history, and society.</p>
+                                </div>
+                            </div>
+                            <div class="circle-list" v-if="isMb">
                                 <div class="line" v-if="isMb"> <span class="l1"></span><span class="l2"></span><span class="l3"></span><span class="l4"></span></div>
-                                <div class="circle-item top">
+                                <div class="circle-item top ci1">
                                     <div class="num">A </div>
                                     <div class="pic"></div>
                                 </div>
-                                <div class="circle-item top">
+                                <div class="circle-item top ci2">
                                     <div class="num">B </div>
                                     <div class="pic"></div>
                                 </div>
-                                <div class="circle-item top">
+                                <div class="circle-item top ci3">
                                     <div class="num">1 </div>
                                     <div class="pic"></div>
                                 </div>
-                                <div class="circle-item top mg">
+                                <div class="circle-item top ci4">
                                     <div class="num">2 </div>
                                     <div class="pic"></div>
                                 </div>
-                                <div class="circle-item top mg">
+                                <div class="circle-item top ci5">
                                     <div class="num">3 </div>
                                     <div class="pic"></div>
                                 </div>
-                                <div class="circle-item bottom b1 mg">
+                                <div class="circle-item bottom ci6">
                                     <div class="num">4 </div>
                                     <div class="pic"></div>
                                 </div>
-                                <div class="circle-item bottom">
+                                <div class="circle-item bottom ci7">
                                     <div class="num">5 </div>
                                     <div class="pic"></div>
                                 </div>
-                                <div class="circle-item bottom">
+                                <div class="circle-item bottom ci8">
                                     <div class="num">6 </div>
                                     <div class="pic"></div>
                                 </div>
-                                <div class="circle-item bottom">
+                                <div class="circle-item bottom ci9">
                                     <div class="num">7 </div>
                                     <div class="pic"></div>
                                 </div>
@@ -536,7 +548,10 @@
                                     <div class="icon c1"> </div>
                                 </div>
                             </div>
-                            <div class="project-list">
+                            <div class="project-list"> <img class="see-icon map-icon" src="images/see-more2.png" v-if="!isMb">
+                                <div class="project top p1" @click="scrollTo('#p2','mb')" v-if="!isMb">
+                                    <div class="num">A </div>
+                                </div>
                                 <div class="project top p2" @click="scrollTo('#p2','mb')">
                                     <div class="num">A </div>
                                 </div>
@@ -549,7 +564,7 @@
                                 <div class="project top p5" @click="scrollTo('#p5','mb')">
                                     <div class="num">2</div>
                                 </div>
-                                <div class="project top p6" @click="scrollTo('#p6','mb')">
+                                <div class="project bottom p6" @click="scrollTo('#p6','mb')">
                                     <div class="num">3 </div>
                                 </div>
                                 <div class="project bottom p7" @click="scrollTo('#p7','mb')">
@@ -949,8 +964,8 @@
     <script type="text/javascript" src="js/vendor.js"></script>
     <script type="text/javascript" src="js/lib.js"></script>
     <script type="text/javascript" src="js/components/video.js"></script>
-    <script type="text/javascript" id="appjs" src="js/app.js?v=1575905630707" data-mode="false" data-site=""></script>
-    <script src="js/index.js?v=1575905630707"></script>
+    <script type="text/javascript" id="appjs" src="js/app.js?v=1576515092992" data-mode="false" data-site=""></script>
+    <script src="js/index.js?v=1576515092992"></script>
     <script type="text/javascript"></script>
 </body>
 
