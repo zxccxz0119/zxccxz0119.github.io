@@ -3,7 +3,6 @@ class scrollCheck {
         this.items = document.getElementsByClassName(options.classname);
         this.repeat = options.repeat || false;
         this.rules = [];
-        this.init()
     }
     init() {
         var _self = this;
@@ -49,7 +48,7 @@ class scrollCheck {
         var dis = window.innerHeight / iRange;
 
         var rule = function () {
-            if (_self.items[options.stay - 1].offsetTop <= window.scrollY && window.scrollY <= _self.items[options.stay].offsetTop - dis) {
+            if (_self.items[options.stay - 1].offsetTop - dis <= window.scrollY && window.scrollY <= _self.items[options.stay].offsetTop - dis) {
                 thing.classList.add('active');
             } else if (repeat) {
                 thing.classList.remove('active');
