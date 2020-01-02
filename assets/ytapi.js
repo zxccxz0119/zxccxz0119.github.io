@@ -38,4 +38,8 @@ class YtApi {
         var _self = this;
         _self.videoList[name].video.stopVideo();
     }
+    pauseVideo(name) {
+        var _self = this;
+        _self.videoList[name].video.pauseVideo()
+    }
 }
