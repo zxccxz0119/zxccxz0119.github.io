@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>youtube api add video</title>
+</head>
+
+<body>
+    <style>
+        .video-area iframe {
+            width: 52%;
+        }
+    </style>
+    <!-- partial:index.partial.html -->
+    <div class="video-area">
+        <div class="video-item">
+            <div id="video1"></div>
+            <button onClick="play(1)">play</button>
+        </div>
+        <div class="video-item">
+            <div id="video2"></div>
+            <button onClick="play(2)">play</button>
+        </div>
+        <div class="video-item">
+            <div id="video3"></div>
+            <button onClick="play(3)">play</button>
+        </div>
+    </div>
+    <!-- partial -->
+    <script src='https://ss830119.github.io/assets/ytapi.js'></script>
+    <script>
+        var ytvideo = new YtApi();
+            ytvideo.addVideo({
+                element: 'video1',
+                name: 'player1',
+                videoId: 'LAVTMcBRujo',
+                height: '200'
+            })
+            ytvideo.addVideo({
+                element: 'video2',
+                name: 'player2',
+                videoId: 'LAVTMcBRujo',
+                height: '200'
+            })
+            ytvideo.addVideo({
+                element: 'video3',
+                name: 'player3',
+                videoId: 'LAVTMcBRujo',
+                height: '200'
+            })
+
+            // onYouTubeIframeAPIReady is Youtube API
+            function onYouTubeIframeAPIReady() {
+                ytvideo.ready() // init video
+            }
+    </script>
+</body>
+
+</html>
