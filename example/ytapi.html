@@ -8,23 +8,56 @@
 
 <body>
     <style>
+        body{
+            background: #888;
+        }
+        h1{color: #333}
+        a{color: #111}
+        .video-area{
+            text-align: center
+        }
         .video-area iframe {
-            width: 52%;
+            width: 32vw;
+            display: inline-block
+        }
+        .btn-bar{
+            margin: 10px 0 50px;
+        }
+        button{
+            background: #333;
+            color: #eee;
+            border: 0;
+            padding: 5px 10px;
+            border-radius: 3px;
         }
     </style>
     <!-- partial:index.partial.html -->
     <div class="video-area">
+        <h1>YTAPI JS</h1>
+        <p><a href="#">GitHub</a></p>
         <div class="video-item">
             <div id="video1"></div>
-            <button onClick="play(1)">play</button>
+            <div class="btn-bar">
+                <button onClick="play(1)">play</button>
+                <button onClick="pause(1)">pause</button>
+                <button onClick="stop(1)">stop</button>
+            </div>
         </div>
         <div class="video-item">
             <div id="video2"></div>
-            <button onClick="play(2)">play</button>
+            <div class="btn-bar">
+                <button onClick="play(2)">play</button>
+                <button onClick="pause(2)">pause</button>
+                <button onClick="stop(2)">stop</button>
+            </div>
         </div>
         <div class="video-item">
             <div id="video3"></div>
-            <button onClick="play(3)">play</button>
+            <div class="btn-bar">
+                <button onClick="play(3)">play</button>
+                <button onClick="pause(3)">pause</button>
+                <button onClick="stop(3)">stop</button>
+            </div>
         </div>
     </div>
     <!-- partial -->
@@ -34,20 +67,20 @@
             ytvideo.addVideo({
                 element: 'video1',
                 name: 'player1',
-                videoId: 'LAVTMcBRujo',
-                height: '200'
+                videoId: '9uWh-TlEQ4k',
+                height: '250'
             })
             ytvideo.addVideo({
                 element: 'video2',
                 name: 'player2',
                 videoId: 'LAVTMcBRujo',
-                height: '200'
+                height: '250'
             })
             ytvideo.addVideo({
                 element: 'video3',
                 name: 'player3',
-                videoId: 'LAVTMcBRujo',
-                height: '200'
+                videoId: 'wdIVP0ZjBv4',
+                height: '250'
             })
 
             // onYouTubeIframeAPIReady is Youtube API
@@ -57,8 +90,15 @@
 
             function play(num) {
                 var item = 'player' + num
-                console.log(item)
                 ytvideo.playVideo(item);
+            }
+            function stop(num) {
+                var item = 'player' + num
+                ytvideo.stopVideo(item);
+            }
+            function pause(num) {
+                var item = 'player' + num
+                ytvideo.pauseVideo(item);
             }
     </script>
 </body>
