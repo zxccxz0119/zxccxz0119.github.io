@@ -115,7 +115,7 @@
 			my_intro : "羅芷榕，喜愛設計的前端工程師，前端工作經歷兩年以上。<br>在學期間，專注於 網頁程式設計、 多媒體互動藝術創作、 UI/UX等領域。<br>喜歡多方面嘗試不同的專業、 團體合作，開拓自己的視野及學習新的挑戰。<br>目前正積極往 前端框架開發、使用者體驗優化 的方向自我精進。",
 			pic : "assets/img/me-web.jpg",
 			resume_link : "https://medium.com/@ss830119",
-			github_link : "https://github.com/ss830119/about-me",
+			github_link: "https://github.com/zxccxz0119/about-me",
 			issuu_link : "https://issuu.com/sandylo0119/docs/profolio______",
 			intro1 : "a Web Designer.",
 			intro2 : "a Front-end Developer.",
