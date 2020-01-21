@@ -489,7 +489,7 @@
                     <div id="chapter2-2">
                         <div class="content scoll-check-sub"><img class="mb-title" v-if="isMb" src="images/f2-title2-m.png" alt="龍崎光節 藝術地圖／集章">
                             <div class="img-issue" v-show="!isMb"><img class="see-icon map-icon" src="images/see-more.png"><a class="image-popup-no-margins" href="images/issue.jpg"><img src="images/issue.jpg" alt="空山祭 藝術地圖"></a></div>
-                            <div class="img-issue" v-show="isMb"><img class="see-icon map-icon" src="images/see-more-m.png"><a href="images/issue.jpg" target="_blank" download><img src="images/issue.jpg" alt="空山祭 藝術地圖"></a></div>
+                            <div class="img-issue" v-show="isMb"><img class="see-icon map-icon" src="images/see-more-m.png"><a href="images/issue-m.jpg" target="_blank" download><img src="images/issue-m.jpg" alt="空山祭 藝術地圖"></a></div>
                             <div class="info-issue tw-info" v-if="!isMb">
                                 <h3 class="title">集章須知</h3>
                                 <div class="inner">
@@ -1104,7 +1104,8 @@
                             <div class="img-issue"><img src="images/date-issue.jpg" alt="空山祭 展期"></div>
                             <div class="info-issue eng-info">
                                 <div class="inner">
-                                    <p class="date-b"> <span>EXHIBITION TIME</span>｜Weekdays 17：30——21：00｜Holiday 17：30——22：00<br><span>EXHIBITION ADMISSION TIME</span>｜Weekdays 20：20｜Holiday 21：20</p>
+                                    <p class="date-b" v-if="isMb"> <span>EXHIBITION DATE</span>｜2019.12.21 ——————＞ 2020.2.2<br><span>EXHIBITION TIME</span>｜Weekdays 17：30——21：00｜Holiday 17：30——22：00<br><span>EXHIBITION ADMISSION TIME</span>｜Weekdays 20：20｜Holiday 21：20</p>
+                                    <p class="date-b" v-if="!isMb"> <span>EXHIBITION TIME</span>｜Weekdays 17：30——21：00｜Holiday 17：30——22：00<br><span>EXHIBITION ADMISSION TIME</span>｜Weekdays 20：20｜Holiday 21：20</p>
                                 </div>
                             </div>
                             <hr>
@@ -1124,7 +1125,7 @@
                     <div id="chapter4-3">
                         <div class="content scoll-check-sub yellow"><img class="mb-title" v-if="isMb" src="images/f4-title3-m.png" alt="龍崎光節 交通資訊">
                             <div class="img-issue" v-show="!isMb"><img class="see-icon map-icon" src="images/see-more3.png"><a class="image-popup-no-margins" href="images/park.jpg"><img src="images/park.jpg" alt="空山祭 交通資訊"></a></div>
-                            <div class="img-issue" v-show="isMb"><a href="images/park.jpg" target="_blank" download><img src="images/park.jpg" alt="空山祭 交通資訊"></a></div>
+                            <div class="img-issue" v-show="isMb"><a href="images/park.jpg" target="_blank" download><img class="see-icon map-icon" src="images/see-more2-m.jpg"><img src="images/park.jpg" alt="空山祭 交通資訊"></a></div>
                             <div class="info-issue tw-info pt">
                                 <div class="nb-issue bb1">1</div>
                                 <h3 class="title">停車資訊</h3>
@@ -1266,8 +1267,8 @@
     <script type="text/javascript" src="js/vendor.js"></script>
     <script type="text/javascript" src="js/lib.js"></script>
     <script type="text/javascript" src="js/components/video.js"></script>
-    <script type="text/javascript" id="appjs" src="js/app.js?v=1579542842687" data-mode="false" data-site=""></script>
-    <script src="js/index.js?v=1579542842687"></script>
+    <script type="text/javascript" id="appjs" src="js/app.js?v=1579623724227" data-mode="false" data-site=""></script>
+    <script src="js/index.js?v=1579623724227"></script>
     <script type="text/javascript"></script>
 </body>
 
