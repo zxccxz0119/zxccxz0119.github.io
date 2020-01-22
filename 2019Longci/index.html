@@ -147,11 +147,20 @@
                         <div class="fixed-area" v-if="!isMb">
                             <div class="title"> <img src="images/f-title1.png" alt=""></div>
                         </div>
-                        <div class="content">
+                        <div class="content mb-set">
                             <div class="video-block">
                                 <div class="cover" v-if="!player1.state" @click="play('player1')"><img src="images/m1.gif" alt="龍崎光節＿空山祭 前導片"></div>
                                 <div id="player1"></div>
                             </div>
+                        </div>
+                        <div class="content mb-set">
+                            <div class="video-block">
+                                <div class="cover" v-if="!player2.state" @click="play('player2')"><img src="images/people/movie.jpg" alt="龍崎光節＿空山祭 "></div>
+                                <div id="player2"></div>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="pic-slide" id="pic-slide"> <img src="images/slide/s1.jpg" alt=""><img src="images/slide/s2.jpg" alt=""><img src="images/slide/s3.jpg" alt=""><img src="images/slide/s4.jpg" alt=""><img src="images/slide/s5.jpg" alt=""><img src="images/slide/s6.jpg" alt=""><img src="images/slide/s7.jpg" alt=""><img src="images/slide/s8.jpg" alt=""><img src="images/slide/s9.jpg" alt=""><img src="images/slide/s10.jpg" alt=""></div>
                         </div>
                     </div>
                 </section>
@@ -342,11 +351,7 @@
                     <div id="chapter2-1">
                         <div class="content gray scoll-check scoll-check-sub">
                             <div class="item"><img class="mb-title" v-if="isMb" src="images/f2-title1-m.png" alt="龍崎光節 空空的山">
-                                <div class="img-issue">
-                                    <div class="cs-block purple-block">
-                                        <div class="icon c2"></div>
-                                    </div>
-                                </div>
+                                <div class="img-issue"><img src="images/workshop/a7.jpg" alt="空空的山"></div>
                                 <div class="info-issue tw-info">
                                     <h3 class="title">空空的山</h3>
                                     <h4 class="subtitle">劇本｜<span>辛綺</span>┼<span>陳雋中</span>；動畫設計｜<span>朱為麟</span>；<br v-if="isMb">配樂設計｜<span>林信樺</span>┼<span>蔡痞諺</span></h4>
@@ -381,10 +386,9 @@
                                 <div class="info-issue tw-info">
                                     <div class="person-list">
                                         <div class="person-item">
-                                            <div class="img-issue">
-                                                <div class="cs-block purple-block">
-                                                    <div class="icon c1"></div>
-                                                </div>
+                                            <div class="pic-group">
+                                                <div class="pic-item"><img src="images/people/f2-1.jpg" alt=""></div>
+                                                <div class="pic-item"><img src="images/people/f2-2.jpg" alt=""></div>
                                             </div>
                                             <div class="info-issue tw-info">
                                                 <h3 class="title">光蟲</h3>
@@ -400,10 +404,9 @@
                                             </div>
                                         </div>
                                         <div class="person-item">
-                                            <div class="img-issue">
-                                                <div class="cs-block purple-block">
-                                                    <div class="icon c1"></div>
-                                                </div>
+                                            <div class="pic-group">
+                                                <div class="pic-item"><img src="images/people/f3-1.jpg" alt=""></div>
+                                                <div class="pic-item"><img src="images/people/f3-2.jpg" alt=""></div>
                                             </div>
                                             <div class="info-issue tw-info">
                                                 <h3 class="title">烏雲</h3>
@@ -419,10 +422,9 @@
                                             </div>
                                         </div>
                                         <div class="person-item">
-                                            <div class="img-issue">
-                                                <div class="cs-block purple-block">
-                                                    <div class="icon c1"></div>
-                                                </div>
+                                            <div class="pic-group">
+                                                <div class="pic-item"><img src="images/people/f4-1.jpg" alt=""></div>
+                                                <div class="pic-item"><img src="images/people/f4-2.jpg" alt=""></div>
                                             </div>
                                             <div class="info-issue tw-info">
                                                 <h3 class="title">山</h3>
@@ -438,10 +440,9 @@
                                             </div>
                                         </div>
                                         <div class="person-item">
-                                            <div class="img-issue">
-                                                <div class="cs-block purple-block">
-                                                    <div class="icon c1"></div>
-                                                </div>
+                                            <div class="pic-group">
+                                                <div class="pic-item"><img src="images/people/f5-1.jpg" alt=""></div>
+                                                <div class="pic-item"><img src="images/people/f5-2.jpg" alt=""></div>
                                             </div>
                                             <div class="info-issue tw-info">
                                                 <h3 class="title">山中的朋友們</h3>
@@ -547,11 +548,7 @@
                 <section class="chapter chapter2-3">
                     <div id="chapter2-3">
                         <div class="content gray scoll-check-sub"><img class="mb-title" v-if="isMb" src="images/f2-title3-m.png" alt="龍崎光節 作品概述">
-                            <div class="img-issue">
-                                <div class="cs-block purple-block">
-                                    <div class="icon c1"> </div>
-                                </div>
-                            </div>
+                            <div class="img-issue"><img src="images/project/bt1.jpg" alt=""></div>
                             <div class="project-list"> <img class="see-icon map-icon" src="images/see-more2.png" v-if="!isMb">
                                 <div class="project top p1" @click="scrollTo('#p2','mb')" v-if="!isMb">
                                     <div class="num">A </div>
@@ -598,9 +595,24 @@
                             </div>
                         </div>
                         <div class="content" id="p1">
-                            <div class="img-issue">
-                                <div class="cs-block purple-block">
-                                    <div class="icon c1"> </div>
+                            <div class="project-view">
+                                <div class="left-block" style="background-image: url('images/project/b1.jpg')"></div>
+                                <div class="right-block">
+                                    <div class="ani-pic"><img src="images/project-top/b1.jpg" alt=""></div>
+                                    <div class="author-list">
+                                        <div class="author-item">
+                                            <p class="name">辛綺</p>
+                                            <div class="author-pic a1"></div>
+                                        </div>
+                                        <div class="author-item">
+                                            <p class="name">張永旺</p>
+                                            <div class="author-pic a2"></div>
+                                        </div>
+                                        <div class="author-item">
+                                            <p class="name">瓦豆</p>
+                                            <div class="author-pic a3"></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="sub-issue sp0"><span>整體展場設置</span><span>｜</span><span>EXHIBITION ARTWORKS</span></div>
@@ -619,9 +631,43 @@
                             </div>
                         </div>
                         <div class="content gray" id="p2">
-                            <div class="img-issue">
-                                <div class="cs-block purple-block">
-                                    <div class="icon c2"></div>
+                            <div class="project-view">
+                                <div class="left-block" style="background-image: url('images/project/b2.jpg')"></div>
+                                <div class="right-block addtitle">
+                                    <div class="part pp1">
+                                        <div class="at">竹苗</div>
+                                        <div class="author-list issue">
+                                            <div class="author-item">
+                                                <p class="name">張永旺</p>
+                                                <div class="author-pic a2"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="part pp2">
+                                        <div class="at at2">空空的山</div>
+                                        <div class="author-list slide at2">
+                                            <div class="author-item no-icon">
+                                                <p class="name">辛綺</p>
+                                                <div class="author-pic a1"></div>
+                                            </div>
+                                            <div class="author-item">
+                                                <p class="name">陳雋中</p>
+                                                <div class="author-pic a4"></div>
+                                            </div>
+                                            <div class="author-item">
+                                                <p class="name">朱為麟</p>
+                                                <div class="author-pic a5"></div>
+                                            </div>
+                                            <div class="author-item">
+                                                <p class="name">林信樺</p>
+                                                <div class="author-pic a6"></div>
+                                            </div>
+                                            <div class="author-item">
+                                                <p class="name">蔡痞諺</p>
+                                                <div class="author-pic a7"></div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="sub-issue sp1 bb1"><span>入口意象</span><span>｜</span><span>ENTRANCE IMAGERY</span><span>｜</span><span class="icon">A</span></div>
@@ -640,9 +686,24 @@
                             </div>
                         </div>
                         <div class="content" id="p3">
-                            <div class="img-issue">
-                                <div class="cs-block purple-block">
-                                    <div class="icon c2"></div>
+                            <div class="project-view">
+                                <div class="left-block" style="background-image: url('images/project/b3.jpg')"></div>
+                                <div class="right-block">
+                                    <div class="ani-pic"><img src="images/project-top/b3.jpg" alt=""></div>
+                                    <div class="author-list">
+                                        <div class="author-item no-icon">
+                                            <p class="name">辛綺</p>
+                                            <div class="author-pic a1"></div>
+                                        </div>
+                                        <div class="author-item">
+                                            <p class="name">龍崎國小<br>及<br>龍船分校</p>
+                                            <div class="author-pic a8"></div>
+                                        </div>
+                                        <div class="author-item">
+                                            <p class="name">龍崎國中</p>
+                                            <div class="author-pic a9"></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="sub-issue sp2"><span>入口意象</span><span>｜</span><span>ENTRANCE IMAGERY</span><span>｜</span><span class="icon">B</span></div>
@@ -661,9 +722,16 @@
                             </div>
                         </div>
                         <div class="content gray" id="p4">
-                            <div class="img-issue">
-                                <div class="cs-block purple-block">
-                                    <div class="icon c2"></div>
+                            <div class="project-view">
+                                <div class="left-block" style="background-image: url('images/project/b4.jpg')"></div>
+                                <div class="right-block">
+                                    <div class="ani-pic"><img src="images/project-top/b4.jpg" alt=""></div>
+                                    <div class="author-list">
+                                        <div class="author-item">
+                                            <p class="name">高德亮</p>
+                                            <div class="author-pic a10"></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="sub-issue bb1"><span>作品</span><span>｜</span><span>ART WORK</span><span>｜</span><span class="icon">1</span></div>
@@ -684,9 +752,16 @@
                             </div>
                         </div>
                         <div class="content" id="p5">
-                            <div class="img-issue">
-                                <div class="cs-block purple-block">
-                                    <div class="icon c2"></div>
+                            <div class="project-view">
+                                <div class="left-block" style="background-image: url('images/project/b5.jpg')"></div>
+                                <div class="right-block">
+                                    <div class="ani-pic"><img src="images/project-top/b5.jpg" alt=""></div>
+                                    <div class="author-list">
+                                        <div class="author-item">
+                                            <p class="name">大橋頭藝術<br>工作室</p>
+                                            <div class="author-pic a11"></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="sub-issue"><span>作品</span><span>｜</span><span>ART WORK</span><span>｜</span><span class="icon">2</span></div>
@@ -705,9 +780,24 @@
                             </div>
                         </div>
                         <div class="content gray" id="p6">
-                            <div class="img-issue">
-                                <div class="cs-block purple-block">
-                                    <div class="icon c2"></div>
+                            <div class="project-view">
+                                <div class="left-block" style="background-image: url('images/project/b6.jpg')"></div>
+                                <div class="right-block">
+                                    <div class="ani-pic"><img src="images/project-top/b6.jpg" alt=""></div>
+                                    <div class="author-list">
+                                        <div class="author-item">
+                                            <p class="name">楊芳宜<br>彭起夫</p>
+                                            <div class="author-pic a12"></div>
+                                        </div>
+                                        <div class="author-item">
+                                            <p class="name">崎頂里<br>民眾</p>
+                                            <div class="author-pic a13"></div>
+                                        </div>
+                                        <div class="author-item">
+                                            <p class="name">牛埔里<br>民眾</p>
+                                            <div class="author-pic a14"></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="sub-issue bb1"><span>作品</span><span>｜</span><span>ART WORK</span><span>｜</span><span class="icon">3</span></div>
@@ -727,9 +817,16 @@
                             </div>
                         </div>
                         <div class="content" id="p7">
-                            <div class="img-issue">
-                                <div class="cs-block purple-block">
-                                    <div class="icon c2"></div>
+                            <div class="project-view">
+                                <div class="left-block" style="background-image: url('images/project/b7.jpg')"></div>
+                                <div class="right-block">
+                                    <div class="ani-pic"><img src="images/project-top/b7.jpg" alt=""></div>
+                                    <div class="author-list">
+                                        <div class="author-item">
+                                            <p class="name">蕭聖健</p>
+                                            <div class="author-pic a15"></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="sub-issue"><span>作品</span><span>｜</span><span>ART WORK</span><span>｜</span><span class="icon">4</span></div>
@@ -748,9 +845,16 @@
                             </div>
                         </div>
                         <div class="content gray" id="p8">
-                            <div class="img-issue">
-                                <div class="cs-block purple-block">
-                                    <div class="icon c2"></div>
+                            <div class="project-view">
+                                <div class="left-block" style="background-image: url('images/project/b8.jpg')"></div>
+                                <div class="right-block">
+                                    <div class="ani-pic"><img src="images/project-top/b8.jpg" alt=""></div>
+                                    <div class="author-list">
+                                        <div class="author-item">
+                                            <p class="name">辛綺</p>
+                                            <div class="author-pic a1"></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="sub-issue bb1"><span>作品</span><span>｜</span><span>ART WORK</span><span>｜</span><span class="icon">5</span></div>
@@ -769,9 +873,20 @@
                             </div>
                         </div>
                         <div class="content" id="p9">
-                            <div class="img-issue">
-                                <div class="cs-block purple-block">
-                                    <div class="icon c2"></div>
+                            <div class="project-view">
+                                <div class="left-block" style="background-image: url('images/project/b9.jpg')"></div>
+                                <div class="right-block">
+                                    <div class="ani-pic"><img src="images/project-top/b9.jpg" alt=""></div>
+                                    <div class="author-list">
+                                        <div class="author-item">
+                                            <p class="name">廖昭豪</p>
+                                            <div class="author-pic a16"></div>
+                                        </div>
+                                        <div class="author-item">
+                                            <p class="name">辛綺</p>
+                                            <div class="author-pic a1"></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="sub-issue"><span>作品</span><span>｜</span><span>ART WORK</span><span>｜</span><span class="icon">6</span></div>
@@ -791,9 +906,16 @@
                             </div>
                         </div>
                         <div class="content gray" id="p10">
-                            <div class="img-issue">
-                                <div class="cs-block purple-block">
-                                    <div class="icon c2"></div>
+                            <div class="project-view">
+                                <div class="left-block" style="background-image: url('images/project/b10.jpg')"></div>
+                                <div class="right-block">
+                                    <div class="ani-pic"><img src="images/project-top/b10.jpg" alt=""></div>
+                                    <div class="author-list">
+                                        <div class="author-item">
+                                            <p class="name">辛綺</p>
+                                            <div class="author-pic a1"></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="sub-issue"><span>作品</span><span>｜</span><span>ART WORK</span><span>｜</span><span class="icon">7</span></div>
@@ -826,11 +948,7 @@
                 <section class="chapter chapter3-2">
                     <div id="chapter3-2">
                         <div class="content gray scoll-check-sub green"><img class="mb-title" v-if="isMb" src="images/f3-title2-m.png" alt="龍崎光節 活動介紹 ">
-                            <div class="img-issue">
-                                <div class="cs-block green-block">
-                                    <div class="icon c2"></div>
-                                </div>
-                            </div>
+                            <div class="img-issue"><img src="images/workshop/t1.jpg" alt="光蟲造型小提燈"></div>
                             <div class="info-issue tw-info">
                                 <div class="nb-issue bb1">1</div>
                                 <h3 class="title">光蟲造型小提燈</h3>
@@ -846,11 +964,7 @@
                             </div>
                         </div>
                         <div class="content green">
-                            <div class="img-issue">
-                                <div class="cs-block green-block">
-                                    <div class="icon c2"></div>
-                                </div>
-                            </div>
+                            <div class="img-issue"><img src="images/workshop/t2.jpg" alt="集章兌換限量貼紙"></div>
                             <div class="info-issue tw-info">
                                 <div class="nb-issue bb1">2</div>
                                 <h3 class="title">集章兌換限量貼紙</h3>
@@ -866,11 +980,7 @@
                             </div>
                         </div>
                         <div class="content gray green">
-                            <div class="img-issue">
-                                <div class="cs-block green-block">
-                                    <div class="icon c2"></div>
-                                </div>
-                            </div>
+                            <div class="img-issue"><img src="images/workshop/t3.jpg" alt="竹夢"></div>
                             <div class="info-issue tw-info">
                                 <div class="nb-issue bb1">3</div>
                                 <h3 class="title">竹夢</h3>
@@ -886,11 +996,7 @@
                             </div>
                         </div>
                         <div class="content green">
-                            <div class="img-issue">
-                                <div class="cs-block green-block">
-                                    <div class="icon c2"></div>
-                                </div>
-                            </div>
+                            <div class="img-issue"><img src="images/workshop/t4.jpg" alt="崎聚市集"></div>
                             <div class="info-issue tw-info">
                                 <div class="nb-issue bb1">4</div>
                                 <h3 class="title">崎聚市集</h3>
@@ -913,11 +1019,7 @@
                 <section class="chapter chapter3-3">
                     <div id="chapter3-3">
                         <div class="content gray scoll-check-sub green"><img class="mb-title" v-if="isMb" src="images/f3-title3-m.png" alt="龍崎光節 工作坊介紹">
-                            <div class="img-issue">
-                                <div class="cs-block green-block">
-                                    <div class="icon c2"></div>
-                                </div>
-                            </div>
+                            <div class="img-issue"><img src="images/workshop/w1.jpg" alt=""></div>
                             <div class="info-issue tw-info">
                                 <div class="nb-issue bb1">1</div>
                                 <h3 class="title">龍崎夜空――星星杯墊</h3>
@@ -928,11 +1030,7 @@
                             </div>
                         </div>
                         <div class="content green">
-                            <div class="img-issue">
-                                <div class="cs-block green-block">
-                                    <div class="icon c2"></div>
-                                </div>
-                            </div>
+                            <div class="img-issue"><img src="images/workshop/w2.jpg" alt=""></div>
                             <div class="info-issue tw-info">
                                 <div class="nb-issue bb1">2</div>
                                 <h3 class="title">金姬護卵――燈罩彩球</h3>
@@ -943,11 +1041,7 @@
                             </div>
                         </div>
                         <div class="content gray green">
-                            <div class="img-issue">
-                                <div class="cs-block green-block">
-                                    <div class="icon c2"></div>
-                                </div>
-                            </div>
+                            <div class="img-issue"><img src="images/workshop/w3.jpg" alt=""></div>
                             <div class="info-issue tw-info">
                                 <div class="nb-issue bb1">3</div>
                                 <h3 class="title">在地特產――鳳凰造型盤</h3>
@@ -958,11 +1052,7 @@
                             </div>
                         </div>
                         <div class="content gray green">
-                            <div class="img-issue">
-                                <div class="cs-block green-block">
-                                    <div class="icon c2"></div>
-                                </div>
-                            </div>
+                            <div class="img-issue"><img src="images/workshop/w4.jpg" alt=""></div>
                             <div class="info-issue tw-info">
                                 <div class="nb-issue bb1">4</div>
                                 <h3 class="title">春節杯墊吊飾</h3>
@@ -973,11 +1063,7 @@
                             </div>
                         </div>
                         <div class="content green">
-                            <div class="img-issue">
-                                <div class="cs-block green-block">
-                                    <div class="icon c2"></div>
-                                </div>
-                            </div>
+                            <div class="img-issue"><img src="images/workshop/w3.jpg" alt=""></div>
                             <div class="info-issue tw-info">
                                 <div class="nb-issue bb1">5</div>
                                 <h3 class="title">竹編小花器</h3>
@@ -992,11 +1078,7 @@
                 <section class="chapter chapter3-4">
                     <div id="chapter3-4">
                         <div class="content scoll-check-sub gray green"><img class="mb-title" v-if="isMb" src="images/f3-title4-m.png" alt="龍崎光節 生態導覽介紹">
-                            <div class="img-issue">
-                                <div class="cs-block green-block">
-                                    <div class="icon c1"></div>
-                                </div>
-                            </div>
+                            <div class="img-issue"><img src="images/workshop/w5.jpg" alt=""></div>
                             <div class="info-issue tw-info">
                                 <div class="nb-issue bb1 group">6</div>
                                 <div class="nb-issue bb1 group none-c">―</div>
@@ -1013,11 +1095,7 @@
                 <section class="chapter chapter3-5">
                     <div id="chapter3-5">
                         <div class="content scoll-check-sub green"><img class="mb-title" v-if="isMb" src="images/f3-title5-m.png" alt="龍崎光節 藝術家創作座談">
-                            <div class="img-issue">
-                                <div class="cs-block green-block">
-                                    <div class="icon c2"></div>
-                                </div>
-                            </div>
+                            <div class="img-issue"><img src="images/workshop/a1.jpg" alt=""></div>
                             <div class="info-issue tw-info">
                                 <div class="nb-issue bb1">1</div>
                                 <h3 class="title">勞作</h3>
@@ -1025,11 +1103,7 @@
                             </div>
                         </div>
                         <div class="content gray green">
-                            <div class="img-issue">
-                                <div class="cs-block green-block">
-                                    <div class="icon c2"></div>
-                                </div>
-                            </div>
+                            <div class="img-issue"><img src="images/workshop/a2.jpg" alt=""></div>
                             <div class="info-issue tw-info">
                                 <div class="nb-issue bb1">2</div>
                                 <h3 class="title">月夜</h3>
@@ -1037,11 +1111,7 @@
                             </div>
                         </div>
                         <div class="content green">
-                            <div class="img-issue">
-                                <div class="cs-block green-block">
-                                    <div class="icon c2"></div>
-                                </div>
-                            </div>
+                            <div class="img-issue"><img src="images/workshop/a3.jpg" alt=""></div>
                             <div class="info-issue tw-info">
                                 <div class="nb-issue bb1">3</div>
                                 <h3 class="title">流光橋</h3>
@@ -1049,11 +1119,7 @@
                             </div>
                         </div>
                         <div class="content gray green">
-                            <div class="img-issue">
-                                <div class="cs-block green-block">
-                                    <div class="icon c2"></div>
-                                </div>
-                            </div>
+                            <div class="img-issue"><img src="images/workshop/a4.jpg" alt=""></div>
                             <div class="info-issue tw-info">
                                 <div class="nb-issue bb1">4</div>
                                 <h3 class="title">團結織網</h3>
@@ -1061,11 +1127,7 @@
                             </div>
                         </div>
                         <div class="content green">
-                            <div class="img-issue">
-                                <div class="cs-block green-block">
-                                    <div class="icon c2"></div>
-                                </div>
-                            </div>
+                            <div class="img-issue"><img src="images/workshop/a5.jpg" alt=""></div>
                             <div class="info-issue tw-info">
                                 <div class="nb-issue bb1">5</div>
                                 <h3 class="title">烏雲來了</h3>
@@ -1073,23 +1135,15 @@
                             </div>
                         </div>
                         <div class="content gray green">
-                            <div class="img-issue">
-                                <div class="cs-block green-block">
-                                    <div class="icon c2"></div>
-                                </div>
-                            </div>
+                            <div class="img-issue"><img src="images/workshop/a6.jpg" alt=""></div>
                             <div class="info-issue tw-info">
                                 <div class="nb-issue bb1">6</div>
-                                <h3 class="title">辛綺</h3>
-                                <div class="time-block mt0"><img src="images/time13.jpg" alt="辛綺 時程表"></div>
+                                <h3 class="title">策展團隊：艸非火藝術工作室</h3>
+                                <div class="time-block mt0"><img src="images/time13.jpg" alt="策展團隊：艸非火藝術工作室 時程表"></div>
                             </div>
                         </div>
                         <div class="content green">
-                            <div class="img-issue">
-                                <div class="cs-block green-block">
-                                    <div class="icon c2"></div>
-                                </div>
-                            </div>
+                            <div class="img-issue"><img src="images/workshop/a7.jpg" alt="空空的山"></div>
                             <div class="info-issue tw-info">
                                 <div class="nb-issue bb1">7</div>
                                 <h3 class="title">空空的山</h3>
@@ -1267,8 +1321,8 @@
     <script type="text/javascript" src="js/vendor.js"></script>
     <script type="text/javascript" src="js/lib.js"></script>
     <script type="text/javascript" src="js/components/video.js"></script>
-    <script type="text/javascript" id="appjs" src="js/app.js?v=1579627750199" data-mode="false" data-site=""></script>
-    <script src="js/index.js?v=1579627750199"></script>
+    <script type="text/javascript" id="appjs" src="js/app.js?v=1579714457035" data-mode="false" data-site=""></script>
+    <script src="js/index.js?v=1579714457035"></script>
     <script type="text/javascript"></script>
 </body>
 
