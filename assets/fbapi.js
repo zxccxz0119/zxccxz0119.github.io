@@ -36,10 +36,9 @@ class FBApi {
         var self = this;
         return new Promise((resolve) => {
             FB.getLoginStatus(function (response) {
-                cMessage(response, consoleShow)
+                console.log(response)
                 if (response.status === 'connected') {
                     console.log('已登入');
-                    cMessage('已登入', consoleShow)
                     self.isLogin = true;
                     self.profile.fbtoken = response.authResponse.accessToken;
                     self.profile.fbid = response.authResponse.userID;
