@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FBAPI | facebook sdk api</title>
+</head>
+
+<body>
+    <style>
+        body{
+            background: #888;
+        }
+        h1{color: #333}
+        a{color: #111}
+        .btn-bar{
+            margin: 10px 0 50px;
+        }
+        button{
+            background: #333;
+            color: #eee;
+            border: 0;
+            padding: 5px 10px;
+            border-radius: 3px;
+        }
+    </style>
+    <div class="fbapi-area">
+        <h1>FBAPI JS</h1>
+        <p><a href="https://github.com/zxccxz0119/fbApi">GitHub</a></p>
+        <button onClick="login">Login & Get Info</button>
+        <button onClick="fbapi.share('https://zxccxz0119.github.io/')">Share</button>
+        <p id='issue'></p>
+    </div>
+    <!-- partial -->
+    <script src='https://zxccxz0119.github.io/assets/fbapi.js'></script>
+    <script>
+        var fbapi = new FBApi({
+            appId: '124212955637196',
+        })
+
+        function login() {
+            fbapi.login().then(() => {
+                return fbapi.getProfile()
+            }).then((res) => {
+                console.log(res)
+                document.getElementById('issue').append(`Hi! ${res.name}`)
+            })
+        }
+    </script>
+</body>
+
+</html>
