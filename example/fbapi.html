@@ -38,13 +38,14 @@
         var fbapi = new FBApi({
             appId: '124212955637196',
         })
-
+        var once = true;
         function login() {
             fbapi.login().then(() => {
                 return fbapi.getProfile()
             }).then((res) => {
                 console.log(res)
-                document.getElementById('issue').append(`Hi! ${res.name}`)
+                if(once) document.getElementById('issue').append(`Hi! ${res.name}  (•͈⌔•͈⑅) `)
+                once = fasle;
             })
         }
     </script>
