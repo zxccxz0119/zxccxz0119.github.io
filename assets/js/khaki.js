@@ -2902,47 +2902,47 @@ function _initFullPage() {
 
     // Check for prevent default scroll
     function preventScroll(delta) {
-        var prev = $prevItem && $prevItem.length;
-        var next = $nextItem && $nextItem.length;
-        if (!prev && !next) {
-            getActiveItem();
-            prev = $prevItem && $prevItem.length;
-            next = $nextItem && $nextItem.length;
-        }
-        if (prev && next || isBusy) {
-            return true;
-        }
-        var visible = self.isInViewport($fullPage);
-        if (visible > 0.5) {
-            $activeItem = false;
-            $nextItem = false;
-            $prevItem = false;
+        // var prev = $prevItem && $prevItem.length;
+        // var next = $nextItem && $nextItem.length;
+        // if (!prev && !next) {
+        //     getActiveItem();
+        //     prev = $prevItem && $prevItem.length;
+        //     next = $nextItem && $nextItem.length;
+        // }
+        // if (prev && next || isBusy) {
+        //     return true;
+        // }
+        // var visible = self.isInViewport($fullPage);
+        // if (visible > 0.5) {
+        //     $activeItem = false;
+        //     $nextItem = false;
+        //     $prevItem = false;
 
-            getActiveItem();
-            prev = $prevItem && $prevItem.length;
-            next = $nextItem && $nextItem.length;
-            if (!prev && delta < 0 && visible === 1 && $wnd.scrollTop() === 0) {
-                return true;
-            }
-            return prev && delta < 0 || next && delta > 0;
-        }
-        return false;
+        //     getActiveItem();
+        //     prev = $prevItem && $prevItem.length;
+        //     next = $nextItem && $nextItem.length;
+        //     if (!prev && delta < 0 && visible === 1 && $wnd.scrollTop() === 0) {
+        //         return true;
+        //     }
+        //     return prev && delta < 0 || next && delta > 0;
+        // }
+        // return false;
     }
 
     // scroll to item
     function scrollToItem($item, callback) {
-        if ($item && !isBodyOverflowed()) {
-            isBusy = 1;
-            self.scrollTo($item, function () {
-                isBusy = 0;
+        // if ($item && !isBodyOverflowed()) {
+        //     isBusy = 1;
+        //     self.scrollTo($item, function () {
+        //         isBusy = 0;
 
-                if (callback) {
-                    callback();
-                }
-            });
-            setActiveNavItem($item.index());
-            showNav();
-        }
+        //         if (callback) {
+        //             callback();
+        //         }
+        //     });
+        //     setActiveNavItem($item.index());
+        //     showNav();
+        // }
     }
     $nav.on('click', '> li', function onItemClick() {
         $activeItem = false;

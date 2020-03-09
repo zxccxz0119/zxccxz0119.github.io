@@ -115,7 +115,7 @@
                     </div>
                 </div>
 
-                <div class="nk-fullpage-item bg-black" >
+                <!-- <div class="nk-fullpage-item bg-black" >
                     <div>
                         <div class="container">
                           <div class="bg-center" style="background-image: url(assets/img/bg-sec.jpg);">
@@ -148,6 +148,48 @@
                           </div>
                         </div>
                     </div>
+                </div> -->
+                <div class="nk-fullpage-item bg-black">
+                    <div class="nk-carousel-3">
+                        <div class="container">
+                            <div class="nk-gap-3"></div>
+                            <div class="nk-carousel-prev">
+                                <div class="nk-carousel-arrow-name">
+                                    
+                                </div>
+                                Previous
+                                <span class="nk-icon-arrow-left"></span>
+                            </div>
+                            <div class="nk-carousel-next">
+                                <div class="nk-carousel-arrow-name">
+                                    
+                                </div>
+                                Next
+                                <span class="nk-icon-arrow-right"></span>
+                            </div>
+                            <div class="nk-carousel-current">
+                                <h3 class="nk-carousel-name h4">
+                                    <
+                                </h3>
+                                <div class="nk-carousel-links"></div>
+                            </div>
+                            <div class="nk-gap-3"></div>
+                        </div>
+
+                        <div class="nk-carousel-inner bg-dark">
+                            <div v-for="(id,work) in works">
+                                <div class="nk-image-box-1 nk-no-effect nk-portfolio-item">
+                                    <a href="{{work.link}}" target="_blank" class="nk-image-box-link"></a>
+                                    <img class="nk-portfolio-image"  :src="work.img">
+                                    <h2 class="nk-portfolio-title nk-carousel-item-name"><a href="{{work.link}}" target="_blank" class="">品牌網站-{{id+1}}</a></h2>
+                                    <div class="nk-portfolio-sub-title nk-carousel-item-links">{{work.type}} , {{work.date}}</div>
+                                </div>
+                            </div>
+                          
+
+                        </div>
+                    </div>
+
                 </div>
                 <div class="nk-fullpage-item bg-black">
                     <div class="nk-carousel-3">
@@ -181,50 +223,7 @@
                                 <div class="nk-image-box-1 nk-no-effect nk-portfolio-item">
                                     <a href="{{work.link}}" target="_blank" class="nk-image-box-link "></a>
                                     <img class="nk-portfolio-image"  :src="work.img">
-                                    <h2 class="nk-portfolio-title nk-carousel-item-name"><a href="{{work.link}}" target="_blank" class="">Recent Works-{{id+1}}</a></h2>
-                                    <div class="nk-portfolio-sub-title nk-carousel-item-links">{{work.type}} , {{work.date}}</div>
-                                </div>
-                            </div>
-                          
-
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="nk-fullpage-item bg-black">
-                    <div class="nk-carousel-3">
-                        <div class="container">
-                            <div class="nk-gap-3"></div>
-                            <div class="nk-carousel-prev">
-                                <div class="nk-carousel-arrow-name">
-                                    
-                                </div>
-                                Previous
-                                <span class="nk-icon-arrow-left"></span>
-                            </div>
-                            <div class="nk-carousel-next">
-                                <div class="nk-carousel-arrow-name">
-                                    
-                                </div>
-                                Next
-                                <span class="nk-icon-arrow-right"></span>
-                            </div>
-                            <div class="nk-carousel-current">
-                                <h3 class="nk-carousel-name h4">
-                                    <
-                                </h3>
-                                <div class="nk-carousel-links"></div>
-                            </div>
-                            <div class="nk-gap-3"></div>
-                        </div>
-
-                        <div class="nk-carousel-inner bg-dark">
-                            <div v-for="(id,work) in works">
-                                <div class="nk-image-box-1 nk-no-effect nk-portfolio-item">
-                                    <a href="{{work.link}}" target="_blank" class="nk-image-box-link"></a>
-                                    <img class="nk-portfolio-image"  :src="work.img">
-                                    <h2 class="nk-portfolio-title nk-carousel-item-name"><a href="{{work.link}}" target="_blank" class="">Works-{{id+1}}</a></h2>
+                                    <h2 class="nk-portfolio-title nk-carousel-item-name"><a href="{{work.link}}" target="_blank" class="">活動網站-{{id+1}}</a></h2>
                                     <div class="nk-portfolio-sub-title nk-carousel-item-links">{{work.type}} , {{work.date}}</div>
                                 </div>
                             </div>

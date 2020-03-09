@@ -1,4 +1,10 @@
 /* PLACE YOU CUSTOM STYLES IN THIS FILE */
+.nk-fullpage-nav{
+	display: none;
+}
+.nk-side-buttons{
+	bottom: 60px;
+}
 .icon-issuu img{
 	width: 15px;
 	height: auto;
@@ -72,6 +78,9 @@
 	}
 	.nk-portfolio-text-box.sec-2{
 		padding-top: 0;
+	}
+	.nk-side-buttons{
+		bottom: 40px;
 	}
 }
 @media (max-width: 420px){

@@ -1,6 +1,13 @@
 
 	var works = [
 		{
+			info : "hirata",
+			link : "http://hirata.com.tw/",
+			img : "assets/img/a4.jpg",
+			type : "Company Image Web",
+			date : 2018,
+		},
+		{
 			info : "中保生活誌",
 			link : "https://www.sigmu.tw/",
 			img : "assets/img/b4.jpg",
@@ -13,13 +20,6 @@
 			img : "assets/img/a3.jpg",
 			type : "Company Image Web",
 			date : 2017,
-		},
-		{
-			info : "hirata",
-			link : "http://hirata.com.tw/",
-			img : "assets/img/a4.jpg",
-			type : "Company Image Web",
-			date : 2018,
 		},
 		{
 			info : "智慧宅",
@@ -55,47 +55,65 @@
 			img : "assets/img/b8.jpg",
 			type : "Company Image Web",
 			date : 2018,
-		},
-		{
-			info : "找好室",
-			link : "https://cuotahouse.com/",
-			img : "assets/img/b10.jpg",
-			type : "Company Image Web",
-			date : 2018,
-		},
+		}
 	]
 	var recent_works = [
 		{
+			info : "龍崎光節",
+			link : "https://zxccxz0119.github.io/2019Longci/",
+			img : "assets/img/longci.jpg",
+			type : "Campaign",
+			date : 2019,
+		},{
+			info : "星空聯盟",
+			link : "https://showcase.friendo.com.tw/2019luckystar/",
+			img : "assets/img/star.jpg",
+			type : "Campaign",
+			date : 2019,
+		},{
+			info : "scoopaway",
+			link : "https://showcase.friendo.com.tw/scoopaway/",
+			img : "assets/img/scoopaway.jpg",
+			type : "Campaign",
+			date : 2019,
+		},{
+			info : "soriyanagi",
+			link : "https://showcase.friendo.com.tw/2019soriyanagi/",
+			img : "assets/img/soriyanagi.jpg",
+			type : "Campaign",
+			date : 2019,
+		},
+		{
 			info : "長榮787小遊戲",
-			link : "https://b787.evaair.com/game?utm_source=friendo&utm_medium=brand_banner",
+			link : "https://showcase.friendo.com.tw/eva787Game/",
 			img : "assets/img/n1.jpg",
 			type : "Campaign",
 			date : 2018,
 		},
 		{
 			info : "夏慕尼",
-			link : "https://campaign.friendo.com.tw/chamonix_valentine/index.html",
+			link : "https://showcase.friendo.com.tw/chamonix_valentine/",
 			img : "assets/img/n2.jpg",
 			type : "Campaign",
 			date : 2018,
 		},
 		{
 			info : "Sentra",
-			link : "http://bit.ly/2O7Gbsv",
+			link : "https://showcase.friendo.com.tw/sentra19my/",
 			img : "assets/img/n3.jpg",
 			type : "Campaign",
 			date : 2018,
 		},
 		{
 			info : "TIDDA",
-			link : "http://bit.ly/2zTvKAh",
+			link : "https://showcase.friendo.com.tw/tiida19my/",
 			img : "assets/img/n4.jpg",
 			type : "Campaign",
 			date : 2018,
 		},
 		{
 			info : "福媽",
-			link : "https://carrefour.friendo.com.tw/campaign/trygon/fuma_intro.html?utm_source=friendo_brand",
+			link : "https://showcase.friendo.com.tw/carrefour2018fuma/",
 			img : "assets/img/n5.jpg",
 			type : "Campaign",
 			date : 2018,
