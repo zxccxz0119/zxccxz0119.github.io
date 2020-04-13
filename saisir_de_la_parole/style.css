@@ -12,6 +12,7 @@ html, body {
 #body {
 	background: white;
 	transition: all 0.5s;
+  height: 100vh;
 }
 div#instruction {
   position: absolute;
