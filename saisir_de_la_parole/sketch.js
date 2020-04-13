@@ -22,7 +22,6 @@ var cover1 = document.getElementById('cover1');
 var cover2 = document.getElementById('cover2');
 var coverb = document.getElementById('coverb');
 
-
 function preload() {
 }
 
@@ -70,8 +69,8 @@ function showResult() {
     var texte = myRec.resultString;
     texte = texte.toLowerCase();
 
-    if (texte.includes("早餐") || 
-    texte.includes("剪刀")  || 
+    if (texte.includes("bonjour") || 
+    texte.includes("salut")  || 
     texte.includes("ça va") ||
     texte.includes("excuse") ||
     texte.includes("droit") ||
@@ -101,7 +100,7 @@ function showResult() {
       coverb.style.opacity = opacity4;
     }
 
-    if (texte.includes("晚安") || 
+    if (texte.includes("oui") || 
     texte.includes("ouais")  || 
     texte.includes("grave") ||
     texte.includes("yes") ||
