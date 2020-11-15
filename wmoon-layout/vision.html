@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Article" lang="zh-TW">
+<!--page default Information-->
+<!--html head-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="edge,chrome=1">
+    <title>掬月–最昂貴的品味</title>
+    <meta name="description" content="十五種姿態迥然的美學，只獻給十五位挑剔的主人">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1, maximum-scale=1">
+    <meta itemprop="name" content="掬月–最昂貴的品味">
+    <meta itemprop="description" content="十五種姿態迥然的美學，只獻給十五位挑剔的主人">
+    <meta itemprop="image" content="指定顯示圖片">
+    <meta property="og:title" content="掬月–最昂貴的品味">
+    <meta property="og:description" content="十五種姿態迥然的美學，只獻給十五位挑剔的主人">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="指定顯示圖片">
+    <link rel="Shortcut Icon" type="images/x-icon" href="../images/fav.ico">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<!--html body-->
+
+<body>
+    <div class="l-wrap" id="app">
+        <div class="l-main">
+            <section class="index">
+                <div class="page thought active">
+                    <div class="control-bar"><a class="p-close" href="main.html"></a></div>
+                    <div class="content-layout">
+                        <div class="left-sidebar" :class="'l-'+status">
+                            <ul class="list">
+                                <li :class="status=== 1 ?'active':''"><a @click="status=1">見證「掬月」</a></li>
+                                <li :class="status=== 2 ?'active':''"><a @click="status=2">make_it_happen.</a></li>
+                                <li :class="status=== 3 ?'active':''"><a @click="status=3">超越當今豪宅的居住品味</a></li>
+                                <li :class="status=== 4 ?'active':''"><a @click="status=4">打造Dream House</a></li>
+                            </ul>
+                        </div>
+                        <div class="middle-content">
+                            <div class="part" v-if="status===0">
+                                <div class="inner">
+                                    <div class="img"> <img src="images/t1.png" alt=""></div>
+                                </div>
+                            </div>
+                            <div class="part" v-if="status===1" :class="status===1?'active':''">
+                                <div class="inner">
+                                    <div class="inner-content">
+                                        <p>衷心希望你能先到掬月來看看。那會比任何文字或影像更有說服力。</p>
+                                        <p>就像少數在掬月公開前便有幸造訪的人士，他們還沒真正走進來，就已經被說服了。</p>
+                                        <p>甚至，那些單憑口耳相傳就駕著超級跑車前來的神秘客人，他們緩慢地繞著房子兜了又兜，只為一睹傳聞中的掬月。能穿過三道衛哨並不簡單，在此向您致上敬意。</p>
+                                        <p>希望你有機會來。你不只會看見一幢獨特的建築，也同時見證台灣居住美學正在歷經怎樣的轉變。這不單是一個建案，更是一個事件：有兩個人執意蓋出一個沒有建商願意蓋的房子，建築師以及掬月建設董事長趙鴻鵬，我們都叫他Giovanni。如果你來，Giovanni會詳述三年來他所經歷的故事。在那之後，更希望你有夠深的口袋能夠擁有掬月並好好珍藏它，但可能動作要快，畢竟掬月就只有十五戶而已。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="part" v-if="status===2" :class="status===2?'active':''">
+                                <div class="inner">
+                                    <div class="inner-content">
+                                        <p>在開始整個「掬月事件」之前，Giovanni對自己與團隊最高的期望，還有這段時間他們在歷經各種磨難時所堅持的信念就是：‘Make it happen!’</p>
+                                        <p>如果你在歐美或日本待過一段時間，踏出桃園國際機場回到台北市，你一定也會質疑：「為什麼所謂的豪宅都是這種樣子？」「有錢人的品味到底發生了什麼事？」</p>
+                                        <p>台灣不缺資金，也不缺人才，但為什麼就是沒有好看的房子？台北市有這麼優越的自然條件，為什麼找不到一幢像樣的別墅？當兩岸的距離漸漸近了，台灣在建築與住宅上面的成績，會不會只是原地踏步？回頭想想，當我們有了雲門、誠品，也有世界級的高科技產業，甚至還蓋了一棟世界最高的大樓！但為什麼談到最基本的一個居所，一種對的住宅樣貌，還是尷尬地讓人不知所措？</p>
+                                        <p>關鍵或許在於美學的經濟還在孕育，或許建商的獲利邏輯讓我們沒有選擇，或許那些在意品味的少數還不夠大膽表態，或許我們還沒看懂好衣服、好車、好腕錶是在於設計、美感、細節，而不是品牌。或許我們都應該多一點挑剔跟偏執……</p>
+                                        <p>關鍵在於主事者看待這整件事的方式，以及意志；不是太遠的旅程，端看你有沒有決心前往。兩個同月同日生的雙子座男人，想要做出一些改變。一個理想中的住宅，正在你眼前實現。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="part" v-if="status===3" :class="status===3?'active':''">
+                                <div class="inner">
+                                    <div class="inner-content">
+                                        <p>豪宅在台灣似乎是過熱了。</p>
+                                        <p>但在都市裡的這些昂貴的建築群，真的是顯示地位的唯一識別證？</p>
+                                        <p>住在所謂的豪宅裡其實不足以解除社交上的認同焦慮，超過數千萬甚至上億的要價也不能拯救美感的匱乏。如果對本身素養欠缺自信，對生活起居的安排沒有判斷，擁有一間三十坪的主臥室其實不具任何意義。</p>
+                                        <p>層層疊疊的群居式豪華，可能連你自己都很難一眼辨識出自家所在，也代表永遠有人居住在你房子之上或之下，分享同一塊不怎麼樣的view。在這個豪宅的價值感大量複製而稀釋的時代，隱隱然有一群沈默的富人階級選擇了截然不同的途徑，或許已擁有不只一塊位於都市精華區域的門牌，但是他們要求更多更高……</p>
+                                        <p>所以紐約有長島別墅、東京有輕井澤、香港也有太平山。素質整齊，環境隱密，從外觀到室內都交由著名建築設計師量身打造，更是天高地闊的私人招待所。他們知道真正的優雅不需要拉高分貝，豪宅的名字可能在若干年後褪色，但是好的住宅品味永遠都會存在，尤其當你的房子是一款唯你獨有的樣貌。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="part" v-if="status===4" :class="status===4?'active':''">
+                                <div class="inner">
+                                    <div class="inner-content">
+                                        <p>每一件革命性的事情裡面，都需要一個夠偏執、夠瘋狂、夠極端的人。</p>
+                                        <p>當我們看到房子的那一刻，突然間察覺台灣真的能有像國外建築雜誌裡面的漂亮房子，它的細節低調，卻又周到。富有功能性，線條又簡潔優美，搭配任何的設計師傢俱，都是那麼合宜。</p>
+                                        <p>頓時我們被感動了。讓我們更加羨慕未來掬月的主人，也讓我們對台灣的高級住宅重燃一點信心。終於有一個案子不用靠室內裝潢大手筆改造，本身就能展現建築之美。在台灣貧瘠的美學環境、令人焦慮的市容裡面，終於有人花費龐大的時間人力成本，用心打造了十五棟素質如此整齊的房子。</p>
+                                        <p>這一次，是Giovanni的任性與建築師的理性互相激盪的結果，如果把它當作一個「掬月建設」的奠基之作……那麼未來呢？還有什麼創意會被激發出來並認真執行？真的如他們說，不論坪數，每個階層的房子都能有這樣水準嗎？我們可以住在堅持以craftsmanship精心淬鍊的masterpiece裡嗎？</p>
+                                        <p>因為掬月，我們更有理由相信且期待，台灣會有越來越多的dream house。我們不用再忍受制服一樣的壞品味以及粗糙的房地產銷售方式，希望下一代能成長在掬月這樣的環境之下，誕生出一種屬於台灣的住宅風貌，最重要的，我們終於可以有選擇，選擇一種質地與美感兼具的住宅，撫慰居住者的心。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-brand">
+                            <div class="logo"> <img src="images/logo2.png" alt=""></div>
+                            <h3>Make it happen.</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--render main view-->
+        </div>
+        <div class="l-footer footer">
+            <div class="l-container">
+                <div class="left">
+                    <p v-if="breadcrumbs===0">聯絡掬月<a href="mailto:wm@wmoon.tw"> wm@wmoon.tw</a></p>
+                    <div class="breadcrumb" v-if="breadcrumbs&gt;0" :class="'b' + breadcrumbs"><a class="first" href="#main">首頁</a><span>＞</span>
+                        <div class="menu">
+                            <ul class="menu-list">
+                                <li v-for="(item,index) in mData.menu_list" :class="breadcrumbs === item.breadcrumb ? 'active':''"><a :href="item.link">{{item.title}}</a></li>
+                            </ul>
+                        </div>
+                        <div class="second" v-if="hashType &amp;&amp; getSubMenu()"><span>＞</span><span class="active">{{getSubMenu().name}}</span></div>
+                    </div>
+                </div>
+                <div class="right">
+                    <p>預約接待 +886 2 22166 3000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/vendor.js"></script>
+    <script type="text/javascript" src="js/lib.js"></script>
+    <script type="text/javascript" id="appjs" src="js/app.js?v=1605450925659" data-mode="false" data-site=""></script>
+    <script src="js/index.js?v=1605450925659"></script>
+    <script type="text/javascript"></script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Article" lang="zh-TW">
+<!--page default Information-->
+<!--html head-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="edge,chrome=1">
+    <title>掬月–最昂貴的品味</title>
+    <meta name="description" content="十五種姿態迥然的美學，只獻給十五位挑剔的主人">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1, maximum-scale=1">
+    <meta itemprop="name" content="掬月–最昂貴的品味">
+    <meta itemprop="description" content="十五種姿態迥然的美學，只獻給十五位挑剔的主人">
+    <meta itemprop="image" content="指定顯示圖片">
+    <meta property="og:title" content="掬月–最昂貴的品味">
+    <meta property="og:description" content="十五種姿態迥然的美學，只獻給十五位挑剔的主人">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="指定顯示圖片">
+    <link rel="Shortcut Icon" type="images/x-icon" href="../images/fav.ico">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<!--html body-->
+
+<body>
+    <div class="l-wrap" id="app">
+        <div class="l-main">
+            <section class="index">
+                <div class="page thought relations active">
+                    <div class="control-bar"><a class="p-close" href="main.html"></a></div>
+                    <div class="content-layout">
+                        <div class="left-sidebar" :class="'l-'+(status+1)">
+                            <ul class="list">
+                                <li :class="status=== 0 ?'active':''"><a @click="status= 0">
+                                        <p>美國建高控股集團</p>
+                                        <p>Chenco Holding Company</p>
+                                    </a></li>
+                                <li :class="status=== 1 ?'active':''"><a @click="status= 1">
+                                        <p>建高控股集團總裁</p>
+                                        <p>陳銘達 Derek Chen</p>
+                                    </a></li>
+                            </ul>
+                        </div>
+                        <div class="middle-content">
+                            <div class="part" v-if="status=== 0" :class="status=== 0?'active':''">
+                                <div class="inner">
+                                    <div class="inner-content"><img class='c-logo' src='images/chenco-logo.png'>
+                                        <p>美國建高控股公司Chenco Holding Company於1991年成立於美國，主要業務為不動產投資與開發、資產管理、以及基金管理，涵蓋的投資區域從美國西岸擴及台灣與中國，致力於成為環太平洋地區之領導企業。</p>
+                                        <p>過去二十六年間，建高控股與凱雷集團、摩根大通、富國銀行、奇異資融、美林、美國華平投資等多家國際知名金融機構合作投資，管理資產總市值超過美金一百億元，遍及美國十五個州，以及中國、台灣，在美、中、台地區的八個城市設有辦公室。</p>
+                                        <p>建高控股主要轉投資事業包括美國的Bascom Group, Premier Business Centers、台灣的「掬月建設」，以及中國的「建高資本管理公司」：</p>
+                                        <p>-Bascom Group—1996年成立，主要業務為投資加值型出租式公寓(Multi-family)，經由重新定位、改建、導入專業經營管理，達成房地產增值目標。2014年榮獲美國出租公寓經理人雜誌(MFE)評選為全美公寓翻新第一名，目前該公司累計收購的出租式公寓已超過六萬三千間。</p>
+                                        <p>-Premier Business Centers—2002年成立，主要營運範圍為併購、開發以及經營管理優質的商務中心，於美國四十個城市擁有七十四個營運點，為美國第二大商務中心經營者。</p>
+                                        <p>-掬月建設公司—2004年成立，致力於大台北地區高級別墅住宅之開發，於2009下半年在台北華城「禾豐特區」正式推出頂級的「掬月別墅」。</p>
+                                        <p>-中盛郵信投資管理有限公司—中國國家發改委首批備案之專業投資管理機構，由建高集團等台灣股東與中國中信集團、中國郵政集團共同創辦設立。2011年建高集團與中盛郵信合組中盛建高資產管理公司，負責房產投資管理業務，目前以募集中國資金投資美國項目為主。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="part" v-if="status=== 1" :class="status=== 1?'active':''">
+                                <div class="inner">
+                                    <div class="inner-content">
+                                        <p>陳銘達先生(Mr. Derek M.D. Chen)，係建高控股公司的創辦人及總裁，擁有美國威斯康辛大學房地產經營及財務管理雙碩士學位，於2004年榮獲由美國西岸最大且最具名望的美國地產聯盟所頒發的「年度最佳公寓房地產經營者」，2005年榮獲美國經濟部商業司少數企業開發局所頒發的「全國資金取得經理獎」，並於2007年榮獲美國總統最高榮譽「義務服務金鷹獎章」。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-brand">
+                            <div class="logo"> <img src="images/logo2.png" alt=""></div>
+                            <h3>掬月建設關係企業</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--render main view-->
+        </div>
+        <div class="l-footer footer">
+            <div class="l-container">
+                <div class="left">
+                    <p v-if="breadcrumbs===0">聯絡掬月<a href="mailto:wm@wmoon.tw"> wm@wmoon.tw</a></p>
+                    <div class="breadcrumb" v-if="breadcrumbs&gt;0" :class="'b' + breadcrumbs"><a class="first" href="#main">首頁</a><span>＞</span>
+                        <div class="menu">
+                            <ul class="menu-list">
+                                <li v-for="(item,index) in mData.menu_list" :class="breadcrumbs === item.breadcrumb ? 'active':''"><a :href="item.link">{{item.title}}</a></li>
+                            </ul>
+                        </div>
+                        <div class="second" v-if="hashType &amp;&amp; getSubMenu()"><span>＞</span><span class="active">{{getSubMenu().name}}</span></div>
+                    </div>
+                </div>
+                <div class="right">
+                    <p>預約接待 +886 2 22166 3000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/vendor.js"></script>
+    <script type="text/javascript" src="js/lib.js"></script>
+    <script type="text/javascript" id="appjs" src="js/app.js?v=1605450925659" data-mode="false" data-site=""></script>
+    <script src="js/index.js?v=1605450925659"></script>
+    <script type="text/javascript"></script>
+</body>
+
+</html>
