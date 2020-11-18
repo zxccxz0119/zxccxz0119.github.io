@@ -27,10 +27,9 @@
             <section class="index">
                 <div class="page about active">
                     <div class="control-bar"><a class="p-close" v-if="!hashType" href="main.html"></a></div>
-                    <div class="about-layout" :class="'a'+hashType">
-                        <div class="logo2"> <img src="images/logo2.png" alt="掬月 water moon">
+                    <div class="about-layout" :class="'a'+hashType"><a class="logo2" href="main.html"><img src="images/logo2.png" alt="掬月 water moon">
                             <p>最昂貴的品味</p>
-                        </div>
+                        </a>
                         <div class="top-menu"> <a href="about.html#about-1">最昂貴的<br>品味,<br>不在城裡。</a><a href="about.html#about-2">最有資格<br>與山對話<br>的建築。</a><a href="about.html#about-3">安全隱密的<br>頂級社區。</a><a href="about.html#about-4">沒有建商<br>願意蓋的房子。</a><a href="about.html#about-5">現代極簡的<br>十五種面貌。</a><a href="about.html#about-6">連年得獎的<br>歐洲頂級工藝。</a><a href="about.html#about-7">挽袖掬月<br>的生活意境。</a>
                         </div>
                         <div class="about-area" v-if="hashType&gt;=1">
@@ -123,20 +122,20 @@
             </section>
             <!--render main view-->
         </div>
-        <div class="l-footer footer">
+        <div class="l-footer footer active" :class="breadcrumbs===0?'thin':''">
             <div class="l-container">
                 <div class="left">
                     <p v-if="breadcrumbs===0">聯絡掬月<a href="mailto:wm@wmoon.tw"> wm@wmoon.tw</a></p>
-                    <div class="breadcrumb" v-if="breadcrumbs&gt;0" :class="'b' + breadcrumbs"><a class="first" href="#main">首頁</a><span>＞</span>
+                    <div class="breadcrumb" v-if="breadcrumbs&gt;0" :class="'b' + breadcrumbs"><a class="first" href="main.html">首頁</a><span>＞</span>
                         <div class="menu">
                             <ul class="menu-list">
-                                <li v-for="(item,index) in mData.menu_list" :class="breadcrumbs === item.breadcrumb ? 'active':''"><a :href="item.link">{{item.title}}</a></li>
+                                <li v-for="(item,index) in mData.menu_list" :class="breadcrumbs === item.breadcrumb ? 'active':''"><a @click="goPage(item.link)">{{item.title}}</a></li>
                             </ul>
                         </div>
                         <div class="second" v-if="hashType &amp;&amp; getSubMenu()"><span>＞</span><span class="active">{{getSubMenu().name}}</span></div>
                     </div>
                 </div>
-                <div class="right">
+                <div class="right" v-if="breadcrumbs&gt;=0">
                     <p>預約接待 +886 2 22166 3000</p>
                 </div>
             </div>
@@ -144,8 +143,8 @@
     </div>
     <script type="text/javascript" src="js/vendor.js"></script>
     <script type="text/javascript" src="js/lib.js"></script>
-    <script type="text/javascript" id="appjs" src="js/app.js?v=1605484870491" data-mode="false" data-site=""></script>
-    <script src="js/index.js?v=1605484870491"></script>
+    <script type="text/javascript" id="appjs" src="js/app.js?v=1605693936979" data-mode="false" data-site=""></script>
+    <script src="js/index.js?v=1605693936979"></script>
     <script type="text/javascript"></script>
 </body>
 
