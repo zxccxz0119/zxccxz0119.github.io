@@ -32,7 +32,7 @@
                         <div class="letters"><a class="letter la" href="#atoz-a">A</a><a class="letter lb" href="#atoz-b">B</a><a class="letter lc" href="#atoz-c">C</a><a class="letter ld" href="#atoz-d">D</a><a class="letter le" href="#atoz-e">E</a><a class="letter lf" href="#atoz-f">F</a><a class="letter lg" href="#atoz-g">G</a><a class="letter lh" href="#atoz-h">H</a><a class="letter li" href="#atoz-i">I</a><a class="letter lj" href="#atoz-j">J</a><a class="letter lk" href="#atoz-k">K</a><a class="letter ll" href="#atoz-l">L</a><a class="letter lm" href="#atoz-m">M</a><a class="letter ln" href="#atoz-n">N</a><a class="letter lo" href="#atoz-o">O</a><a class="letter lp" href="#atoz-p">P</a><a class="letter lq" href="#atoz-q">Q</a><a class="letter lr" href="#atoz-r">R</a><a class="letter ls" href="#atoz-s">S</a><a class="letter lt" href="#atoz-t">T</a><a class="letter lu" href="#atoz-u">U</a><a class="letter lv" href="#atoz-v">V</a><a class="letter lw" href="#atoz-w">W</a><a class="letter lx" href="#atoz-x">X</a><a class="letter ly" href="#atoz-y">Y</a><a class="letter lz" href="#atoz-z">Z</a>
                         </div>
                     </div>
-                    <div class="atoz-main" v-if="hashType">
+                    <div class="atoz-main" v-if="hashType" :class="hashType?'active':''">
                         <div class="control-bar"><a class="p-pre" :href="pagePre()"></a><a class="p-close" href="#atoz"></a><a class="p-next" :href="pageNext()"></a></div>
                         <div class="logo2"> <img src="images/logo2.png" alt="掬月 water moon">
                             <p>最昂貴的品味</p>
@@ -576,20 +576,20 @@
             </section>
             <!--render main view-->
         </div>
-        <div class="l-footer footer">
+        <div class="l-footer footer active" :class="breadcrumbs===0?'thin':''">
             <div class="l-container">
                 <div class="left">
                     <p v-if="breadcrumbs===0">聯絡掬月<a href="mailto:wm@wmoon.tw"> wm@wmoon.tw</a></p>
-                    <div class="breadcrumb" v-if="breadcrumbs&gt;0" :class="'b' + breadcrumbs"><a class="first" href="#main">首頁</a><span>＞</span>
+                    <div class="breadcrumb" v-if="breadcrumbs&gt;0" :class="'b' + breadcrumbs"><a class="first" href="main.html">首頁</a><span>＞</span>
                         <div class="menu">
                             <ul class="menu-list">
-                                <li v-for="(item,index) in mData.menu_list" :class="breadcrumbs === item.breadcrumb ? 'active':''"><a :href="item.link">{{item.title}}</a></li>
+                                <li v-for="(item,index) in mData.menu_list" :class="breadcrumbs === item.breadcrumb ? 'active':''"><a @click="goPage(item.link)">{{item.title}}</a></li>
                             </ul>
                         </div>
                         <div class="second" v-if="hashType &amp;&amp; getSubMenu()"><span>＞</span><span class="active">{{getSubMenu().name}}</span></div>
                     </div>
                 </div>
-                <div class="right">
+                <div class="right" v-if="breadcrumbs&gt;=0">
                     <p>預約接待 +886 2 22166 3000</p>
                 </div>
             </div>
@@ -597,8 +597,8 @@
     </div>
     <script type="text/javascript" src="js/vendor.js"></script>
     <script type="text/javascript" src="js/lib.js"></script>
-    <script type="text/javascript" id="appjs" src="js/app.js?v=1605484870491" data-mode="false" data-site=""></script>
-    <script src="js/index.js?v=1605484870491"></script>
+    <script type="text/javascript" id="appjs" src="js/app.js?v=1605748359419" data-mode="false" data-site=""></script>
+    <script src="js/index.js?v=1605748359419"></script>
     <script type="text/javascript"></script>
 </body>
 

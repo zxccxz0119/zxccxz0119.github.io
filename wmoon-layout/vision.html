@@ -31,7 +31,7 @@
                         <div class="left-sidebar" :class="'l-'+status">
                             <ul class="list">
                                 <li :class="status=== 1 ?'active':''"><a @click="status=1">見證「掬月」</a></li>
-                                <li :class="status=== 2 ?'active':''"><a @click="status=2">make_it_happen.</a></li>
+                                <li :class="status=== 2 ?'active':''"><a @click="status=2">Make it happen.</a></li>
                                 <li :class="status=== 3 ?'active':''"><a @click="status=3">超越當今豪宅的居住品味</a></li>
                                 <li :class="status=== 4 ?'active':''"><a @click="status=4">打造Dream House</a></li>
                             </ul>
@@ -55,7 +55,7 @@
                             <div class="part" v-if="status===2" :class="status===2?'active':''">
                                 <div class="inner">
                                     <div class="inner-content">
-                                        <p>在開始整個「掬月事件」之前，Giovanni對自己與團隊最高的期望，還有這段時間他們在歷經各種磨難時所堅持的信念就是：‘Make it happen!’</p>
+                                        <p>在開始整個「掬月事件」之前，Giovanni對自己與團隊最高的期望，還有這段時間他們在歷經各種磨難時所堅持的信念就是：<br><br>'Make it happen!'<br></p>
                                         <p>如果你在歐美或日本待過一段時間，踏出桃園國際機場回到台北市，你一定也會質疑：「為什麼所謂的豪宅都是這種樣子？」「有錢人的品味到底發生了什麼事？」</p>
                                         <p>台灣不缺資金，也不缺人才，但為什麼就是沒有好看的房子？台北市有這麼優越的自然條件，為什麼找不到一幢像樣的別墅？當兩岸的距離漸漸近了，台灣在建築與住宅上面的成績，會不會只是原地踏步？回頭想想，當我們有了雲門、誠品，也有世界級的高科技產業，甚至還蓋了一棟世界最高的大樓！但為什麼談到最基本的一個居所，一種對的住宅樣貌，還是尷尬地讓人不知所措？</p>
                                         <p>關鍵或許在於美學的經濟還在孕育，或許建商的獲利邏輯讓我們沒有選擇，或許那些在意品味的少數還不夠大膽表態，或許我們還沒看懂好衣服、好車、好腕錶是在於設計、美感、細節，而不是品牌。或許我們都應該多一點挑剔跟偏執……</p>
@@ -86,8 +86,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="right-brand">
-                            <div class="logo"> <img src="images/logo2.png" alt=""></div>
+                        <div class="right-brand"><a class="logo" href="main.html"> <img src="images/logo2.png" alt=""></a>
                             <h3>Make it happen.</h3>
                         </div>
                     </div>
@@ -95,20 +94,20 @@
             </section>
             <!--render main view-->
         </div>
-        <div class="l-footer footer">
+        <div class="l-footer footer active" :class="breadcrumbs===0?'thin':''">
             <div class="l-container">
                 <div class="left">
                     <p v-if="breadcrumbs===0">聯絡掬月<a href="mailto:wm@wmoon.tw"> wm@wmoon.tw</a></p>
-                    <div class="breadcrumb" v-if="breadcrumbs&gt;0" :class="'b' + breadcrumbs"><a class="first" href="#main">首頁</a><span>＞</span>
+                    <div class="breadcrumb" v-if="breadcrumbs&gt;0" :class="'b' + breadcrumbs"><a class="first" href="main.html">首頁</a><span>＞</span>
                         <div class="menu">
                             <ul class="menu-list">
-                                <li v-for="(item,index) in mData.menu_list" :class="breadcrumbs === item.breadcrumb ? 'active':''"><a :href="item.link">{{item.title}}</a></li>
+                                <li v-for="(item,index) in mData.menu_list" :class="breadcrumbs === item.breadcrumb ? 'active':''"><a @click="goPage(item.link)">{{item.title}}</a></li>
                             </ul>
                         </div>
                         <div class="second" v-if="hashType &amp;&amp; getSubMenu()"><span>＞</span><span class="active">{{getSubMenu().name}}</span></div>
                     </div>
                 </div>
-                <div class="right">
+                <div class="right" v-if="breadcrumbs&gt;=0">
                     <p>預約接待 +886 2 22166 3000</p>
                 </div>
             </div>
@@ -116,8 +115,8 @@
     </div>
     <script type="text/javascript" src="js/vendor.js"></script>
     <script type="text/javascript" src="js/lib.js"></script>
-    <script type="text/javascript" id="appjs" src="js/app.js?v=1605484870491" data-mode="false" data-site=""></script>
-    <script src="js/index.js?v=1605484870491"></script>
+    <script type="text/javascript" id="appjs" src="js/app.js?v=1605748359419" data-mode="false" data-site=""></script>
+    <script src="js/index.js?v=1605748359419"></script>
     <script type="text/javascript"></script>
 </body>
 

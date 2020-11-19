@@ -90,20 +90,20 @@
             </section>
             <!--render main view-->
         </div>
-        <div class="l-footer footer">
+        <div class="l-footer footer active" :class="breadcrumbs===0?'thin':''">
             <div class="l-container">
                 <div class="left">
                     <p v-if="breadcrumbs===0">聯絡掬月<a href="mailto:wm@wmoon.tw"> wm@wmoon.tw</a></p>
-                    <div class="breadcrumb" v-if="breadcrumbs&gt;0" :class="'b' + breadcrumbs"><a class="first" href="#main">首頁</a><span>＞</span>
+                    <div class="breadcrumb" v-if="breadcrumbs&gt;0" :class="'b' + breadcrumbs"><a class="first" href="main.html">首頁</a><span>＞</span>
                         <div class="menu">
                             <ul class="menu-list">
-                                <li v-for="(item,index) in mData.menu_list" :class="breadcrumbs === item.breadcrumb ? 'active':''"><a :href="item.link">{{item.title}}</a></li>
+                                <li v-for="(item,index) in mData.menu_list" :class="breadcrumbs === item.breadcrumb ? 'active':''"><a @click="goPage(item.link)">{{item.title}}</a></li>
                             </ul>
                         </div>
                         <div class="second" v-if="hashType &amp;&amp; getSubMenu()"><span>＞</span><span class="active">{{getSubMenu().name}}</span></div>
                     </div>
                 </div>
-                <div class="right">
+                <div class="right" v-if="breadcrumbs&gt;=0">
                     <p>預約接待 +886 2 22166 3000</p>
                 </div>
             </div>
@@ -111,8 +111,8 @@
     </div>
     <script type="text/javascript" src="js/vendor.js"></script>
     <script type="text/javascript" src="js/lib.js"></script>
-    <script type="text/javascript" id="appjs" src="js/app.js?v=1605484870491" data-mode="false" data-site=""></script>
-    <script src="js/index.js?v=1605484870491"></script>
+    <script type="text/javascript" id="appjs" src="js/app.js?v=1605748359419" data-mode="false" data-site=""></script>
+    <script src="js/index.js?v=1605748359419"></script>
     <script type="text/javascript"></script>
 </body>
 
