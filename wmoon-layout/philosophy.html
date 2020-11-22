@@ -17,6 +17,8 @@
     <meta property="og:type" content="article">
     <meta property="og:image" content="指定顯示圖片">
     <link rel="Shortcut Icon" type="images/x-icon" href="../images/fav.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <!--html body-->
@@ -47,8 +49,7 @@
                             <div class="part" v-if="status===0">
                                 <div class="inner">
                                     <div class="img"> <img src="images/t2.png" alt=""></div>
-                                    <p>謹在這裡感謝投資人、團隊與協力廠商對我的容忍與配合。我們把所有最挑剔的品味獻給了極少數真正懂得掬月的人。</p>
-                                    <p>- 全文．掬月建設 董事長 趙鴻鵬 -</p>
+                                    <p>謹在這裡感謝投資人、團隊與協力廠商對我的容忍與配合。我們把所有最挑剔的品味獻給了極少數真正懂得掬月的人。<br>- 全文．掬月建設 董事長 趙鴻鵬 -</p>
                                 </div>
                             </div>
                             <div class="part" v-if="status===1" :class="status===1?'active':''">
@@ -83,7 +84,7 @@
                                     <div class="inner-content">
                                         <p>Craftsmanship「工藝精神」一直是我們追求的目標。「機械錶」是我諸多的興趣與鑽研之一；手錶中有你看得見與看不見的部份，在錶的世界裡，製錶大師們可能更注重看不見的部份，他們專注於所有的細節，一絲不苟。最後enjoy的往往是修錶師傅，精密機芯中的日內瓦波紋、黃金套筒、四十五度倒角等，有些是機芯拆開之後才能發現的。送去保養時，老師傅跟你說：「你這部機芯不錯，連裡面都做得很細緻。」這是非常有趣的，可能是自己一輩子都不會看到的東西，深諳此道的收藏家們卻為此著迷。就是這樣的精神，你看不到的東西，還是執意要把它做好。建築中也有許多部分是結構裡的東西，雖然外表看不到，我們還是要把它做到最好。</p>
                                         <p>其實有很多事情可以不必做到那樣，但我就是會去要求。那不僅只是一種負責任的精神，那就是我的個性。記得小時候有一次，父親走進我的房間，終於，他有點憋扭地說出：「身為一個家長這樣說也許有點奇怪，但你的房間是不是可以不要這麼整齊？」我一定會要求到每一塊石材、每一段護欄、甚至每一米擋土牆的組裝與品質。</p>
-                                        <p>‘God is in the details.’ <br> -Ludwig Mies van der Rohe-</p>
+                                        <p>'God is in the details.' - Ludwig Mies van der Rohe - </p>
                                     </div>
                                 </div>
                             </div>
@@ -145,14 +146,14 @@
                             </div>
                         </div>
                         <div class="right-brand"><a class="logo" href="main.html"> <img src="images/logo2.png" alt=""></a>
-                            <h3>掬月，追求理想的執念</h3>
+                            <h3>Make it happen.</h3>
                         </div>
                     </div>
                 </div>
             </section>
             <!--render main view-->
         </div>
-        <div class="l-footer footer active" :class="breadcrumbs===0?'thin':''">
+        <div class="l-footer footer active" :class="hashType?ft[breadcrumbs]:(ft[breadcrumbs]+' f-enter')">
             <div class="l-container">
                 <div class="left">
                     <p v-if="breadcrumbs===0">聯絡掬月<a href="mailto:wm@wmoon.tw"> wm@wmoon.tw</a></p>
@@ -173,8 +174,8 @@
     </div>
     <script type="text/javascript" src="js/vendor.js"></script>
     <script type="text/javascript" src="js/lib.js"></script>
-    <script type="text/javascript" id="appjs" src="js/app.js?v=1605693936979" data-mode="false" data-site=""></script>
-    <script src="js/index.js?v=1605693936979"></script>
+    <script type="text/javascript" id="appjs" src="js/app.js?v=1606071888366" data-mode="false" data-site=""></script>
+    <script src="js/index.js?v=1606071888366"></script>
     <script type="text/javascript"></script>
 </body>
 

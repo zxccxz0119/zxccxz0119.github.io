@@ -17,6 +17,8 @@
     <meta property="og:type" content="article">
     <meta property="og:image" content="指定顯示圖片">
     <link rel="Shortcut Icon" type="images/x-icon" href="../images/fav.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <!--html body-->
@@ -27,16 +29,14 @@
             <section class="index">
                 <div class="page atoz active">
                     <div class="atoz-enter" v-if="!hashType">
-                        <div class="control-bar"><a class="p-close" href="main.html"></a></div>
-                        <div class="logo2"> <img src="images/logo2.png" alt="掬月 water moon"></div>
+                        <div class="control-bar"><a class="p-close" href="main.html"></a></div><a class="logo2"><img src="images/logo2.png" alt="掬月 water moon"></a>
                         <div class="letters"><a class="letter la" href="#atoz-a">A</a><a class="letter lb" href="#atoz-b">B</a><a class="letter lc" href="#atoz-c">C</a><a class="letter ld" href="#atoz-d">D</a><a class="letter le" href="#atoz-e">E</a><a class="letter lf" href="#atoz-f">F</a><a class="letter lg" href="#atoz-g">G</a><a class="letter lh" href="#atoz-h">H</a><a class="letter li" href="#atoz-i">I</a><a class="letter lj" href="#atoz-j">J</a><a class="letter lk" href="#atoz-k">K</a><a class="letter ll" href="#atoz-l">L</a><a class="letter lm" href="#atoz-m">M</a><a class="letter ln" href="#atoz-n">N</a><a class="letter lo" href="#atoz-o">O</a><a class="letter lp" href="#atoz-p">P</a><a class="letter lq" href="#atoz-q">Q</a><a class="letter lr" href="#atoz-r">R</a><a class="letter ls" href="#atoz-s">S</a><a class="letter lt" href="#atoz-t">T</a><a class="letter lu" href="#atoz-u">U</a><a class="letter lv" href="#atoz-v">V</a><a class="letter lw" href="#atoz-w">W</a><a class="letter lx" href="#atoz-x">X</a><a class="letter ly" href="#atoz-y">Y</a><a class="letter lz" href="#atoz-z">Z</a>
                         </div>
                     </div>
                     <div class="atoz-main" v-if="hashType" :class="hashType?'active':''">
-                        <div class="control-bar"><a class="p-pre" :href="pagePre()"></a><a class="p-close" href="#atoz"></a><a class="p-next" :href="pageNext()"></a></div>
-                        <div class="logo2"> <img src="images/logo2.png" alt="掬月 water moon">
+                        <div class="control-bar"><a class="p-pre" :href="pagePre()"></a><a class="p-close" href="#atoz"></a><a class="p-next" :href="pageNext()"></a></div><a class="logo2" href="main.html"> <img src="images/logo2.png" alt="掬月 water moon">
                             <p>最昂貴的品味</p>
-                        </div>
+                        </a>
                         <div class="content" v-if="hashType===&quot;a&quot;">
                             <div class="atoz-slide">
                                 <div class="s-item">
@@ -524,7 +524,7 @@
                                     <div class="letter-intro">
                                         <div class="title"><span class="e-name">Giovanni</span><span class="c-name"></span></div>
                                         <div class="txt-block">
-                                            <p>Giovanni執意蓋出一個「沒有建商願意蓋的房子」：</p>
+                                            <p>這兩個人執意蓋出一個「沒有建商願意蓋的房子」：</p>
                                             <p>Giovanni趙鴻鵬，最另類的建設公司董事長。對細節的挑剔、對設計感的堅持，全都展現在「掬月別墅」。英國名校諾丁漢大學企管碩士，從極度整潔的習慣不難想像他的論文主題正是「無印良品」。曾任多家知名企業的最高行銷企劃主管，歷任本公司行銷企劃總監、執行副總經理、總經理，並跨足多種創作領域：曾在美國榮獲世界行銷企劃競賽冠軍、聯合文學與時報舉辦的二次小說獎、二度在美國榮獲平面設計大獎。他同時也是建高控股集團資深副總及總裁執行顧問，一個日耳曼高級車、德製腕錶、德國家電、設備與所有‘Made in Germany’的死忠擁護者。</p>
                                         </div>
                                     </div>
@@ -576,7 +576,7 @@
             </section>
             <!--render main view-->
         </div>
-        <div class="l-footer footer active" :class="breadcrumbs===0?'thin':''">
+        <div class="l-footer footer active" :class="hashType?ft[breadcrumbs]:(ft[breadcrumbs]+' f-enter')">
             <div class="l-container">
                 <div class="left">
                     <p v-if="breadcrumbs===0">聯絡掬月<a href="mailto:wm@wmoon.tw"> wm@wmoon.tw</a></p>
@@ -597,8 +597,8 @@
     </div>
     <script type="text/javascript" src="js/vendor.js"></script>
     <script type="text/javascript" src="js/lib.js"></script>
-    <script type="text/javascript" id="appjs" src="js/app.js?v=1605693936979" data-mode="false" data-site=""></script>
-    <script src="js/index.js?v=1605693936979"></script>
+    <script type="text/javascript" id="appjs" src="js/app.js?v=1606071888366" data-mode="false" data-site=""></script>
+    <script src="js/index.js?v=1606071888366"></script>
     <script type="text/javascript"></script>
 </body>
 
