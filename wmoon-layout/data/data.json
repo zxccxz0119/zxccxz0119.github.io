@@ -1,0 +1,240 @@
+{
+    "menu_list": [
+        {
+            "link": "vision.html",
+            "title": "Make it happen.",
+            "subtitle":"",
+            "breadcrumb": 1,
+            "sub":[]
+        },
+        {
+            "link": "philosophy.html",
+            "title": "掬月，追求理想的執念",
+            "subtitle":"",
+            "breadcrumb": 2,
+            "sub":[]
+
+        },
+        {
+            "link": "affiliated-company.html",
+            "title": "掬月建設關係企業",
+            "subtitle":"",
+            "breadcrumb": 3,
+            "sub":[]
+        }, 
+        {
+            "link": "about.html",
+            "title": "關於掬月別墅",
+            "subtitle":"",
+            "breadcrumb": 4,
+            "sub":[
+                {
+                    "id": 1,
+                    "name": "最昂貴的品味,不在城裡。"
+                },
+                {
+                    "id": 2,
+                    "name": "最有資格與山對話的建築。"
+                },
+                {
+                    "id": 3,
+                    "name": "安全隱密的頂級社區。"
+                },
+                {
+                    "id": 4,
+                    "name": "沒有建商願意蓋的房子。"
+                },
+                {
+                    "id": 5,
+                    "name": "現代極簡的十五種面貌。"
+                },
+                {
+                    "id": 6,
+                    "name": "連年得獎的歐洲頂級工藝。"
+                },
+                {
+                    "id": 7,
+                    "name": "挽袖掬月的生活意境。"
+                }                                                                                                
+            ]
+        }, 
+        {
+            "link": "atoz.html",
+            "title": "掬月 A to Z",
+            "subtitle":"",
+            "breadcrumb": 5,
+            "sub":[
+                {
+                    "id": "a",
+                    "name": "Aesthetic"
+                },
+                {
+                    "id": "b",
+                    "name": "Barcode"
+                },
+                {
+                    "id": "c",
+                    "name": "Climate"
+                },
+                {
+                    "id": "d",
+                    "name": "District"
+                },
+                {
+                    "id": "e",
+                    "name": "Execution"
+                },
+                {
+                    "id": "f",
+                    "name": "Flowing"
+                },
+                {
+                    "id": "g",
+                    "name": "Grille"
+                },
+                {
+                    "id": "h",
+                    "name": "Human"
+                },  
+                {
+                    "id": "i",
+                    "name": "Individualize"
+                },    
+                {
+                    "id": "j",
+                    "name": "Journey"
+                },    
+                {
+                    "id": "k",
+                    "name": "K2"
+                },    
+                {
+                    "id": "l",
+                    "name": "Learning"
+                },    
+                {
+                    "id": "m",
+                    "name": "Minimalism"
+                },    
+                {
+                    "id": "n",
+                    "name": "Nature"
+                },    
+                {
+                    "id": "o",
+                    "name": "Outdoor"
+                },    
+                {
+                    "id": "p",
+                    "name": "Picky"
+                },    
+                {
+                    "id": "q",
+                    "name": "Quality"
+                },    
+                {
+                    "id": "r",
+                    "name": "Relax"
+                },    
+                {
+                    "id": "s",
+                    "name": "Scandinavian"
+                },    
+                {
+                    "id": "t",
+                    "name": "Taste"
+                },    
+                {
+                    "id": "u",
+                    "name": "Uniqueness"
+                },    
+                {
+                    "id": "v",
+                    "name": "View"
+                },    
+                {
+                    "id": "w",
+                    "name": "Window"
+                },    
+                {
+                    "id": "x",
+                    "name": "Giovanni"
+                },    
+                {
+                    "id": "y",
+                    "name": "Yourself"
+                },    
+                {
+                    "id": "z",
+                    "name": "Zealousness"
+                }                                                                                                                                                                                                                                                                                                                                                                                                              
+            ]
+        }, 
+        {
+            "link": "villas.html",
+            "title": "15席頂級別墅",
+            "subtitle":"villas",
+            "breadcrumb": 6,
+            "sub":[{
+                "id": 1,
+                "name": "朔"
+            },{
+                "id": 2,
+                "name": "弦"
+            },{
+                "id": 3,
+                "name": "望"
+            },{
+                "id": 4,
+                "name": "盈"
+            },{
+                "id": 5,
+                "name": "曉"
+            },{
+                "id": 6,
+                "name": "晌"
+            },{
+                "id": 7,
+                "name": "沐"
+            },{
+                "id": 8,
+                "name": "漾"
+            },{
+                "id": 9,
+                "name": "霽"
+            },{
+                "id": 10,
+                "name": "霏"
+            },{
+                "id": 11,
+                "name": "朗"
+            },{
+                "id": 12,
+                "name": "櫻"
+            },{
+                "id": 13,
+                "name": "桐"
+            },{
+                "id": 14,
+                "name": "樺"
+            },{
+                "id": 15,
+                "name": "嵐"
+            }]
+        }, 
+        {
+            "link": "b38.html",
+            "title": "好品味的現場實踐 朔",
+            "subtitle":"",
+            "breadcrumb": 7,
+            "sub":[]
+        }, 
+        {
+            "link": "advertising.html",
+            "title": "掬月廣告",
+            "subtitle":"",
+            "breadcrumb": 8,
+            "sub":[]
+        }       
+    ]
+}
