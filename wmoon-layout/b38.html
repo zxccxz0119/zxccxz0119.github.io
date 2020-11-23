@@ -48,9 +48,13 @@
                                 </div>
                                 <div class="b-item">
                                     <div class="gallery">
-                                        <div class="show" v-if="gShow" @click="gShow=false"> <img :src="'images/b38/img'+status+'.jpg'" alt="好品味的現場實踐 朔"></div>
                                         <div class="link" @click="gOpen(index)" v-for="index in 11"> <img :src="'images/b38/img'+index+'-s.jpg'" alt="好品味的現場實踐 朔"></div>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="show" :class="gShow?'active':''">
+                                <div class="gpic-slide">
+                                    <div class="gpic" v-for="i in 11"><img @click="gShow=false" :src="'images/b38/img'+i+'.jpg'" alt="好品味的現場實踐 朔"></div>
                                 </div>
                             </div>
                         </div>
@@ -80,8 +84,8 @@
     </div>
     <script type="text/javascript" src="js/vendor.js"></script>
     <script type="text/javascript" src="js/lib.js"></script>
-    <script type="text/javascript" id="appjs" src="js/app.js?v=1606071888366" data-mode="false" data-site=""></script>
-    <script src="js/index.js?v=1606071888366"></script>
+    <script type="text/javascript" id="appjs" src="js/app.js?v=1606153376476" data-mode="false" data-site=""></script>
+    <script src="js/index.js?v=1606153376476"></script>
     <script type="text/javascript"></script>
 </body>
 
