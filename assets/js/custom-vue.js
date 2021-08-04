@@ -59,6 +59,34 @@
 	]
 	var recent_works = [
 		{
+			info: "滙豐活動網站",
+			link: "https://showcase.friendo.com.tw/hsbc_travel/index.html",
+			img: "assets/img/hand.jpg",
+			type: "Campaign",
+			date: 2020,
+		},
+		{
+			info: "家樂福活動網站",
+			link: "https://showcase.friendo.com.tw/2020goodplus/",
+			img: "assets/img/goodplus.jpg",
+			type: "Campaign",
+			date: 2020,
+		},
+		{
+			info: "Richart活動網站",
+			link: "https://showcase.friendo.com.tw/2019wangzilla/index.html",
+			img: "assets/img/dog.jpg",
+			type: "Campaign",
+			date: 2019,
+		},
+		{
+			info: "visa活動網站",
+			link: "https://showcase.friendo.com.tw/visa/",
+			img: "assets/img/visa.jpg",
+			type: "Campaign",
+			date: 2019,
+		},
+		{
 			info : "龍崎光節",
 			link : "https://zxccxz0119.github.io/2019Longci/",
 			img : "assets/img/longci.jpg",
@@ -87,13 +115,6 @@
 			info : "長榮787小遊戲",
 			link : "https://showcase.friendo.com.tw/eva787Game/",
 			img : "assets/img/n1.jpg",
-			type : "Campaign",
-			date : 2018,
-		},
-		{
-			info : "夏慕尼",
-			link : "https://showcase.friendo.com.tw/chamonix_valentine/",
-			img : "assets/img/n2.jpg",
 			type : "Campaign",
 			date : 2018,
 		},
@@ -135,8 +156,8 @@
 			resume_link : "https://medium.com/@ss830119",
 			github_link: "https://github.com/zxccxz0119/about-me",
 			issuu_link : "https://issuu.com/sandylo0119/docs/profolio______",
-			intro1 : "a Web Designer.",
-			intro2 : "a Front-end Developer.",
+			intro1: "a Front-end Developer.",
+			intro2: "a Web Designer.",
 			copyright: "&copy; 2018. All rights reserved",
 		}
 

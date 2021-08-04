@@ -119,7 +119,6 @@ header{
 .pd0{
 	padding: 0 !important;
 }
-
 /*rwd===========================================================================*/
 @media (max-width: 991px) {
 	.nk-fullpage .nk-portfolio-text-box.top-1,.nk-fullpage .nk-portfolio-text-box.sec-1{
