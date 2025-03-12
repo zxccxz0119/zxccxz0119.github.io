@@ -3,7 +3,7 @@
 var index_view = new Vue({
   el: "#app",
   data: {
-    "bestList": ["product1", "product32", "product12", "product38", "product45", "product60"]
+    "bestList": ["product1101", "product11202", "product7101", "product3101", "product8106", "product9103", "product11102"]
   },
   methods: {},
   computed: {
