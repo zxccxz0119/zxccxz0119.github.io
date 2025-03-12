@@ -109,7 +109,7 @@ Vue.mixin({
     var _this = this;
 
     // 抓取 menu.json
-    var menuFile = "../static/data/menu.json";
+    var menuFile = "static/data/menu.json";
     axios.get(menuFile).then(function (response) {
       _this.menuData = response.data;
       _this.productMapping = _this.createProductMapping(_this.menuData);
