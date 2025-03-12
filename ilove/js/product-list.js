@@ -1,0 +1,1 @@
+"use strict";var list_view=new Vue({el:"#app",data:{mainCategory:null},methods:{},computed:{categoryInfo:function(){if(0==this.menuData.length)return[];var t=findGetParameter("category").split("-"),e=t[0],n=parseInt(t[1])-1,t=this.menuData.find(function(t){return t.id==e});return(this.mainCategory=t).children[n]}},mounted:function(){}});

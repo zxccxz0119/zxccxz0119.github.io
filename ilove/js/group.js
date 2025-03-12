@@ -1,0 +1,1 @@
+"use strict";var group_view=new Vue({el:"#app",data:{},methods:{},computed:{groupInfo:function(){if(0==this.menuData.length)return[];var e=findGetParameter("group");return this.menuData.find(function(t){return t.id==e})}},mounted:function(){}});

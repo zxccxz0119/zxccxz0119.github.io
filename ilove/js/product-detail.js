@@ -1,0 +1,1 @@
+"use strict";var detail_view=new Vue({el:"#app",data:{},methods:{},computed:{productInfo:function(){if(0==this.menuData.length)return[];var t=findGetParameter("id"),e=this.createProductMapping(this.menuData);return console.log("productMapping",e),e[t]}},mounted:function(){var t=findGetParameter("id");console.log("id",t)}});
