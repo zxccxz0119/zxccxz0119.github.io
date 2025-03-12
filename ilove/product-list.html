@@ -130,7 +130,7 @@
             <div class="section-padding">
               <div class="section-container p-l-r">
                 <div class="text-center empty-text" v-if="!categoryInfo?.children || categoryInfo?.children.length===0">
-                  <p class="mb-5">目前無商品</p><a class="button" href="/">回首頁 </a>
+                  <p class="mb-5">目前無商品</p><a class="button" href="index.html">回首頁 </a>
                 </div>
                 <template v-else>
                   <div class="products-list grid">
@@ -139,12 +139,12 @@
                         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
                           <div class="products-entry clearfix product-wapper">
                             <div class="products-thumb">
-                              <div class="product-thumb-hover"><a :href="`/product-detail.html?id=${product.id}`">
+                              <div class="product-thumb-hover"><a :href="`product-detail.html?id=${product.id}`">
                                   <div class="square-img" :style="{ backgroundImage: `url(${product.img[0]})` }"></div></a></div>
                             </div>
                             <div class="products-content">
                               <div class="contents text-center">
-                                <h3 class="product-title"><a :href="`/product-detail.html?id=${product.id}`">{{product.name}}</a></h3><span class="price">{{product?.price}}</span>
+                                <h3 class="product-title"><a :href="`product-detail.html?id=${product.id}`">{{product.name}}</a></h3><span class="price">{{product?.price}}</span>
                               </div>
                             </div>
                           </div>
@@ -264,6 +264,6 @@
     <script type="text/javascript" src="js/vendor.js"></script>
     <script type="text/javascript" src="js/lib.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/product-list.js?v=1741747021468"></script>
+    <script src="js/product-list.js?v=1741747566892"></script>
   </body>
 </html>
