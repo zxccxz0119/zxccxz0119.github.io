@@ -1,1 +1,69 @@
-"use strict";Vue.component("comingsoon",{template:"#comingsoon",data:function(){return{open:!0,date:{total:0,days:0,hours:0,minutes:0,seconds:0},total:0}},computed:{openCome:function(){return"Testing"!=this.envMode&&0<this.total}},methods:{countIssue:function(){var n,s=this;s.total=Date.parse(new Date(s.projApi.info.startDate))-Date.parse(new Date),this.openCome&&(n=setInterval(function(){s.total=Date.parse(new Date(s.projApi.info.startDate))-Date.parse(new Date);var t=Math.floor(s.total/1e3%60),e=Math.floor(s.total/1e3/60%60),o=Math.floor(s.total/36e5%24),a=Math.floor(s.total/864e5);s.date={total:s.total,days:s.padLeft(a,2),hours:s.padLeft(o,2),minutes:s.padLeft(e,2),seconds:s.padLeft(t,2)},s.date.total<=0&&clearInterval(n)},1e3))},padLeft:function(t,e){return(t=""+t).length>=e?t:this.padLeft("0"+t,e)}},mounted:function(){var t=this;this.projApi.token().then(function(){t.countIssue()}).catch(function(){t.countIssue()})}});
+"use strict";
+
+Vue.component('comingsoon', {
+  template: "#comingsoon",
+  data: function data() {
+    return {
+      open: true,
+      date: {
+        total: 0,
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0
+      },
+      total: 0
+    };
+  },
+  computed: {
+    openCome: function openCome() {
+      return this.envMode != "Testing" && this.total > 0;
+    }
+  },
+  methods: {
+    countIssue: function countIssue() {
+      var vm = this;
+      vm.total = Date.parse(new Date(vm.projApi.info.startDate)) - Date.parse(new Date());
+
+      if (this.openCome) {
+        var timeinterval = setInterval(function () {
+          vm.total = Date.parse(new Date(vm.projApi.info.startDate)) - Date.parse(new Date());
+          var seconds = Math.floor(vm.total / 1000 % 60);
+          var minutes = Math.floor(vm.total / 1000 / 60 % 60);
+          var hours = Math.floor(vm.total / (1000 * 60 * 60) % 24);
+          var days = Math.floor(vm.total / (1000 * 60 * 60 * 24));
+          vm.date = {
+            'total': vm.total,
+            'days': vm.padLeft(days, 2),
+            'hours': vm.padLeft(hours, 2),
+            'minutes': vm.padLeft(minutes, 2),
+            'seconds': vm.padLeft(seconds, 2)
+          };
+
+          if (vm.date.total <= 0) {
+            clearInterval(timeinterval);
+          }
+        }, 1000);
+      }
+    },
+    padLeft: function padLeft(str, len) {
+      var vm = this;
+      str = '' + str;
+
+      if (str.length >= len) {
+        return str;
+      } else {
+        return vm.padLeft("0" + str, len);
+      }
+    }
+  },
+  mounted: function mounted() {
+    var vm = this;
+    this.projApi.token().then(function () {
+      vm.countIssue();
+    }).catch(function () {
+      // if statusCode = 2 (reject)
+      vm.countIssue();
+    });
+  }
+});

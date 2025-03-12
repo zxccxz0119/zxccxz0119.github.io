@@ -1,1 +1,26 @@
-"use strict";var list_view=new Vue({el:"#app",data:{mainCategory:null},methods:{},computed:{categoryInfo:function(){if(0==this.menuData.length)return[];var t=findGetParameter("category").split("-"),e=t[0],n=parseInt(t[1])-1,t=this.menuData.find(function(t){return t.id==e});return(this.mainCategory=t).children[n]}},mounted:function(){}});
+"use strict";
+
+var list_view = new Vue({
+  el: "#app",
+  data: {
+    mainCategory: null
+  },
+  methods: {},
+  computed: {
+    categoryInfo: function categoryInfo() {
+      if (this.menuData.length == 0) {
+        return [];
+      }
+
+      var query = findGetParameter("category").split("-");
+      var subCategoryId = query[0];
+      var pos = parseInt(query[1]) - 1;
+      var mainCategory = this.menuData.find(function (item) {
+        return item.id == subCategoryId;
+      });
+      this.mainCategory = mainCategory;
+      return mainCategory.children[pos];
+    }
+  },
+  mounted: function mounted() {}
+});

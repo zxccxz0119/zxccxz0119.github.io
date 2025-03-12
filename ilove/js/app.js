@@ -1,1 +1,121 @@
-"use strict";var production=!1,device=deviceCheck(),md=new MobileDetect(window.navigator.userAgent);function deviceCheck(){var n={},e=new MobileDetect(window.navigator.userAgent);return e.match(/android/i)?(n.os="android",n.version=e.version("android")):e.match(/(iphone|ipad|ipod);?/i)?(n.os="ios",n.version=e.version("iOS")):(n.os="pc",n.version=e.version("Chrome")),n}function findGetParameter(e){var o,t=null;return location.search.substr(1).split("&").forEach(function(n){(o=n.split("="))[0]===e&&(t=decodeURIComponent(o[1]))}),t}Vue.config.devtools=!production,Vue.config.debug=!production,Vue.config.silent=production,document.addEventListener("DOMContentLoaded",function(){console.log("v1.01"),console.log(device)}),Vue.mixin({data:function(){return{projApi:null,errorMsg:"",envMode:production?"Started":"Testing",loading:!1,menuData:[],productMapping:{},search:""}},computed:{},watch:{errorMsg:function(n){document.querySelector("body").classList.toggle("_freeze")}},methods:{gaEvant:function(n){dataLayer.push({event:n}),console.log("ga:",n)},createProductMapping:function(n){var t={},i=null;return function e(n,o){n.forEach(function(n){n.id&&n.id.startsWith("product")&&(t[n.id]={id:n.id,groupName:null==i?void 0:i.name,group:null==i?void 0:i.id,name:n.name,categoryName:o.name,category:n.category,content:n.content,notice:n.notice,price:null==n?void 0:n.price,img:n.img,warning:null==n?void 0:n.warning}),n.children&&Array.isArray(n.children)&&(n.id.includes("-")||(i=n),e(n.children,n))})}(n),t},handleSearchSubmit:function(){this.search&&(window.location.href="search.html?keyword=".concat(this.search))}},mounted:function(){var e=this;axios.get("../../static/data/menu.json").then(function(n){e.menuData=n.data,e.productMapping=e.createProductMapping(e.menuData),console.log("menuData",e.menuData)},function(n){console.log("error",n)})}});
+"use strict";
+
+var production = false;
+var device = deviceCheck();
+var md = new MobileDetect(window.navigator.userAgent);
+
+function deviceCheck() {
+  var device = {};
+  var md = new MobileDetect(window.navigator.userAgent);
+
+  if (md.match(/android/i)) {
+    device.os = "android";
+    device.version = md.version("android");
+  } else if (md.match(/(iphone|ipad|ipod);?/i)) {
+    device.os = "ios";
+    device.version = md.version("iOS");
+  } else {
+    device.os = "pc";
+    device.version = md.version("Chrome");
+  }
+
+  return device;
+}
+
+function findGetParameter(parameterName) {
+  var result = null,
+      tmp = [];
+  location.search.substr(1).split("&").forEach(function (item) {
+    tmp = item.split("=");
+    if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+  });
+  return result;
+}
+
+Vue.config.devtools = !production;
+Vue.config.debug = !production;
+Vue.config.silent = production;
+document.addEventListener('DOMContentLoaded', function () {
+  console.log("v1.01");
+  console.log(device);
+});
+Vue.mixin({
+  data: function data() {
+    return {
+      projApi: null,
+      errorMsg: "",
+      envMode: production ? "Started" : "Testing",
+      loading: false,
+      menuData: [],
+      productMapping: {},
+      search: ""
+    };
+  },
+  computed: {},
+  watch: {
+    errorMsg: function errorMsg(val) {
+      document.querySelector('body').classList.toggle('_freeze');
+    }
+  },
+  methods: {
+    gaEvant: function gaEvant(gtmData) {
+      dataLayer.push({
+        'event': gtmData
+      });
+      console.log("ga:", gtmData);
+    },
+    createProductMapping: function createProductMapping(menuData) {
+      var productMapping = {};
+      var groupInfo = null;
+
+      function processItems(categoryArr, categoryInfo) {
+        categoryArr.forEach(function (item) {
+          if (item.id && item.id.startsWith('product')) {
+            var _groupInfo, _groupInfo2;
+
+            productMapping[item.id] = {
+              id: item.id,
+              groupName: (_groupInfo = groupInfo) === null || _groupInfo === void 0 ? void 0 : _groupInfo.name,
+              group: (_groupInfo2 = groupInfo) === null || _groupInfo2 === void 0 ? void 0 : _groupInfo2.id,
+              name: item.name,
+              categoryName: categoryInfo.name,
+              category: item.category,
+              content: item.content,
+              notice: item.notice,
+              price: item === null || item === void 0 ? void 0 : item.price,
+              img: item.img,
+              warning: item === null || item === void 0 ? void 0 : item.warning
+            };
+          } // 如果有子項目，遞迴處理
+
+
+          if (item.children && Array.isArray(item.children)) {
+            if (!item.id.includes('-')) groupInfo = item;
+            processItems(item.children, item);
+          }
+        });
+      }
+
+      processItems(menuData);
+      return productMapping;
+    },
+    handleSearchSubmit: function handleSearchSubmit() {
+      if (this.search) {
+        window.location.href = "search.html?keyword=".concat(this.search);
+      }
+    }
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    // 抓取 menu.json
+    var menuFile = "../static/data/menu.json";
+    axios.get(menuFile).then(function (response) {
+      _this.menuData = response.data;
+      _this.productMapping = _this.createProductMapping(_this.menuData);
+      console.log("menuData", _this.menuData);
+    }, function (response) {
+      console.log("error", response);
+    });
+  }
+});
