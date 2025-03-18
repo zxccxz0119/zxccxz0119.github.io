@@ -113,7 +113,6 @@ Vue.mixin({
     axios.get(menuFile).then(function (response) {
       _this.menuData = response.data;
       _this.productMapping = _this.createProductMapping(_this.menuData);
-      console.log("menuData", _this.menuData);
     }, function (response) {
       console.log("error", response);
     });
