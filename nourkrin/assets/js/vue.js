@@ -1,10 +1,10 @@
 /*!
- * Vue.js v2.7.16
+ * Vue.js v2.7.16-beta.1
  * (c) 2014-2023 Evan You
  * Released under the MIT License.
  */
 /*!
- * Vue.js v2.7.16
+ * Vue.js v2.7.16-beta.1
  * (c) 2014-2023 Evan You
  * Released under the MIT License.
  */
@@ -1539,7 +1539,7 @@
     Un = Nn("renderTracked"),
     zn = Nn("renderTriggered"),
     Vn = Nn("errorCaptured");
-  var Kn = "2.7.16";
+  var Kn = "2.7.16-beta.1";
   var Jn = Object.freeze({
       __proto__: null,
       version: Kn,
@@ -2664,7 +2664,6 @@
         (n._isVue = !0),
         (n.__v_skip = !0),
         (n._scope = new ze(!0)),
-        (n._scope.parent = void 0),
         (n._scope._vm = !0),
         e && e._isComponent
           ? (function (t, e) {
@@ -2894,35 +2893,33 @@
           return En(t, this);
         }),
         (t.prototype._render = function () {
-          var t = this,
-            n = t.$options,
-            r = n.render,
-            o = n._parentVnode;
-          o &&
-            t._isMounted &&
-            ((t.$scopedSlots = Se(
-              t.$parent,
-              o.data.scopedSlots,
-              t.$slots,
-              t.$scopedSlots
+          var t,
+            n = this,
+            r = n.$options,
+            o = r.render,
+            i = r._parentVnode;
+          i &&
+            n._isMounted &&
+            ((n.$scopedSlots = Se(
+              n.$parent,
+              i.data.scopedSlots,
+              n.$slots,
+              n.$scopedSlots
             )),
-            t._slotsProxy && Ne(t._slotsProxy, t.$scopedSlots)),
-            (t.$vnode = o);
-          var i,
-            a = ut,
-            s = Ie;
+            n._slotsProxy && Ne(n._slotsProxy, n.$scopedSlots)),
+            (n.$vnode = i);
           try {
-            lt(t), (Ie = t), (i = r.call(t._renderProxy, t.$createElement));
+            lt(n), (Ie = n), (t = o.call(n._renderProxy, n.$createElement));
           } catch (e) {
-            yn(e, t, "render"), (i = t._vnode);
+            yn(e, n, "render"), (t = n._vnode);
           } finally {
-            (Ie = s), lt(a);
+            (Ie = null), lt();
           }
           return (
-            e(i) && 1 === i.length && (i = i[0]),
-            i instanceof ft || (i = dt()),
-            (i.parent = o),
-            i
+            e(t) && 1 === t.length && (t = t[0]),
+            t instanceof ft || (t = dt()),
+            (t.parent = i),
+            t
           );
         });
     })(Er);

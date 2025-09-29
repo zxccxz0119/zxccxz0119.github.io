@@ -130,7 +130,6 @@ const app = new Vue({
   },
   mounted: function () {
     const vm = this;
-    console.log("123");
     emailjs.init({
       publicKey: vm.ejPs,
     });
