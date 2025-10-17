@@ -223,11 +223,13 @@
               <div class="row mb-10">
                 <div class="col-md-10 offset-md-1">
                   <div class="clinic-bg rounded-bottom p-4">
-                    <div class="row">
+                    <div class="row justify-content-center align-items-center">
                       <!-- Title -->
-                      <div class="col-sm-10 offset-sm-1">
+                      <div class="col-8 col-sm-7 col-lg-7 col-xl-8 col-xxl-7">
                         <div class="contact-header mb-3 mb-sm-10">
-                          <h2 class="d-flex flex-row align-items-center my-4">
+                          <h2
+                            class="d-flex flex-row align-items-center my-2 my-sm-4"
+                          >
                             <span>想要</span>
                             <div class="logo">
                               <img
@@ -243,9 +245,18 @@
                           </p>
                         </div>
                       </div>
+                      <div class="col-4 col-lg-4 col-xl-3 col-xxl-3">
+                        <div class="">
+                          <img
+                            class="w-100"
+                            src="./assets/nourkrin/product.png"
+                            alt="nourkrin product"
+                          />
+                        </div>
+                      </div>
                       <!-- IP + Form -->
-                      <div class="col-sm-10 offset-sm-1">
-                        <div class="position-relative">
+                      <div class="col-sm-10">
+                        <!-- <div class="position-relative">
                           <div class="ip-img">
                             <img
                               class="w-100"
@@ -253,7 +264,7 @@
                               alt="nourkrin product"
                             />
                           </div>
-                        </div>
+                        </div> -->
                         <form
                           ref="contactForm"
                           :class="{'contact-form': true, 'was-validated': contact.wasValid}"
