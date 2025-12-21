@@ -56,13 +56,6 @@
     "link": "https://maps.app.goo.gl/3GroWQuynfRN3nhH9"
   },
   {
-    "name": "久明診所-大安店",
-    "city": "台北",
-    "address": "台北市大安區敦化南路一段344號2樓",
-    "phone": "02-27095290",
-    "region": "北部"
-  },
-  {
     "name": "久明診所-敦南旗艦",
     "city": "台北",
     "address": "台北市大安區敦化南路一段344號2樓",
@@ -171,7 +164,8 @@
     "city": "台北",
     "address": "台北市松山區八德路2段397號1樓",
     "phone": "02-87728085",
-    "region": "北部"
+    "region": "北部",
+    "link": "https://maps.app.goo.gl/mtS9wXj8V18hwe8EA"
   },
   {
     "name": "悠美診所",

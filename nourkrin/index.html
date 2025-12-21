@@ -27,9 +27,34 @@
     <link rel="stylesheet" href="./assets/css/plugins.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/custom.css" />
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-T4CSWWZR");
+    </script>
+    <!-- End Google Tag Manager -->
   </head>
 
   <body class="onepage">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-T4CSWWZR"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <div id="app">
       <nav>
         <ul class="navbar-nav">
@@ -207,6 +232,42 @@
                               <p class="text-center my-4">
                                 查無資料，請重新搜尋
                               </p>
+                              <template v-if="filteredKeywordList.length > 0">
+                                <p class="text-center my-4">
+                                  您是否在找尋以下診所
+                                </p>
+                                <div
+                                  class="card mb-2"
+                                  v-for="clinic in filteredKeywordList"
+                                >
+                                  <div class="card-body p-3">
+                                    <div
+                                      class="d-flex justify-content-between flex-column flex-lg-row"
+                                    >
+                                      <div
+                                        class="left d-flex align-items-start flex-column flex-lg-row"
+                                      >
+                                        <span
+                                          class="badge bg-yellow p-2 mb-1 mb-lg-0"
+                                          >{{clinic.city}}</span
+                                        >
+                                        <span
+                                          class="px-0 px-lg-2 fs-17 text-black-100"
+                                          >{{clinic.name}}</span
+                                        >
+                                      </div>
+                                      <div
+                                        class="right d-flex align-items-start flex-column flex-lg-row fs-16 text-black-50"
+                                      >
+                                        <span class="px-0 px-lg-2"
+                                          >{{clinic.address}}</span
+                                        >
+                                        <span>{{clinic.phone}}</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </template>
                             </template>
                           </div>
                         </div>
