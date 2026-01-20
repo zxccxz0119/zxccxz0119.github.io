@@ -1,19 +1,67 @@
 [
   {
-    "name": "首盛診所",
+    "name": "璞之妍診所",
     "city": "台北",
-    "address": "台北市大安區大安路一段101巷5號",
-    "phone": "02-27751919",
+    "address": "台北市大安區安和路一段21巷5號",
+    "phone": "02-27402777",
     "region": "北部",
-    "link": "https://maps.app.goo.gl/QFUCvTg8Ak1RBibC7"
+    "link": "https://maps.app.goo.gl/SgmcUYG4mN1tU1Ls5"
   },
   {
-    "name": "維格診所仁愛概念店",
+    "name": "賦真妍醫美診所-台北中山店",
     "city": "台北",
-    "address": "台北市大安區仁愛路四段403號1樓",
-    "phone": "02-23710805",
+    "address": "台北市中山區八德路二段315,317,319號",
+    "phone": "02-27771589",
     "region": "北部",
-    "link": "https://maps.app.goo.gl/NHC3bcVDEse4CorN7"
+    "link": "https://maps.app.goo.gl/u6dYMWw7bTDHX6qA7"
+  },
+  {
+    "name": "越L'excellence",
+    "city": "台北",
+    "address": "台北市中山區南京東路二段41巷8號",
+    "phone": "02-25711881",
+    "region": "北部",
+    "link": "https://maps.app.goo.gl/DafagS8Vcb2X7wKYA"
+  },
+  {
+    "name": "陳冠宇皮膚科診所",
+    "city": "台中",
+    "address": "台中市西屯區青海路二段242-13號",
+    "phone": "04-27070383",
+    "region": "中部",
+    "link": "https://maps.app.goo.gl/shmbgkUWbeavQMUz5"
+  },
+  {
+    "name": "四季診所",
+    "city": "台中",
+    "address": "台中市南屯區公益路二段120號",
+    "phone": "04-23103389",
+    "region": "中部",
+    "link": "https://maps.app.goo.gl/JaTf8kZVZAAEBUuk9"
+  },
+  {
+    "name": "彭賢禮皮膚專科診所",
+    "city": "高雄",
+    "address": "高雄市左營區左營大路103號",
+    "phone": "07-5838868",
+    "region": "南部",
+    "link": "https://maps.app.goo.gl/cAksTegLUbgGeiCY8"
+  },
+  {
+    "name": "林政賢皮膚科診所",
+    "city": "高雄",
+    "address": "高雄市左營區華夏路718號",
+    "phone": "07-3454189",
+    "region": "南部",
+    "link": "https://maps.app.goo.gl/QYotDUFsGDVZSHPN8"
+  },
+  {
+    "name": "陳嘉偉皮膚科診所",
+    "city": "高雄",
+    "address": "高雄市楠梓區後昌路766號",
+    "phone": "07-3637696",
+    "region": "南部",
+    "link": "https://maps.app.goo.gl/r6YQkA98DL3Tieso7"
   },
   {
     "name": "芮態診所-大安店",
@@ -22,14 +70,6 @@
     "phone": "02-27760080",
     "region": "北部",
     "link": "https://maps.app.goo.gl/n5jzXNwYnfBJxY3P7"
-  },
-  {
-    "name": "璞之妍診所",
-    "city": "台北",
-    "address": "台北市大安區安和路一段21巷5號",
-    "phone": "02-27402777",
-    "region": "北部",
-    "link": "https://maps.app.goo.gl/SgmcUYG4mN1tU1Ls5"
   },
   {
     "name": "植診所",
@@ -56,20 +96,76 @@
     "link": "https://maps.app.goo.gl/3GroWQuynfRN3nhH9"
   },
   {
-    "name": "久明診所-敦南旗艦",
-    "city": "台北",
-    "address": "台北市大安區敦化南路一段344號2樓",
-    "phone": "02-27095290",
-    "region": "北部",
-    "link": "https://maps.app.goo.gl/RHUgpSzL6u1KG9f37"
-  },
-  {
     "name": "佳思優整形醫美診所-台北總院",
     "city": "台北",
     "address": "台北市大安區新生南路一段153號2樓",
     "phone": "0800-060-111",
     "region": "北部",
     "link": "https://maps.app.goo.gl/JZVeReagrzdXBAYd7"
+  },
+  {
+    "name": "璞悅美學診所–台北旗艦店",
+    "city": "台北",
+    "address": "台北市中正區忠孝東路二段88號1樓",
+    "phone": "02-23930808",
+    "region": "北部",
+    "link": "https://maps.app.goo.gl/hUhLF6c1h81dPdYM7"
+  },
+  {
+    "name": "佳思優整形醫美診所-敦北旗艦",
+    "city": "台北",
+    "address": "台北市松山區敦化北路8號 1、2樓",
+    "phone": "0800-060-111",
+    "region": "北部",
+    "link": "https://maps.app.goo.gl/mSpXGJkKiAnFC5967"
+  },
+  {
+    "name": "佳思優整形醫美診所-竹北分院",
+    "city": "新竹",
+    "address": "新竹縣竹北市光明六路150號 1、2樓",
+    "phone": "0800-060-111",
+    "region": "北部",
+    "link": "https://maps.app.goo.gl/zGNcKjLHbFG8aAGi8"
+  },
+  {
+    "name": "佳思優整形醫美診所-台中分院",
+    "city": "台中",
+    "address": "台中市南屯區公益路二段1號 1、2樓",
+    "phone": "0800-060-111",
+    "region": "中部",
+    "link": "https://maps.app.goo.gl/nEDT1AeQjZd9ZpR59"
+  },
+  {
+    "name": "佳思優整形醫美診所-羅東分院",
+    "city": "宜蘭",
+    "address": "宜蘭縣羅東鎮公正路208號",
+    "phone": "0800-060-111",
+    "region": "北部",
+    "link": "https://maps.app.goo.gl/o5uPwSHt3DQbBQP37"
+  },
+  {
+    "name": "璞悅美學皮膚專科診所",
+    "city": "高雄",
+    "address": "高雄市左營區裕誠路457-2號",
+    "phone": "07-5564949",
+    "region": "南部",
+    "link": "https://maps.app.goo.gl/FDMBCf92v3LbrUxd9"
+  },
+  {
+    "name": "首盛診所",
+    "city": "台北",
+    "address": "台北市大安區大安路一段101巷5號",
+    "phone": "02-27751919",
+    "region": "北部",
+    "link": "https://maps.app.goo.gl/QFUCvTg8Ak1RBibC7"
+  },
+  {
+    "name": "久明診所-敦南旗艦",
+    "city": "台北",
+    "address": "台北市大安區敦化南路一段344號2樓",
+    "phone": "02-27095290",
+    "region": "北部",
+    "link": "https://maps.app.goo.gl/RHUgpSzL6u1KG9f37"
   },
   {
     "name": "藏琢診所一館",
@@ -96,22 +192,6 @@
     "link": "https://maps.app.goo.gl/2PZJAbpr2SuZAckF9"
   },
   {
-    "name": "賦真妍醫美診所-台北中山店",
-    "city": "台北",
-    "address": "台北市中山區八德路二段315,317,319號",
-    "phone": "02-27771589",
-    "region": "北部",
-    "link": "https://maps.app.goo.gl/u6dYMWw7bTDHX6qA7"
-  },
-  {
-    "name": "越L'excellence",
-    "city": "台北",
-    "address": "台北市中山區南京東路二段41巷8號",
-    "phone": "02-25711881",
-    "region": "北部",
-    "link": "https://maps.app.goo.gl/DafagS8Vcb2X7wKYA"
-  },
-  {
     "name": "美無極美學診所",
     "city": "台北",
     "address": "台北市中山區樂群二路105號",
@@ -128,14 +208,6 @@
     "link": "https://maps.app.goo.gl/SSR8sG8MUhyuBBjC8"
   },
   {
-    "name": "璞悅美學診所–台北旗艦店",
-    "city": "台北",
-    "address": "台北市中正區忠孝東路二段88號1樓",
-    "phone": "02-23930808",
-    "region": "北部",
-    "link": "https://maps.app.goo.gl/hUhLF6c1h81dPdYM7"
-  },
-  {
     "name": "美無極慕康診所",
     "city": "台北",
     "address": "台北市內湖區瑞光路60號6樓",
@@ -150,14 +222,6 @@
     "phone": "02-28210261",
     "region": "北部",
     "link": "https://maps.app.goo.gl/amoFd6fQkWS3pkwZA"
-  },
-  {
-    "name": "佳思優整形醫美診所-敦北旗艦",
-    "city": "台北",
-    "address": "台北市松山區敦化北路8號 1、2樓",
-    "phone": "0800-060-111",
-    "region": "北部",
-    "link": "https://maps.app.goo.gl/mSpXGJkKiAnFC5967"
   },
   {
     "name": "駿俏藥局",
@@ -224,14 +288,6 @@
     "link": "https://maps.app.goo.gl/U1Jod9nTZNiW7DgD8"
   },
   {
-    "name": "佳思優整形醫美診所-竹北分院",
-    "city": "新竹",
-    "address": "新竹縣竹北市光明六路150號 1、2樓",
-    "phone": "0800-060-111",
-    "region": "北部",
-    "link": "https://maps.app.goo.gl/zGNcKjLHbFG8aAGi8"
-  },
-  {
     "name": "久明診所竹北分院",
     "city": "新竹",
     "address": "新竹縣竹北市嘉豐南路一段72號",
@@ -272,14 +328,6 @@
     "link": "https://maps.app.goo.gl/Hb82E2keKrh5sr5p8"
   },
   {
-    "name": "佳思優整形醫美診所-台中分院",
-    "city": "台中",
-    "address": "台中市南屯區公益路二段1號 1、2樓",
-    "phone": "0800-060-111",
-    "region": "中部",
-    "link": "https://maps.app.goo.gl/nEDT1AeQjZd9ZpR59"
-  },
-  {
     "name": "晨米健康美學診所",
     "city": "台中",
     "address": "台中市南屯區文心路一段378號22樓之2",
@@ -288,28 +336,12 @@
     "link": "https://maps.app.goo.gl/ikwD4VXcokoBNUtWA"
   },
   {
-    "name": "陳冠宇皮膚科診所",
-    "city": "台中",
-    "address": "台中市西屯區青海路二段242-13號",
-    "phone": "04-27070383",
-    "region": "中部",
-    "link": "https://maps.app.goo.gl/shmbgkUWbeavQMUz5"
-  },
-  {
     "name": "美麗線時尚診所",
     "city": "台中",
     "address": "台中市西屯區黎明路三段368號2樓",
     "phone": "04-27062000",
     "region": "中部",
     "link": "https://maps.app.goo.gl/qtzEhvPb2fNA2Frg8"
-  },
-  {
-    "name": "四季診所",
-    "city": "台中",
-    "address": "台中市南屯區公益路二段120號",
-    "phone": "04-23103389",
-    "region": "中部",
-    "link": "https://maps.app.goo.gl/JaTf8kZVZAAEBUuk9"
   },
   {
     "name": "楓城號牙醫診所",
@@ -352,36 +384,12 @@
     "link": "https://maps.app.goo.gl/qaBUPqpyfjH27qFcA"
   },
   {
-    "name": "彭賢禮皮膚專科診所",
-    "city": "高雄",
-    "address": "高雄市左營區左營大路103號",
-    "phone": "07-5838868",
-    "region": "南部",
-    "link": "https://maps.app.goo.gl/cAksTegLUbgGeiCY8"
-  },
-  {
     "name": "彤曜時尚診所",
     "city": "高雄",
     "address": "高雄市左營區明華一路169號",
     "phone": "07-5571988",
     "region": "南部",
     "link": "https://maps.app.goo.gl/Zi4ce1foCcb1tB6T7"
-  },
-  {
-    "name": "林政賢皮膚科診所",
-    "city": "高雄",
-    "address": "高雄市左營區華夏路718號",
-    "phone": "07-3454189",
-    "region": "南部",
-    "link": "https://maps.app.goo.gl/QYotDUFsGDVZSHPN8"
-  },
-  {
-    "name": "璞悅美學皮膚專科診所",
-    "city": "高雄",
-    "address": "高雄市左營區裕誠路457-2號",
-    "phone": "07-5564949",
-    "region": "南部",
-    "link": "https://maps.app.goo.gl/FDMBCf92v3LbrUxd9"
   },
   {
     "name": "佳祈皮膚科診所",
@@ -400,14 +408,6 @@
     "link": "https://maps.app.goo.gl/1CGcy9xCmMuWTCgM6"
   },
   {
-    "name": "陳嘉偉皮膚科診所",
-    "city": "高雄",
-    "address": "高雄市楠梓區後昌路766號",
-    "phone": "07-3637696",
-    "region": "南部",
-    "link": "https://maps.app.goo.gl/r6YQkA98DL3Tieso7"
-  },
-  {
     "name": "康仕美診所",
     "city": "高雄",
     "address": "高雄市楠梓區德民路1017號",
@@ -424,11 +424,51 @@
     "link": "https://maps.app.goo.gl/Gfmvntwjs2EpWPXs8"
   },
   {
-    "name": "佳思優整形醫美診所-羅東分院",
-    "city": "宜蘭",
-    "address": "宜蘭縣羅東鎮公正路208號",
-    "phone": "0800-060-111",
+    "name": "台大德妍思概念店",
+    "city": "台北",
+    "address": "台北市中正區常德街1號-2樓皮膚部化妝品專櫃",
+    "phone": "02-2314-7797",
     "region": "北部",
-    "link": "https://maps.app.goo.gl/o5uPwSHt3DQbBQP37"
+    "link": "https://maps.app.goo.gl/vVoMLzUSZtZojsvD6"
+  },
+  {
+    "name": "儷寶得信義皮膚科診所",
+    "city": "台北",
+    "address": "臺北市信義區忠孝東路五段238號",
+    "phone": "02-2314-7797",
+    "region": "北部",
+    "link": "https://maps.app.goo.gl/xWtqyehfJNbCLkpJ7"
+  },
+  {
+    "name": "李承鴻皮膚科診所",
+    "city": "台北",
+    "address": "台北市北投區西安街一段189號",
+    "phone": " 02-2822-9885",
+    "region": "北部",
+    "link": "https://maps.app.goo.gl/xQK4ijtbRaatyjHZ7"
+  },
+  {
+    "name": "樂誠診所",
+    "city": "桃園",
+    "address": "桃園市龜山區文青二路13號",
+    "phone": "(03)3272703",
+    "region": "北部",
+    "link": "https://maps.app.goo.gl/MMgDhZqUqVzHo2GY9"
+  },
+  {
+    "name": "日安青禾皮膚科診所",
+    "city": "台中",
+    "address": "臺中市東區精武東路92號",
+    "phone": "04 2215 2615",
+    "region": "中部",
+    "link": "https://maps.app.goo.gl/XCSSCA63pbua7foL9"
+  },
+  {
+    "name": "湞媄診所",
+    "city": "高雄",
+    "address": "高雄市左營區博愛三路388號1樓",
+    "phone": "07 350 1879",
+    "region": "南部",
+    "link": "https://maps.app.goo.gl/ftdSFZEJHdqMeCSm9"
   }
 ]
