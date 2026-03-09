@@ -1,0 +1,90 @@
+[
+  {
+    "name": "吳及時皮膚科診所",
+    "city": "台中",
+    "address": "臺中市西區金山路18-3號2樓",
+    "phone": "04-23720434",
+    "region": "中部",
+    "link": "https://maps.app.goo.gl/yGLWh8bVbG9hPhND7"
+  },
+  {
+    "name": "芮態診所-台中七期旗艦院所",
+    "city": "台中",
+    "address": "臺中市西屯區市政北ㄧ路19路",
+    "phone": "04-22589090",
+    "region": "中部",
+    "link": "https://maps.app.goo.gl/bnUSTAG45pnQ4qgN8"
+  },
+  {
+    "name": "芮態診所-台北大安旗艦院所",
+    "city": "台北",
+    "address": "台北市大安區市民大道三段206號5F",
+    "phone": "02-27760080",
+    "region": "北部",
+    "link": "https://maps.app.goo.gl/n5jzXNwYnfBJxY3P7"
+  },
+  {
+    "name": "朝沐和安診所-台北大安院",
+    "city": "台北",
+    "address": "台北市大安區仁愛路四段137號6樓之1",
+    "phone": "02-27754606",
+    "region": "北部",
+    "link": "https://maps.app.goo.gl/PgLWs5FzqYA3WYDP6"
+  },
+  {
+    "name": "醫膚親子皮膚專科診所",
+    "city": "桃園",
+    "address": "桃園市桃園區同安區609號",
+    "phone": "03-3566886",
+    "region": "北部",
+    "link": "https://maps.app.goo.gl/R6vvyevP4cDNBJnG7"
+  },
+  {
+    "name": "彭賢禮皮膚科診所",
+    "city": "高雄",
+    "address": "高雄市左營區左營大路103號",
+    "phone": "07-5838868",
+    "region": "南部",
+    "link": "https://maps.app.goo.gl/qKakN1Xt4XhKy9kP8"
+  },
+  {
+    "name": "林政賢皮膚科診所",
+    "city": "高雄",
+    "address": "高雄市左營區華夏路718號",
+    "phone": "07-3454189",
+    "region": "南部",
+    "link": "https://maps.app.goo.gl/vgzJJBQm61CEehHk9"
+  },
+  {
+    "name": "許哲豪皮膚科診所",
+    "city": "新北",
+    "address": "新北市汐止區忠孝東路214號1樓",
+    "phone": "02-26488636",
+    "region": "北部",
+    "link": "https://maps.app.goo.gl/kQWSjCcAnBCM2cTL9"
+  },
+  {
+    "name": "美上美皮膚科診所",
+    "city": "新北",
+    "address": "新北市三重區正義北路104號2樓",
+    "phone": "02-89859060",
+    "region": "北部",
+    "link": "https://maps.app.goo.gl/ehAjjvPvNTxYsf97A"
+  },
+  {
+    "name": "朝沐和安診所-竹北高鐵院",
+    "city": "新竹",
+    "address": "新竹縣竹北市嘉豐九路2號",
+    "phone": "03-6683098",
+    "region": "北部",
+    "link": "https://maps.app.goo.gl/mN2rEL3tYbeZYLhD7"
+  },
+  {
+    "name": "林亮辰皮膚專科診所",
+    "city": "新竹",
+    "address": "新竹市民族路89號",
+    "phone": "03-5329660",
+    "region": "北部",
+    "link": "https://maps.app.goo.gl/CTAyntGBgwB1vi2HA"
+  }
+]
