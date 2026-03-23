@@ -62,7 +62,7 @@
       <nav>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link scroll" href="#kv2">認識 AviClear</a>
+            <a class="nav-link scroll" href="#kv1">認識戰痘雷射</a>
           </li>
           <li class="nav-item">
             <a class="nav-link scroll" href="#kv3">最新消息</a>
@@ -81,52 +81,75 @@
       <div class="content-wrapper">
         <section id="kv1">
           <div class="wrapper">
-            <div class="container">
-              <div class="row">
+            <div class="container position-relative">
+              <div class="row position-relative">
                 <div class="col-md-10 offset-md-1 position-relative">
                   <img
                     class="w-100 d-none d-lg-block"
-                    src="./assets/aviclear/kv1.jpg"
+                    src="./assets/aviclear/kv1.png"
                     alt="aviclear戰痘雷射，全球第一雙認證"
                   />
                 </div>
-              </div>
-            </div>
-            <img
-              class="w-100 d-lg-none"
-              src="./assets/aviclear/kv1-mb.jpg"
-              alt="aviclear戰痘雷射，全球第一雙認證"
-            />
-          </div>
-        </section>
-        <section id="kv2">
-          <div class="dots-bg">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-10 offset-md-1">
-                  <img
-                    class="w-100 d-none d-lg-block"
-                    src="./assets/aviclear/kv2.png"
-                    alt="認識AviClear"
-                  />
-                  <!-- <img
-                    class="w-100 d-lg-none"
-                    src="./assets/aviclear/kv2-mb.png"
-                    alt="認識AviClear"
-                  /> -->
+                <div class="phone-video-outline d-none d-lg-block">
+                  <div class="inner">
+                    <div class="phone-img">
+                      <img
+                        class="w-100"
+                        src="./assets/aviclear/phone.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="phone-video">
+                      <video
+                        poster="./assets/aviclear/video-pic.jpg"
+                        playsinline
+                        controls
+                        muted
+                        autoplay
+                        preload="none"
+                      >
+                        <source
+                          src="./assets/aviclear/video.mp4"
+                          type="video/mp4"
+                        />
+                      </video>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
             <img
               class="w-100 d-lg-none"
-              src="./assets/aviclear/kv2-mb.png"
-              alt="認識AviClear"
+              src="./assets/aviclear/kv1-mb.png"
+              alt="aviclear戰痘雷射，全球第一雙認證"
             />
+            <div class="phone-video-outline d-lg-none">
+              <div class="inner">
+                <div class="phone-img">
+                  <img class="w-100" src="./assets/aviclear/phone.png" alt="" />
+                </div>
+                <div class="phone-video">
+                  <video
+                    poster="./assets/aviclear/video-pic.jpg"
+                    playsinline
+                    controls
+                    muted
+                    autoplay
+                    preload="none"
+                  >
+                    <source
+                      src="./assets/aviclear/video.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
         <section id="kv3">
           <div class="wrapper">
-            <div class="container py-12">
+            <div class="container py-5 py-md-12">
               <div class="row">
                 <div class="col-md-10 offset-md-1">
                   <!-- title -->
@@ -359,7 +382,7 @@
                     <h1 class="logo">
                       <img
                         class="w-100"
-                        src="./assets/aviclear/logo.png"
+                        src="./assets/aviclear/logo3.png"
                         alt="Aviclear戰痘雷射"
                       />
                     </h1>
@@ -373,7 +396,7 @@
                           <!-- 全部診所 -->
                           <div class="col-12 col-lg-2">
                             <button
-                              class="btn btn-ash w-100 mb-2 mb-lg-0"
+                              class="btn btn-ash bg-main-gray w-100 mb-2 mb-lg-0"
                               @click="clearFilter"
                             >
                               全部診所
@@ -437,10 +460,10 @@
                                     class="d-flex justify-content-between flex-column flex-lg-row"
                                   >
                                     <div
-                                      class="left d-flex align-items-start flex-column flex-lg-row"
+                                      class="left d-flex align-items-center flex-column flex-lg-row"
                                     >
                                       <span
-                                        class="badge bg-sky p-2 mb-1 mb-lg-0"
+                                        class="badge bg-main p-2 mb-1 mb-lg-0"
                                         >{{clinic.city}}</span
                                       >
                                       <span
@@ -449,7 +472,7 @@
                                       >
                                     </div>
                                     <div
-                                      class="right d-flex align-items-start flex-column flex-lg-row fs-16 text-black-50"
+                                      class="right d-flex align-items-center flex-column flex-lg-row fs-16 text-black-50"
                                     >
                                       <a
                                         class="link-dark"
@@ -483,7 +506,7 @@
                                       class="d-flex justify-content-between flex-column flex-lg-row"
                                     >
                                       <div
-                                        class="left d-flex align-items-start flex-column flex-lg-row"
+                                        class="left d-flex align-items-center flex-column flex-lg-row"
                                       >
                                         <span
                                           class="badge bg-yellow p-2 mb-1 mb-lg-0"
@@ -495,7 +518,7 @@
                                         >
                                       </div>
                                       <div
-                                        class="right d-flex align-items-start flex-column flex-lg-row fs-16 text-black-50"
+                                        class="right d-flex align-items-center flex-column flex-lg-row fs-16 text-black-50"
                                       >
                                         <span class="px-0 px-lg-2"
                                           >{{clinic.address}}</span
@@ -640,7 +663,7 @@
                           <div class="text-center">
                             <input
                               type="submit"
-                              class="btn btn-blue btn-send mb-3"
+                              class="btn btn-blue bg-main btn-send mb-3"
                               :value="contact.loading ? '送出中...' : '確認送出'"
                             />
                           </div>

@@ -1,268 +1,325 @@
 html,
 body {
-    background-color: #f4f4f4;
-    font-family: "微軟正黑體", sans-serif;
+  background: url(../aviclear/bg.jpg) center center/100% no-repeat #434c6b;
+  background-color: #434c6b;
+  font-family: "微軟正黑體", sans-serif;
 }
 nav {
-    position: fixed;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 2;
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
 }
 .nav-link {
-    padding: 16px 0;
-    text-align: center;
-    font-size: 16px;
+  padding: 16px 0;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
 }
 .nav-item {
-    background: #aedbed;
-    color: #002e79;
-    -webkit-writing-mode: vertical-lr;
-    writing-mode: vertical-lr;
-    margin: 2px 0;
-    padding: 0 8px 0 12px;
-    border-radius: 6px 0px 0px 6px;
+  background: #2d55a5;
+  color: #ffffff;
+  -webkit-writing-mode: vertical-lr;
+  writing-mode: vertical-lr;
+  margin: 2px 0;
+  padding: 0 8px 0 12px;
+  border-radius: 6px 0px 0px 6px;
 }
 .nav-item:last-child {
-    -webkit-writing-mode: horizontal-tb;
-    writing-mode: horizontal-tb;
+  -webkit-writing-mode: horizontal-tb;
+  writing-mode: horizontal-tb;
 }
 .nav-item:last-child .nav-link:before {
-    content: "▲";
-    display: block;
-    margin-bottom: -8px;
+  content: "▲";
+  display: block;
+  margin-bottom: -8px;
 }
 #kv2 {
-    position: relative;
-    background: linear-gradient(to left, #022754 0%, #003a94 100%);
+  position: relative;
+  background: linear-gradient(to left, #022754 0%, #003a94 100%);
 }
 #kv2 .dots-bg {
-    background: url(../aviclear/dots.png) 0 0 / 50% no-repeat;
-    z-index: 0;
+  background: url(../aviclear/dots.png) 0 0 / 50% no-repeat;
+  z-index: 0;
 }
 .clinic-bg {
-    background-color: #dcdfe2;
+  background-color: #dedede;
 }
 .ip-img {
-    width: 35%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(25%, -110%);
+  width: 35%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(25%, -110%);
 }
 .clinic-header .logo {
-    width: 200px;
+  width: 200px;
 }
 .clinic-header h2 {
-    color: #002e79;
-    font-weight: 900;
-    font-size: 42px;
-    padding: 0 1rem;
+  color: #fff;
+  font-weight: 900;
+  font-size: 42px;
+  padding: 0 1rem;
 }
 #contact,
 #contact label {
-    color: #666;
+  color: #666;
 }
 #contact .form-control {
-    color: #222222;
+  color: #222222;
 }
 .contact-header .logo {
-    width: 220px;
-    padding: 0 1rem;
+  width: 220px;
+  padding: 0 1rem;
 }
 .contact-header h2 {
-    color: #002e79;
-    font-weight: 900;
-    font-size: 42px;
+  color: #002e79;
+  font-weight: 900;
+  font-size: 42px;
 }
 .contact-header p {
-    color: #002e79;
-    font-size: 16px;
+  color: #002e79;
+  font-size: 16px;
 }
 .phone-video-outline {
-    position: absolute;
-    width: 28%;
-    top: 27%;
-    right: 26%;
-    transform: translateX(50%);
+  position: absolute;
+  width: 28%;
+  top: 27%;
+  right: 26%;
+  transform: translateX(50%);
 }
 .phone-video-outline .inner {
-    position: relative;
-    padding-top: 7px;
+  position: relative;
+  padding-top: 7px;
 }
 .phone-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1;
-    pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  pointer-events: none;
 }
 .phone-video {
-    width: 92%;
-    margin: 0 auto;
-    aspect-ratio: 9 / 16; /* 現代瀏覽器支援，維持直式 */
-    overflow: hidden;
-    border-radius: 20px 20px 0 0;
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
-    background: #000;
+  width: 92%;
+  margin: 0 auto;
+  aspect-ratio: 9 / 16; /* 現代瀏覽器支援，維持直式 */
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+  background: #000;
 }
 .phone-video video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* cover 會裁切但填滿容器 */
-    display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* cover 會裁切但填滿容器 */
+  display: block;
 }
 .two-line-ellipsis {
-    display: -webkit-box;
-    -webkit-line-clamp: 2; /* 幾行就填幾 */
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 幾行就填幾 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .three-line-ellipsis {
-    display: -webkit-box;
-    -webkit-line-clamp: 3; /* 幾行就填幾 */
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* 幾行就填幾 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 #kv3 .card {
-    height: 100%;
+  height: 100%;
 }
 #kv3 .card-body {
-    padding: 1.5rem;
-    min-height: 8rem;
+  padding: 1.5rem;
+  min-height: 8rem;
 }
-
+.bg-main {
+  background-color: #2d55a5 !important;
+  border-color: #2d55a5 !important;
+}
+.bg-main-gray {
+  background-color: #a8a9a9 !important;
+  border-color: #a8a9a9 !important;
+}
+.phone-video-outline {
+  position: absolute;
+  width: 22%;
+  top: 20%;
+  right: 32%;
+  transform: translateX(50%);
+}
+.phone-video-outline .inner {
+  position: relative;
+  padding-top: 7px;
+}
+.phone-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+.phone-video {
+  width: 92%;
+  margin: 0 auto;
+  aspect-ratio: 9 / 16.4; /* 現代瀏覽器支援，維持直式 */
+  overflow: hidden;
+  border-radius: 10% 10% 0 0;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+  background: #000;
+}
+.phone-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* cover 會裁切但填滿容器 */
+  display: block;
+}
 @media (max-width: 1200px) {
-    .contact-header h2 {
-        font-size: 26px;
-    }
-    .contact-header .logo {
-        width: 180px;
-    }
-    .contact-header p {
-        width: 100%;
-    }
-}
-
-@media (max-width: 992px) {
-    .contact-header h2 {
-        font-size: 21px;
-    }
-    .contact-header .logo {
-        width: 120px;
-        padding: 0 0.5rem;
-    }
-    .phone-video-outline {
+  .contact-header h2 {
+    font-size: 26px;
+  }
+  .contact-header .logo {
+    width: 180px;
+  }
+  .contact-header p {
+    width: 100%;
+  }
+  /* .phone-video-outline {
         width: 24%;
         top: 24%;
         right: 29%;
     }
     .phone-video-outline .inner {
         padding-top: 4px;
-    }
+    } */
+}
+
+@media (max-width: 992px) {
+  .contact-header h2 {
+    font-size: 21px;
+  }
+  .contact-header .logo {
+    width: 120px;
+    padding: 0 0.5rem;
+  }
+  .phone-video-outline {
+    width: 30%;
+    top: 4%;
+    right: 29%;
+  }
+  .phone-video-outline .inner {
+    padding-top: 4px;
+  }
 }
 
 @media (max-width: 768px) {
-    .contact-header h2 {
-        /* justify-content: start; */
-        font-size: 20px;
-    }
-    .contact-header .logo {
-        width: 100px;
-        padding: 0 0.5rem;
-    }
-    .contact-header p {
-        width: 100%;
-        text-align: left;
-    }
-    .ip-img {
-        width: 170px;
-        transform: translate(35%, -290%);
-    }
-    nav {
-        top: initial;
-        bottom: 0;
-        transform: initial;
-        width: 100%;
-    }
-    .navbar-nav {
-        flex-direction: row;
-    }
-    .nav-item {
-        -webkit-writing-mode: horizontal-tb;
-        writing-mode: horizontal-tb;
-        margin: 0;
-        padding: 0;
-        border-radius: 0;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 0.2px solid #fff;
-    }
-    .nav-item:first-child {
-        border-left: 0;
-    }
-    .nav-item:last-child {
-        border-right: 0;
-    }
-    .nav-link {
-        white-space: nowrap;
-        padding: 10px 8px;
-        font-weight: normal;
-        letter-spacing: 1px;
-        font-size: 12px;
-        font-weight: bold;
-    }
-    .nav-item:last-child .nav-link:before {
-        display: none;
-    }
-    .phone-video-outline .inner {
-        padding-top: 2px;
-    }
-    .phone-video {
-        border-radius: 10px 10px 0 0;
-    }
+  .contact-header h2 {
+    /* justify-content: start; */
+    font-size: 20px;
+  }
+  .contact-header .logo {
+    width: 100px;
+    padding: 0 0.5rem;
+  }
+  .contact-header p {
+    width: 100%;
+    text-align: left;
+  }
+  .ip-img {
+    width: 170px;
+    transform: translate(35%, -290%);
+  }
+  nav {
+    top: initial;
+    bottom: 0;
+    transform: initial;
+    width: 100%;
+  }
+  .navbar-nav {
+    flex-direction: row;
+  }
+  .nav-item {
+    -webkit-writing-mode: horizontal-tb;
+    writing-mode: horizontal-tb;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.2px solid #fff;
+  }
+  .nav-item:first-child {
+    border-left: 0;
+  }
+  .nav-item:last-child {
+    border-right: 0;
+  }
+  .nav-link {
+    white-space: nowrap;
+    padding: 10px 8px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .nav-item:last-child .nav-link:before {
+    display: none;
+  }
+  .phone-video-outline .inner {
+    padding-top: 2px;
+  }
+  .phone-video {
+    border-radius: 10px 10px 0 0;
+  }
+  .phone-video-outline .inner {
+    padding-top: 2px;
+  }
+  .phone-video {
+    border-radius: 10px 10px 0 0;
+  }
 }
 
 @media (max-width: 576px) {
-    .clinic-header .logo {
-        width: 140px;
-    }
-    .clinic-header h2 {
-        font-size: 28px;
-        padding: 0 0 0 12px;
-    }
-    .contact-header h2 {
-        font-size: 20px;
-        /* justify-content: center; */
-    }
-    .contact-header .logo {
-        width: 90px;
-        padding: 0 4px;
-    }
-    .contact-header p {
-        /* text-align: center; */
-        width: 100%;
-        font-size: 13px;
-    }
-    .ip-img {
-        width: 140px;
-        transform: translate(21%, -215%);
-    }
+  .clinic-header .logo {
+    width: 140px;
+  }
+  .clinic-header h2 {
+    font-size: 28px;
+    padding: 0 0 0 12px;
+  }
+  .contact-header h2 {
+    font-size: 20px;
+    /* justify-content: center; */
+  }
+  .contact-header .logo {
+    width: 90px;
+    padding: 0 4px;
+  }
+  .contact-header p {
+    /* text-align: center; */
+    width: 100%;
+    font-size: 13px;
+  }
+  .ip-img {
+    width: 140px;
+    transform: translate(21%, -215%);
+  }
 }
 @media (max-width: 452px) {
-    .contact-header h2 {
-        font-size: 14px;
-    }
-    .contact-header .logo {
-        width: 78px;
-        padding: 0 4px;
-    }
-    .contact-header p {
-        width: 100%;
-        font-size: 12px;
-    }
+  .contact-header h2 {
+    font-size: 14px;
+  }
+  .contact-header .logo {
+    width: 78px;
+    padding: 0 4px;
+  }
+  .contact-header p {
+    width: 100%;
+    font-size: 12px;
+  }
 }
