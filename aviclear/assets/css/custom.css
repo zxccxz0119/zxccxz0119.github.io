@@ -135,6 +135,10 @@ nav {
   padding: 1.5rem;
   min-height: 8rem;
 }
+#clinic .card .left,
+#clinic .card .right {
+  width: 50%;
+}
 .bg-main {
   background-color: #2d55a5 !important;
   border-color: #2d55a5 !important;
@@ -212,6 +216,10 @@ nav {
   }
   .phone-video-outline .inner {
     padding-top: 4px;
+  }
+  #clinic .card .left,
+  #clinic .card .right {
+    width: 100%;
   }
 }
 
