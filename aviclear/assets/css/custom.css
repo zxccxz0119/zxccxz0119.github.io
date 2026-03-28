@@ -69,6 +69,9 @@ nav {
 #contact .form-control {
   color: #222222;
 }
+.contact-header {
+  position: relative;
+}
 .contact-header .logo {
   width: 220px;
   padding: 0 1rem;
@@ -81,6 +84,13 @@ nav {
 .contact-header p {
   color: #002e79;
   font-size: 16px;
+}
+.contact-header .machine {
+  position: absolute;
+  width: 28%;
+  bottom: 0;
+  right: 0;
+  transform: translateX(22%);
 }
 .phone-video-outline {
   position: absolute;
@@ -149,9 +159,9 @@ nav {
 }
 .phone-video-outline {
   position: absolute;
-  width: 22%;
-  top: 20%;
-  right: 32%;
+  width: 24%;
+  top: 26%;
+  right: 34%;
   transform: translateX(50%);
 }
 .phone-video-outline .inner {
@@ -167,11 +177,11 @@ nav {
   pointer-events: none;
 }
 .phone-video {
-  width: 92%;
+  width: 96%;
   margin: 0 auto;
-  aspect-ratio: 9 / 16.4; /* 現代瀏覽器支援，維持直式 */
+  aspect-ratio: 9 / 18.2; /* 現代瀏覽器支援，維持直式 */
   overflow: hidden;
-  border-radius: 10% 10% 0 0;
+  border-radius: 10%;
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
   background: #000;
 }
@@ -180,6 +190,16 @@ nav {
   height: 100%;
   object-fit: cover; /* cover 會裁切但填滿容器 */
   display: block;
+}
+.kv-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 43vw;
+  transform: translate(26%, 62%);
+}
+.kv-item img {
+  width: 100%;
 }
 @media (max-width: 1200px) {
   .contact-header h2 {
@@ -191,14 +211,22 @@ nav {
   .contact-header p {
     width: 100%;
   }
-  /* .phone-video-outline {
-        width: 24%;
-        top: 24%;
-        right: 29%;
-    }
-    .phone-video-outline .inner {
-        padding-top: 4px;
-    } */
+  #clinic .card .left,
+  #clinic .card .right {
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  #clinic .card .right span {
+    width: 100%;
+  }
+  .contact-header-content {
+    padding-right: 20%;
+  }
+  .contact-header p {
+    width: 100%;
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -220,6 +248,15 @@ nav {
   #clinic .card .left,
   #clinic .card .right {
     width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  #clinic .card .right span {
+    text-align: center;
+  }
+  .kv-item {
+    width: 52vw;
+    transform: translate(11%, 72%);
   }
 }
 
@@ -290,6 +327,16 @@ nav {
   .phone-video {
     border-radius: 10px 10px 0 0;
   }
+  .contact-header .machine {
+    transform: translate(22%, -102%);
+  }
+  .contact-header-content {
+    padding-right: 0%;
+  }
+  .contact-header p {
+    width: 100%;
+    font-size: 13px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -307,11 +354,6 @@ nav {
   .contact-header .logo {
     width: 90px;
     padding: 0 4px;
-  }
-  .contact-header p {
-    /* text-align: center; */
-    width: 100%;
-    font-size: 13px;
   }
   .ip-img {
     width: 140px;

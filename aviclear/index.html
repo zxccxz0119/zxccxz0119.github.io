@@ -80,7 +80,7 @@
       </nav>
       <div class="content-wrapper">
         <section id="kv1">
-          <div class="wrapper">
+          <div class="wrapper position-relative">
             <div class="container position-relative">
               <div class="row position-relative">
                 <div class="col-md-10 offset-md-1 position-relative">
@@ -88,8 +88,13 @@
                     class="w-100 d-none d-lg-block"
                     src="./assets/aviclear/kv1.png"
                     alt="aviclear戰痘雷射，全球第一雙認證"
-                    fetchpriority="high" loading="eager" decoding="async"
+                    fetchpriority="high"
+                    loading="eager"
+                    decoding="async"
                   />
+                  <div class="kv-item d-none d-lg-block">
+                    <img src="./assets/aviclear/kv-item.gif" alt="" />
+                  </div>
                 </div>
                 <div class="phone-video-outline d-none d-lg-block">
                   <div class="inner">
@@ -101,14 +106,7 @@
                       />
                     </div>
                     <div class="phone-video">
-                      <video
-                        poster="./assets/aviclear/video-pic.jpg"
-                        playsinline
-                        controls
-                        muted
-                        autoplay
-                        preload="none"
-                      >
+                      <video playsinline controls muted autoplay preload="none">
                         <source
                           src="./assets/aviclear/video.mp4"
                           type="video/mp4"
@@ -123,7 +121,9 @@
               class="w-100 d-lg-none"
               src="./assets/aviclear/kv1-mb.png"
               alt="aviclear戰痘雷射，全球第一雙認證"
-              fetchpriority="high" loading="eager" decoding="async"
+              fetchpriority="high"
+              loading="eager"
+              decoding="async"
             />
             <div class="phone-video-outline d-lg-none">
               <div class="inner">
@@ -131,14 +131,7 @@
                   <img class="w-100" src="./assets/aviclear/phone.png" alt="" />
                 </div>
                 <div class="phone-video">
-                  <video
-                    poster="./assets/aviclear/video-pic.jpg"
-                    playsinline
-                    controls
-                    muted
-                    autoplay
-                    preload="none"
-                  >
+                  <video playsinline controls muted autoplay preload="none">
                     <source
                       src="./assets/aviclear/video.mp4"
                       type="video/mp4"
@@ -146,6 +139,9 @@
                   </video>
                 </div>
               </div>
+            </div>
+            <div class="kv-item d-lg-none">
+              <img src="./assets/aviclear/kv-item.gif" alt="" />
             </div>
           </div>
         </section>
@@ -474,14 +470,14 @@
                                       >
                                     </div>
                                     <div
-                                      class="right d-flex align-items-center flex-column flex-lg-row fs-16 text-black-50"
+                                      class="right d-flex align-items-center justify-content-between flex-column flex-lg-row fs-16 text-black-50"
                                     >
                                       <a
                                         class="link-dark"
                                         :href="clinic.link"
                                         target="_blank"
                                       >
-                                        <span class="px-0 px-lg-2"
+                                        <span class="px-0 px-xl-2"
                                           >{{clinic.address}}</span
                                         >
                                       </a>
@@ -520,11 +516,17 @@
                                         >
                                       </div>
                                       <div
-                                        class="right d-flex align-items-center flex-column flex-lg-row fs-16 text-black-50"
+                                        class="right d-flex align-items-center justify-content-between flex-column flex-lg-row fs-16 text-black-50"
                                       >
-                                        <span class="px-0 px-lg-2"
-                                          >{{clinic.address}}</span
+                                        <a
+                                          class="link-dark"
+                                          :href="clinic.link"
+                                          target="_blank"
                                         >
+                                          <span class="px-0 px-xl-2"
+                                            >{{clinic.address}}</span
+                                          >
+                                        </a>
                                         <span>{{clinic.phone}}</span>
                                       </div>
                                     </div>
@@ -550,10 +552,10 @@
                   <div class="clinic-bg rounded-bottom p-4">
                     <div class="row justify-content-center align-items-center">
                       <!-- Title -->
-                      <div class="col-8 col-sm-7 col-lg-7 col-xl-8 col-xxl-7">
-                        <div class="contact-header mb-3 mb-sm-10">
+                      <div class="col-12">
+                        <div class="contact-header">
                           <h2
-                            class="d-flex flex-row align-items-center my-2 my-sm-4"
+                            class="d-flex flex-row justify-content-center align-items-center mb-0"
                           >
                             <span>想要</span>
                             <div class="logo">
@@ -565,20 +567,25 @@
                             </div>
                             <span>認證診所資訊</span>
                           </h2>
-                          <p>
-                            為了方便諮詢請留下您想收到的診所區域，<br />我們會將您選定的區域內認證診所資訊發送到您的信箱，謝謝～
+                        </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div
+                          class="contact-header contact-header-content py-3 py-md-6"
+                        >
+                          <p class="mb-0">
+                            為了方便您選定諮詢診所，請留下您想收到的診所區域，<br />我們會將您選定的區域內【AviClear戰鬥雷射認證診所】資訊發送到您的信箱，謝謝～
                           </p>
+                          <div class="machine">
+                            <img
+                              class="w-100"
+                              src="./assets/aviclear/product.png"
+                              alt="aviclear product"
+                            />
+                          </div>
                         </div>
                       </div>
-                      <div class="col-4 col-lg-4 col-xl-3 col-xxl-3">
-                        <div class="">
-                          <img
-                            class="w-100"
-                            src="./assets/aviclear/product.png"
-                            alt="aviclear product"
-                          />
-                        </div>
-                      </div>
+                      <div class="col-4 col-lg-4 col-xl-3 col-xxl-3"></div>
                       <!-- IP + Form -->
                       <div class="col-sm-10">
                         <!-- <div class="position-relative">
@@ -676,9 +683,14 @@
                   </div>
                   <p class="text-white fs-12 text-center mt-4">
                     <b
-                      >醫療行為具風險且效果因人而異，建議諮詢原廠認證之診所，<br class="d-lg-none">由專業醫師評估以保障安全。<br class="d-lg-none"
-                    >衛部醫器輸字第 037345 號 | “酷特拉” 愛薇可雷射系統<br class="d-lg-none">(“CUTERA”
-                    AviClear Laser System)
+                      >醫療行為具風險且效果因人而異，建議諮詢原廠認證之診所，<br
+                        class="d-lg-none"
+                      />由專業醫師評估以保障安全。<br
+                        class="d-lg-none"
+                      />衛部醫器輸字第 037345 號 | “酷特拉” 愛薇可雷射系統<br
+                        class="d-lg-none"
+                      />(“CUTERA” AviClear Laser System)</b
+                    >
                   </p>
                 </div>
               </div>
