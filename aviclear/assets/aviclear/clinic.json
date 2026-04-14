@@ -24,6 +24,14 @@
     "link": "https://maps.app.goo.gl/hUhLF6c1h81dPdYM7"
   },
   {
+    "name": "台大醫院形體美容醫學中心",
+    "city": "台北",
+    "address": "台北市常德街1號 (西址手術大樓2樓)",
+    "phone": "02-23562992",
+    "region": "北部",
+    "link": "https://www.ntuh.gov.tw/derm/Fpage.action?muid=6489&fid=6981"
+  },
+  {
     "name": "許哲豪皮膚科診所",
     "city": "新北",
     "address": "新北市汐止區忠孝東路214號1樓",
@@ -67,7 +75,7 @@
     "name": "吳及時皮膚科診所",
     "city": "台中",
     "address": "臺中市西區金山路18-3號2樓",
-    "phone": "04-23720434",
+    "phone": "LINE ID @skindrwu",
     "region": "中部",
     "link": "https://maps.app.goo.gl/yGLWh8bVbG9hPhND7"
   },
