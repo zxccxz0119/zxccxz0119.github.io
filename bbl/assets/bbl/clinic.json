@@ -1,0 +1,42 @@
+[
+  {
+    "name": "芮態診所-台中七期旗艦院所",
+    "city": "台中",
+    "address": "臺中市西屯區市政北ㄧ路19路",
+    "phone": "04-22589090",
+    "region": "中部",
+    "link": "https://maps.app.goo.gl/bnUSTAG45pnQ4qgN8"
+  },
+  {
+    "name": "芮態診所-台北大安旗艦院所",
+    "city": "台北",
+    "address": "台北市大安區市民大道三段206號5F",
+    "phone": "02-27760080",
+    "region": "北部",
+    "link": "https://maps.app.goo.gl/n5jzXNwYnfBJxY3P7"
+  },
+  {
+    "name": "璞悅美學診所–台北旗艦店",
+    "city": "台北",
+    "address": "台北市中正區忠孝東路二段88號1樓",
+    "phone": "02-23930808",
+    "region": "北部",
+    "link": "https://maps.app.goo.gl/hUhLF6c1h81dPdYM7"
+  },
+  {
+    "name": "安合癒境美學健康診所",
+    "city": "台北",
+    "address": "臺北市大安區信義路四段251號10樓",
+    "phone": "02-27087666",
+    "region": "北部",
+    "link": "https://maps.app.goo.gl/1Y7sSnyM8YS7tVbm8"
+  },
+  {
+    "name": "賦真妍皮膚專科診所",
+    "city": "台北",
+    "address": "臺北市中山區八德路二段315號317號 八德路二段319號",
+    "phone": "02-27771589",
+    "region": "北部",
+    "link": "https://maps.app.goo.gl/9PJ8BGqc8ndXBGo49"
+  }
+]

@@ -1,0 +1,341 @@
+html,
+body {
+  background-color: #26558b;
+  font-family: "微軟正黑體", sans-serif;
+}
+nav {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+.nav-link {
+  padding: 16px 0;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+.nav-item {
+  background: #ffffff;
+  color: #004276;
+  -webkit-writing-mode: vertical-lr;
+  writing-mode: vertical-lr;
+  margin: 2px 0;
+  padding: 0 8px 0 12px;
+  border-radius: 6px 0px 0px 6px;
+  font-family: serif;
+  letter-spacing: 1px;
+}
+.nav-item:last-child {
+  -webkit-writing-mode: horizontal-tb;
+  writing-mode: horizontal-tb;
+}
+.nav-item:last-child .nav-link:before {
+  content: "▲";
+  display: block;
+  margin-bottom: -8px;
+}
+#kv2 {
+  position: relative;
+}
+.clinic-bg {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 16px 16px 0 0;
+}
+.gradient-bg {
+  background: linear-gradient(to bottom, #426ea1, #6d95c5);
+}
+.clinic-area {
+  position: relative;
+  padding: 24px 5% 0;
+  color: #004276;
+  &.bottom {
+    padding-top: 0;
+    padding-bottom: 60px;
+  }
+  &.bottom .clinic-bg {
+    border-radius: 0 0 16px 16px;
+  }
+}
+.ip-img {
+  width: 35%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(25%, -110%);
+}
+.clinic-header .logo {
+  width: 70%;
+}
+.clinic-header h2 {
+  color: rgb(89 87 88);
+  font-weight: 900;
+  font-size: 42px;
+  padding: 0 1rem;
+}
+#contact,
+#contact label {
+  color: #666;
+  letter-spacing: 1px;
+}
+#contact .form-control {
+  color: #222222;
+}
+.contact-header {
+  position: relative;
+}
+.contact-header-content {
+  width: 65%;
+}
+.contact-header .logo {
+  width: 86%;
+  padding: 0 1rem;
+}
+.contact-header h2 {
+  color: rgb(89 87 88);
+  font-weight: 900;
+  font-size: 42px;
+}
+.contact-header p {
+  color: rgb(89 87 88);
+  font-size: 14px;
+}
+.machine {
+  position: absolute;
+  width: 36%;
+  top: 0;
+  right: 0;
+  transform: translate(-10%, 82px);
+}
+.two-line-ellipsis {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 幾行就填幾 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.three-line-ellipsis {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* 幾行就填幾 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+#kv3 .card {
+  height: 100%;
+}
+#kv3 .card-body {
+  padding: 1.5rem;
+  min-height: 8rem;
+}
+#clinic .card .left {
+  width: 76%;
+}
+#clinic .card .right {
+  width: 14%;
+}
+.text-keep {
+  white-space: nowrap;
+}
+.bg-main {
+  background-color: #0077bb !important;
+  border-color: #0077bb !important;
+}
+.bg-main2 {
+  background-color: #3c6fa9 !important;
+  border-color: #3c6fa9 !important;
+}
+.bg-main-gray {
+  background-color: #a8a9a9 !important;
+  border-color: #a8a9a9 !important;
+}
+.text-main-gray {
+  color: #4c4948;
+}
+.phone-video-outline {
+  position: absolute;
+  width: 24%;
+  top: 26%;
+  right: 34%;
+  transform: translateX(50%);
+}
+.phone-video-outline .inner {
+  position: relative;
+  padding: 13% 0%;
+  background: #000;
+  border-radius: 13%;
+}
+.phone-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+.phone-video {
+  width: 96%;
+  height: 100%;
+  margin: 0 auto;
+  aspect-ratio: 9 / 16; /* 現代瀏覽器支援，維持直式 */
+  overflow: hidden;
+  /* border-radius: 10%; */
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+  background: #000;
+}
+.phone-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* cover 會裁切但填滿容器 */
+  display: block;
+}
+.kv-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 54%;
+  transform: translate(11%, 62%);
+}
+.kv-item img {
+  width: 100%;
+}
+.text-phone-color {
+  color: #00afbc;
+}
+.badge {
+  height: fit-content;
+}
+
+@media (max-width: 1200px) {
+  .contact-header h2 {
+    font-size: 26px;
+  }
+  .contact-header .logo {
+    width: 100%;
+  }
+  .contact-header p {
+    width: 100%;
+  }
+  #clinic .card .left,
+  #clinic .card .right {
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  #clinic .card .right span {
+    width: 100%;
+  }
+  .contact-header p {
+    width: 100%;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 992px) {
+  .contact-header h2 {
+    font-size: 21px;
+  }
+  .phone-video-outline {
+    width: 28vw;
+    top: 44vw;
+    right: 29vw;
+  }
+  #clinic .card .left,
+  #clinic .card .right {
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .kv-item {
+    width: 52vw;
+    transform: translate(11%, 72%);
+  }
+}
+@media (max-width: 991px) {
+  #clinic .card .right span {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-header h2 {
+    font-size: 20px;
+  }
+  .contact-header p {
+    width: 100%;
+    text-align: left;
+  }
+  .ip-img {
+    width: 170px;
+    transform: translate(35%, -290%);
+  }
+  nav {
+    top: initial;
+    bottom: 0;
+    transform: initial;
+    width: 100%;
+  }
+  .navbar-nav {
+    flex-direction: row;
+  }
+  .nav-item {
+    -webkit-writing-mode: horizontal-tb;
+    writing-mode: horizontal-tb;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.2px solid #fff;
+  }
+  .nav-item:first-child {
+    border-left: 0;
+  }
+  .nav-item:last-child {
+    border-right: 0;
+  }
+  .nav-link {
+    white-space: nowrap;
+    padding: 10px 8px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .nav-item:last-child .nav-link:before {
+    display: none;
+  }
+  .contact-header p {
+    width: 100%;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 576px) {
+  .content-wrapper .container {
+    padding: 0;
+    overflow: hidden;
+  }
+  .clinic-header h2 {
+    font-size: 28px;
+    padding: 0 0 0 12px;
+  }
+  .contact-header h2 {
+    font-size: 20px;
+    /* justify-content: center; */
+  }
+  .ip-img {
+    width: 140px;
+    transform: translate(21%, -215%);
+  }
+}
+@media (max-width: 452px) {
+  .contact-header h2 {
+    font-size: 14px;
+  }
+  .contact-header p {
+    width: 100%;
+    font-size: 12px;
+  }
+}
